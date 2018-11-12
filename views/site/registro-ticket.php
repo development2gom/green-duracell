@@ -1,0 +1,39 @@
+<?php
+
+use kartik\form\ActiveForm;
+use yii\helpers\Html;
+
+?>
+
+<?php
+$form = ActiveForm::begin([
+    'id' => 'form-ajax',
+    'enableAjaxValidation' => true,
+    'enableClientValidation' => true,
+    'fieldConfig' => [
+        "template" => "{input}{label}{error}",
+        "options" => [
+            "class" => "form-group form-material floating",
+            "data-plugin" => "formMaterial"
+        ],
+        "labelOptions" => [
+            "class" => "floating-label"
+        ]
+    ]
+]);?>
+
+    <?= $form->field($ticket, 'txt_sucursal')->textInput(["class" => "form-control"]) ?>
+
+    <?= $form->field($ticket, 'txt_codigo_ticket')->textInput(["class" => "form-control"]) ?>
+
+    <?= $form->field($ticket, 'txt_codigo_barras')->textInput(["class" => "form-control"]) ?>
+
+    <?= $form->field($ticket, 'txt_productos')->textInput(["class" => "form-control"]) ?>
+
+    <?= $form->field($ticket, 'num_productos')->textInput(["class" => "form-control"]) ?>
+
+    <div class="form-group form-group-actions">
+        <?= Html::submitButton('Guardar', ['class' => "btn btn-primary btn-block btn-lg"]) ?>
+	</div>
+
+<?php ActiveForm::end(); ?>
