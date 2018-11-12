@@ -1,0 +1,86 @@
+/*!
+	------------------------------------
+
+	0.0 - Cookies
+
+	------------------------------------ */
+
+.pleca-cookies
+	background-color: $secondary
+	bottom: 0
+	left: 0
+	padding: 8px 32px
+	position: fixed
+	right: 0
+	.container-1220
+		display: flex
+		justify-content: space-between
+		+respond-to(xs)
+			flex-direction: column
+		.pc-col-textos,
+		.pc-col-button
+			align-items: center
+			display: flex
+
+		.pc-col-textos
+			// background-color: rgba(green,.4)
+			width: calc(100% - 80px)
+			+respond-to(xs)
+				width: 100%
+
+		.pc-col-button
+			// background-color: rgba(white,.4)
+			width: 80px
+			+respond-to(xs)
+				justify-content: center
+				margin-top: 24px
+				width: 100%
+			button
+				&.btn-primary
+					display: block
+					width: 100%
+					+respond-to(xs)
+						width: 150px
+					+respond-to(tp)
+						width: 150px
+					+respond-to(tx)
+						width: 150px
+					+respond-to(sl)
+						width: 100%
+		
+		.pc-col-textos
+			justify-content: flex-start
+			p
+				color: rgba($white,.9)
+				display: inline-block
+				@extend .fs-13
+				padding-right: 12px
+				text-align: justify
+
+				a
+					color: $white
+					display: inline-block
+					@extend .fs-13
+					@extend .fw-bold
+					margin-left: 6px
+					text-decoration: underline
+				
+		
+	.pc-close
+		align-items: center
+		// background-color: blue
+		cursor: pointer
+		display: flex
+		height: 24px
+		justify-content: center
+		position: absolute
+		margin-top: -12px
+		right: 8px
+		top: 50%
+		width: 24px
+		+respond-to(xs)
+			right: 4vw
+		i.ion
+			color: $white
+			@extend .fs-34
+		
