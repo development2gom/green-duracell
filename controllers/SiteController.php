@@ -13,6 +13,7 @@ use app\components\AccessControlExtend;
 use app\models\EntTickets;
 use app\modules\ModUsuarios\models\Utils;
 use app\models\Mensajes;
+use yii\web\BadRequestHttpException;
 
 class SiteController extends Controller
 {
@@ -159,7 +160,8 @@ class SiteController extends Controller
             if($ticket->save()){
                 $mensajes = new Mensajes();
 				if($mensajes->mandarMensage('Se ha registrado tu ticket', $usuario->txt_telefono)){
-                    echo 'success';exit;
+                    
+                    $this->redirect(['ganador', 'token'=>$ticket->uddi]);
                 }else{
                     echo 'error mensaje';exit;
                 }
@@ -172,5 +174,18 @@ class SiteController extends Controller
         return $this->render('registro-ticket', [
             'ticket' => $ticket
         ]);
+    }
+
+    public function actionGanador($token = null){
+        if(!$token){
+            throw new BadRequestHttpException;
+        }
+
+        $ticket = EntTickets::find()->where(['uddi'=>$token])->one();
+        if(!$ticket){
+            throw new BadRequestHttpException;
+        }
+
+        return $this->render('ganador');
     }
 }

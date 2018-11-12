@@ -2,7 +2,12 @@
 
 use kartik\form\ActiveForm;
 use yii\helpers\Html;
+use app\assets\AppAsset;
 
+$this->registerJsFile(
+    '@web/webAssets/js/site/ticket.js',
+    ['depends' => [AppAsset::className()]]
+);
 ?>
 
 <?php

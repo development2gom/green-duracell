@@ -62,13 +62,13 @@ class EntUsuarios extends \yii\db\ActiveRecord implements IdentityInterface
 	public function rules()
 	{
 		return [
-			[
-				'repeatEmail',
-				'compare',
-				'compareAttribute' => 'txt_email',
-				'on' => 'registerInput',
-				'message' => 'Los email deben coincidir'
-			],
+			// [
+			// 	'repeatEmail',
+			// 	'compare',
+			// 	'compareAttribute' => 'txt_email',
+			// 	'on' => 'registerInput',
+			// 	'message' => 'Los email deben coincidir'
+			// ],
 
 			[
 				[
@@ -254,7 +254,9 @@ class EntUsuarios extends \yii\db\ActiveRecord implements IdentityInterface
 				'targetAttribute' => [
 					'id_status' => 'id_status'
 				]
-			]
+				],
+				['txt_email', 'email'],
+				[['txt_telefono'], 'string', 'max'=>10],
 		];
 	}
 
@@ -595,12 +597,12 @@ class EntUsuarios extends \yii\db\ActiveRecord implements IdentityInterface
 	 */
 	public function getNombreCompleto()
 	{
-		return $this->txt_username . ' ' . $this->txt_apellido_paterno . ' ' . $this->txt_apellido_materno;
+		return $this->txt_username;
 	}
 
 	public function getNombreCorto()
 	{
-		return $this->txt_username . ' ' . $this->txt_apellido_paterno;
+		return $this->txt_username;
 	}
 
 	public function getNombreAbreviado()
