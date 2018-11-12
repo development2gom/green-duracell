@@ -143,4 +143,9 @@ class SiteController extends Controller
         echo Yii::$app->security->generatePasswordHash($p);
         exit;
     }
+
+    public function actionRegistrarTicket(){
+        $usuario = Yii::$app->user->identity;
+        print_r($usuario);exit;
+    }
 }

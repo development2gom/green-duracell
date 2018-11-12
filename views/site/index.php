@@ -12,3 +12,5 @@ $this->registerJsFile(
     ['depends' => [AppAsset::className()]]
 );
 ?>
+
+<a href="<?= Url::base() ?>/login" class="btn btn-primary">Ingresa aqui</a>

@@ -82,10 +82,11 @@ class EntUsuarios extends \yii\db\ActiveRecord implements IdentityInterface
 
 				[
 					'txt_username',
-					'txt_apellido_paterno',
 					'txt_email',
 					'txt_auth_item',
-					'password'
+					'password',
+					'num_edad',
+					'txt_telefono'
 				],
 				'required',
 
@@ -97,10 +98,11 @@ class EntUsuarios extends \yii\db\ActiveRecord implements IdentityInterface
 
 				[
 					'txt_username',
-					'txt_apellido_paterno',
 					'txt_email',
 					'txt_auth_item',
-					'password'
+					'password',
+					'num_edad',
+					'txt_telefono'
 				],
 				'required',
 				'on' => 'update',
@@ -149,8 +151,9 @@ class EntUsuarios extends \yii\db\ActiveRecord implements IdentityInterface
 			[
 				[
 					'txt_username',
-					'txt_apellido_paterno',
-					'txt_email'
+					'txt_email',
+					'num_edad',
+					'txt_telefono'
 				],
 				'required',
 				'on' => 'registerInput',
@@ -263,9 +266,11 @@ class EntUsuarios extends \yii\db\ActiveRecord implements IdentityInterface
 		return [
 			'id_usuario' => 'Id Usuario',
 			'txt_token' => 'Txt Token',
-			'txt_username' => 'Txt Username',
+			'txt_username' => 'Nombre completo',
 			'txt_apellido_paterno' => 'Apellido Paterno',
 			'txt_apellido_materno' => 'Apellido Materno',
+			'num_edad' => 'Edad',
+			'txt_telefono' => 'Telefono celular',
 			'txt_auth_key' => 'Txt Auth Key',
 			'txt_password_hash' => 'Txt Password Hash',
 			'txt_password_reset_token' => 'Txt Password Reset Token',
@@ -274,6 +279,7 @@ class EntUsuarios extends \yii\db\ActiveRecord implements IdentityInterface
 			'fch_actualizacion' => 'Fch Actualizacion',
 			'id_status' => 'Status',
 			'repeatEmail' => 'Repetir email',
+			'repeatPassword' => 'Repetir contraseña',
 			'password' => 'Contraseña'
 		];
 	}
@@ -511,6 +517,7 @@ class EntUsuarios extends \yii\db\ActiveRecord implements IdentityInterface
 		$this->image = UploadedFile::getInstance($this, 'image');
 
 		$this->txt_token = Utils::generateToken('usr');
+		$this->txt_auth_item = 'usuario-normal';
 
 		if ($this->image) {
 			$this->txt_imagen = $this->txt_token . "." . $this->image->extension;
