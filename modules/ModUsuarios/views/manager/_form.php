@@ -31,11 +31,11 @@ $form = ActiveForm::begin([
 
     <?= $form->field($model, 'txt_username')->textInput(["class" => "form-control"]) ?>
 
-    <?= $form->field($model, 'txt_apellido_paterno')->textInput(["class" => "form-control"]) ?>
+    <?= $form->field($model, 'num_edad')->textInput(["class" => "form-control"]) ?>
+
+    <?= $form->field($model, 'txt_telefono')->textInput(["class" => "form-control"]) ?>
 
     <?= $form->field($model, 'txt_email')->textInput(["class" => "form-control"]) ?>
-
-    <?= $form->field($model, 'repeatEmail')->textInput(["class" => "form-control"]) ?>
 
     <?= $form->field($model, 'password')->passwordInput(["class" => "form-control"]) ?>
 

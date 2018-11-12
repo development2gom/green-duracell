@@ -65,7 +65,6 @@ class ManagerController extends Controller {
 		}
 		
 		if ($model->load ( Yii::$app->request->post () )) {
-			
 			if ($model->signup ()) {
 
 				// Envia un correo de bienvenida al usuario
@@ -84,7 +83,7 @@ class ManagerController extends Controller {
 				} else {
 					
 					if (Yii::$app->getUser ()->login ( $model )) {
-						return $this->goHome ();
+						$this->redirect(['/site/registrar-ticket']);
 					}
 				}
 			}
@@ -92,13 +91,6 @@ class ManagerController extends Controller {
 			// return $this->redirect(['view', 'id' => $model->id_usuario]);
 		}
 
-		if(FireBase::ENABLED){
-			// return $this->render ( '//firebase/sign-up', [ 
-			// 	'model' => $model 
-			// ] );
-		}else{
-			
-		}
 		return $this->render ( 'signUp', [ 
 			'model' => $model 
 		] );
@@ -225,7 +217,8 @@ class ManagerController extends Controller {
 	public function actionLogin() {
 
 		if (! Yii::$app->user->isGuest) {
-			return $this->goHome ();
+			// return $this->goHome ();
+			$this->redirect(['/site/registrar-ticket']);
 		}
 
 		$model = new LoginForm ();
@@ -238,7 +231,8 @@ class ManagerController extends Controller {
 
 		if ($model->load ( Yii::$app->request->post () ) && $model->login ()) {
 			
-			return $this->goBack ();
+			// return $this->goBack ();
+			$this->redirect(['/site/registrar-ticket']);
 		}
 		return $this->render ( 'login', [ 
 				'model' => $model 

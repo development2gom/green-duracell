@@ -10,6 +10,10 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\components\AccessControlExtend;
+use app\models\EntTickets;
+use app\modules\ModUsuarios\models\Utils;
+use app\models\Mensajes;
+use yii\web\BadRequestHttpException;
 
 class SiteController extends Controller
 {
@@ -28,7 +32,7 @@ class SiteController extends Controller
         //                 'allow' => true,
         //                 'roles' => ['admin'],
         //             ],
-                   
+
         //         ],
         //     ],
             // 'verbs' => [
@@ -58,7 +62,7 @@ class SiteController extends Controller
 
     public function actionTest(){
          //$auth = Yii::$app->authManager;
-    
+
         //  // add "updatePost" permission
         //  $updatePost = $auth->createPermission('about');
         //  $updatePost->description = 'Update post';
@@ -68,7 +72,7 @@ class SiteController extends Controller
         // $admin = $auth->createRole('test');
          //$auth->add($admin);
         // $auth->addChild($admin, $updatePost);
-        
+
     }
 
     /**
@@ -78,7 +82,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        
+
         // $usuario = Yii::$app->user->identity;
         // $auth = \Yii::$app->authManager;
         // $authorRole = $auth->getRole('test');
@@ -105,7 +109,7 @@ class SiteController extends Controller
         return $this->render("construccion");
     }
 
-    
+
 
     public function actionGetcontrollersandactions()
     {
@@ -142,5 +146,46 @@ class SiteController extends Controller
     public function actionGenerarPass($p){
         echo Yii::$app->security->generatePasswordHash($p);
         exit;
+    }
+
+    public function actionRegistrarTicket(){
+        $usuario = Yii::$app->user->identity;
+        $ticket = new EntTickets();
+        // print_r($usuario);exit;
+
+        if ($ticket->load(Yii::$app->request->post())){
+            $ticket->id_usuario = $usuario->id_usuario;
+            $ticket->uddi = Utils::generateToken('tck');
+
+            if($ticket->save()){
+                $mensajes = new Mensajes();
+				if($mensajes->mandarMensage('Se ha registrado tu ticket', $usuario->txt_telefono)){
+                    
+                    $this->redirect(['ganador', 'token'=>$ticket->uddi]);
+                }else{
+                    echo 'error mensaje';exit;
+                }
+            }else{
+                print_r($ticket->errors);
+                echo 'error';exit;
+            }
+        }
+
+        return $this->render('registro-ticket', [
+            'ticket' => $ticket
+        ]);
+    }
+
+    public function actionGanador($token = null){
+        if(!$token){
+            throw new BadRequestHttpException;
+        }
+
+        $ticket = EntTickets::find()->where(['uddi'=>$token])->one();
+        if(!$ticket){
+            throw new BadRequestHttpException;
+        }
+
+        return $this->render('ganador');
     }
 }

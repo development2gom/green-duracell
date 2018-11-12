@@ -1,6 +1,7 @@
 var inputFile = $("#entusuarios-image");
 var tamanioAdmitido = 3;
 var tipoImagenesAdmitidas = ["image/jpeg", "image/png", "image/jpg", "image/gif"];
+
 $(document).ready(function () {
     $(".js-img-avatar").on("click", function (e) {
         e.preventDefault();
@@ -17,6 +18,20 @@ $(document).ready(function () {
             
         colocarImagen(file);
 
+    });
+    
+    $('#entusuarios-num_edad').keypress(function (e) {
+        if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+    
+            return false;
+        }
+    });
+
+    $('#entusuarios-txt_telefono').keypress(function (e) {
+        if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+    
+            return false;
+        }
     });
 });
 

@@ -10,11 +10,6 @@ use yii\helpers\Url;
 $this->title = 'Registrarse';
 $this->params['classBody'] = "page-login-v3 layout-full login-page";
 
-$this->registerCssFile(
-  '@web/webAssets/css/signUp.css',
-  ['depends' => [\yii\web\JqueryAsset::className()]]
-);
-
 $this->registerJsFile(
   '@web/webAssets/js/sign-up.js',
   ['depends' => [\yii\web\JqueryAsset::className()]]
