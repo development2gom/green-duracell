@@ -6,21 +6,7 @@ use yii\helpers\Html;
 ?>
 
 <?php
-$form = ActiveForm::begin([
-    'id' => 'form-ajax',
-    'enableAjaxValidation' => true,
-    'enableClientValidation' => true,
-    'fieldConfig' => [
-        "template" => "{input}{label}{error}",
-        "options" => [
-            "class" => "form-group form-material floating",
-            "data-plugin" => "formMaterial"
-        ],
-        "labelOptions" => [
-            "class" => "floating-label"
-        ]
-    ]
-]);?>
+$form = ActiveForm::begin();?>
 
     <?= $form->field($ticket, 'txt_sucursal')->textInput(["class" => "form-control"]) ?>
 

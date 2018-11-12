@@ -12,6 +12,7 @@ use app\models\ContactForm;
 use app\components\AccessControlExtend;
 use app\models\EntTickets;
 use app\modules\ModUsuarios\models\Utils;
+use app\models\Mensajes;
 
 class SiteController extends Controller
 {
@@ -156,8 +157,14 @@ class SiteController extends Controller
             $ticket->uddi = Utils::generateToken('tck');
 
             if($ticket->save()){
-                echo 'success';exit;
+                $mensajes = new Mensajes();
+				if($mensajes->mandarMensage('Se ha registrado tu ticket', $usuario->txt_telefono)){
+                    echo 'success';exit;
+                }else{
+                    echo 'error mensaje';exit;
+                }
             }else{
+                print_r($ticket->errors);
                 echo 'error';exit;
             }
         }
