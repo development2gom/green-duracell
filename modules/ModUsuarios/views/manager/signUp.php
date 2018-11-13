@@ -8,7 +8,7 @@ use yii\helpers\Url;
 /* @var $model app\models\EntUsuarios */
 
 $this->title = 'Registrarse';
-$this->params['classBody'] = "page-login-v3 layout-full login-page";
+// $this->params['classBody'] = "";
 
 $this->registerJsFile(
   '@web/webAssets/js/sign-up.js',
@@ -16,17 +16,31 @@ $this->registerJsFile(
 );
 ?>
 
-<div class="panel">
-  <div class="panel-body">
-      <div class="brand text-center">
-        <a class="avatar avatar-lg js-img-avatar">
-              <img class="js-image-preview" src="<?=Url::base()."/webAssets/images/site/user.png"?>">
-            </a>
-        <h2 class="brand-text font-size-18 text-center"><?= Html::encode($this->title) ?></h2>
-      </div>
-      <?= $this->render('_form', [
-        'model' => $model,
-      ]) ?>
+<?= $this->render("//components/classic/topbar/nav-right")?>
 
-  </div>
+<div class="pd-sign-up">
+
+    <div class="pd-sign-up-imagen">
+        <img src="<?= Url::base() ?>/webAssets/images/aviso-privacidad/conejoregalos.png" alt="">
+    </div>
+
+    <div class="pd-sign-up-form">
+
+        <img src="<?= Url::base() ?>/webAssets/images/ingresar/texto.png" alt="">
+
+        <?= $this->render('_form', [
+          'model' => $model,
+        ]) ?>
+
+        <div class="pd-sign-up-form-actions">
+            <a class="pd-sign-up-form-link" href="<?= Url::base() ?>/site/terminos-condiciones">Términos y condiciones</a>
+            <a class="pd-sign-up-form-link" href="<?= Url::base() ?>/site/aviso-privacidad">Aviso de Privacidad</a>
+        </div>
+    
+    </div>
+
+    <div class="pd-sign-up-super-farmacia">
+        <img src="<?= Url::base() ?>/webAssets/images/farmacias-guadalajara.png" alt="">
+    </div>    
+
 </div>

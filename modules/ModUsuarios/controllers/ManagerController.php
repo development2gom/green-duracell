@@ -48,7 +48,7 @@ class ManagerController extends Controller {
         ];
     }
 
-	public $layout = "@app/views/layouts/classic/topBar/mainBlank";
+	public $layout = "@app/views/layouts/classic/topBar/main";
 	
 	/**
 	 * Registrar usuario en la base de datos

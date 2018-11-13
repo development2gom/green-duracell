@@ -14,41 +14,28 @@ $form = ActiveForm::begin([
     'id' => 'form-ajax',
     'enableAjaxValidation' => true,
     'enableClientValidation' => true,
-    'fieldConfig' => [
-        "template" => "{input}{label}{error}",
-        "options" => [
-            "class" => "form-group form-material floating",
-            "data-plugin" => "formMaterial"
-        ],
-        "labelOptions" => [
-            "class" => "floating-label"
-        ]
-    ]
 ]);?>
+    
+    <?= $form->field($model, 'txt_username')->textInput(["class" => "form-control", "placeholder" => "Nombre Completo"])->label(false) ?>
 
-    <?= $form->field($model, 'image')->fileInput(["class"=>"hide"])->label(false) ?> 
+    <?= $form->field($model, 'num_edad')->textInput(["class" => "form-control", "placeholder" => "Edad"])->label(false) ?>
 
+    <?= $form->field($model, 'txt_telefono')->textInput(["class" => "form-control", "placeholder" => "Teléfono celular"])->label(false) ?>
 
-    <?= $form->field($model, 'txt_username')->textInput(["class" => "form-control"]) ?>
+    <?= $form->field($model, 'txt_email')->textInput(["class" => "form-control", "placeholder" => "Correo electrónico"])->label(false) ?>
 
-    <?= $form->field($model, 'num_edad')->textInput(["class" => "form-control"]) ?>
+    <?= $form->field($model, 'password')->passwordInput(["class" => "form-control", "placeholder" => "Crear contraseña"])->label(false) ?>
 
-    <?= $form->field($model, 'txt_telefono')->textInput(["class" => "form-control"]) ?>
-
-    <?= $form->field($model, 'txt_email')->textInput(["class" => "form-control"]) ?>
-
-    <?= $form->field($model, 'password')->passwordInput(["class" => "form-control"]) ?>
-
-    <?= $form->field($model, 'repeatPassword')->passwordInput(["class" => "form-control"]) ?>
+    <?= $form->field($model, 'repeatPassword')->passwordInput(["class" => "form-control", "placeholder" => "Confirmar contraseña"])->label(false) ?>
 
 
     <div class="form-group form-group-actions">
-        <?= Html::submitButton($model->isNewRecord ? 'Registrarme' : 'Actualizar información', ['class' => "btn btn-primary btn-block btn-lg"]) ?>
+        <?= Html::submitButton(' ', ['class' => "btn btn-primary btn-enviar"]) ?>
 	</div>
 
-    <div class="form-group necesito-cuenta">
+    <!-- <div class="form-group necesito-cuenta">
         ¿Tienes una cuenta? <a href="<?=Url::base()?>/login">Ingresa</a>
-    </div>
+    </div> -->
 
 
 <?php ActiveForm::end(); ?>
