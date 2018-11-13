@@ -14,6 +14,7 @@ use app\models\EntTickets;
 use app\modules\ModUsuarios\models\Utils;
 use app\models\Mensajes;
 use yii\web\BadRequestHttpException;
+use yii\helpers\Url;
 
 class SiteController extends Controller
 {
@@ -159,7 +160,9 @@ class SiteController extends Controller
 
             if($ticket->save()){
                 $mensajes = new Mensajes();
-				if($mensajes->mandarMensage('Se ha registrado tu ticket', $usuario->txt_telefono)){
+                $url = Url::base() . '/site/ganador?token='.$ticket->uddi;
+                
+				if($mensajes->mandarMensage('Se ha registrado tu ticket. Ingrese para revisar su premio. '.$url, $usuario->txt_telefono)){
                     
                     $this->redirect(['ganador', 'token'=>$ticket->uddi]);
                 }else{
