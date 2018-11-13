@@ -815,11 +815,73 @@ a
 
 // 
 // BODY
-.body-obracciones
-	// .page
-	// 	background-image: url(../images/lines.jpg)
-	// 	background-position: 0
-	// 	background-repeat: repeat
-	// 	background-size: 200px
+.duracell-page
+	padding: 0 !important
 	.page
-		background-color: $grey-f5
+		background-color: $black
+		.page-content
+			padding: 0 !important
+
+// NAV
+.nav-duracell
+	align-items: center
+	background-color: $black
+	background-image: url(../images/tira.png)
+	background-position: 50%
+	background-repeat: no-repeat
+	background-size: inherit
+	display: flex
+	padding: 0 32px
+	width: 100%
+	&.nav-left
+		height: 90px
+		justify-content: flex-start
+	&.nav-right
+		height: 90px
+		justify-content: flex-end
+	h1
+		margin: 0
+		img
+			height: 40px
+
+// INGRESAR
+.pd-ingresar
+	align-items: center
+	background-image: url(../images/ingresar/fondo.png)
+	background-position: 50%
+	background-repeat: no-repeat
+	background-size: 60%
+	display: flex
+	flex-direction: column
+	min-height: calc(100vh - 90px)
+	justify-content: center
+
+	.pd-ingresar-img-texto
+		margin: 0 auto
+		max-width: 80%
+		width: 720px
+
+	.pd-ingresar-conejo
+		align-items: center
+		display: flex
+		flex-direction: column
+		justify-content: center
+		margin: 0 auto
+		max-width: 80%
+		width: 720px
+		img
+			margin: 0 auto
+			max-width: 80%
+			width: 390px
+		a.btn-ingresar
+			background-color: transparent
+			border-color: transparent
+			background-image: url(../images/ingresar/ingresa-aqui.png)
+			background-position: 50%
+			background-repeat: no-repeat
+			background-size: 463px 70px
+			display: block
+			height: 70px
+			width: 463px
+
+

@@ -5,7 +5,7 @@ use app\assets\AppAsset;
 
 $this->title = "Dashboard";
 
-$this->params['classBody'] = "site-navbar-small dashboard";
+$this->params['classBody'] = "site-navbar-small";
 
 $this->registerJsFile(
     '@web/webAssets/js/index.js',
@@ -13,4 +13,18 @@ $this->registerJsFile(
 );
 ?>
 
-<a href="<?= Url::base() ?>/login" class="btn btn-primary">Ingresa aqui</a>
+<?= $this->render("//components/classic/topbar/nav-left")?>
+
+<div class="pd-ingresar">
+
+    <img class="pd-ingresar-img-texto" src="<?= Url::base() ?>/webAssets/images/ingresar/texto.png" alt="">
+
+    <div class="pd-ingresar-conejo">
+        <img src="<?= Url::base() ?>/webAssets/images/ingresar/conejo.png" alt="">
+        <a href="<?= Url::base() ?>/login" class="btn btn-primary btn-ingresar"></a>
+    </div>
+
+   
+
+
+</div>
