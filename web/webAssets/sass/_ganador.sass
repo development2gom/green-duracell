@@ -1,0 +1,97 @@
+/*!
+	-----------------------------------------------------------------------------
+	- Registro de Ticket
+	-----------------------------------------------------------------------------
+	*/
+
+.pd-ganador
+	// align-items: center
+	background-image: url(../images/fondo.png)
+	background-position: -38% 50%
+	background-repeat: no-repeat
+	background-size: 60%
+	display: flex
+	flex-wrap: wrap
+	min-height: calc(100vh - 90px)
+	justify-content: flex-start
+	position: relative
+
+	.pd-ganador-textos
+		align-items: center
+		display: flex
+		flex-direction: column
+		justify-content: center
+		padding: 40px 0 12px
+		width: 100%
+		h3,
+		h5,
+		h4,
+		h6
+			color: $white
+			margin: 0
+			text-align: center
+			text-transform: uppercase
+
+		h3
+			@extend .fw-bold
+			font-size: 4.2rem
+
+		h4
+			font-size: 6rem
+			@extend .fw-bold
+			margin: 16px auto
+
+		h5,
+		h6
+			@extend .fs-24
+			
+
+	.pd-ganador-imagen
+		// background-color: rgba(red,.1)
+		text-align: center
+		width: 50%
+		img
+			margin: 0 auto
+			max-width: 70%
+			width: 70%
+
+	.pd-ganador-codigo
+		align-items: center
+		// background-color: green
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		padding: 40px 32px 12px
+		width: 50%
+
+		h3,
+		h4,
+		h6
+			color: $white
+			margin: 0
+			text-align: center
+			width: 100%
+		
+		h3,
+		h4
+			@extend .fw-bold
+
+		h3
+			font-size: 2.8rem
+		
+		h4
+			font-size: 3.4rem
+			padding: 24px
+
+		h6
+			@extend .fs-22
+			@extend .fw-regular
+			letter-spacing: 2px
+
+		p
+			color: $white
+			@extend .fs-22
+			@extend .fw-regular
+			margin: 0 auto 32px
+			text-align: center
+			width: 80%

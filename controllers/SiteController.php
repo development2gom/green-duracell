@@ -191,4 +191,15 @@ class SiteController extends Controller
 
         return $this->render('ganador');
     }
+
+
+    public function actionAvisoPrivacidad(){
+        
+        return $this->render('aviso-privacidad');
+    }
+
+    public function actionTerminosCondiciones(){
+        
+        return $this->render('terminos-condiciones');
+    }
 }

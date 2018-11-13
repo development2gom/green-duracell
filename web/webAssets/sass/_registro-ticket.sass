@@ -1,0 +1,106 @@
+/*!
+	-----------------------------------------------------------------------------
+	- Registro de Ticket
+	-----------------------------------------------------------------------------
+	*/
+
+.pd-registro-ticket
+	align-items: center
+	background-image: url(../images/fondo.png)
+	background-position: -38% 50%
+	background-repeat: no-repeat
+	background-size: 60%
+	display: flex
+	flex-wrap: wrap
+	height: calc(100vh - 90px)
+	justify-content: flex-start
+	position: relative
+
+	.pd-registro-ticket-imagen
+		// background-color: red
+		text-align: center
+		width: 35%
+		img
+			margin: 0 auto
+			max-width: 90%
+			width: 90%
+
+	.pd-registro-ticket-form
+		// background-color: green
+		max-height: 90%
+		min-height: 200px
+		overflow-y: auto
+		width: 40%
+
+		h3
+			color: $white
+			@extend .fs-38
+			@extend .fw-regular
+			margin-bottom: 16px
+			text-align: center
+			width: 100%
+
+		.form-control
+			border: 3px solid $white
+			border-radius: 14px
+			color: $gray-300
+			@extend .fs-18
+			@extend .fw-regular
+			height: 42px
+			padding: .5rem 1rem
+			+placeholder
+				color: $gray-900
+				font-style: italic
+
+		.form-control-blue
+			border-color: $info
+		.form-control-yellow
+			border-color: $warning
+		.form-control-red
+			border-color: $error
+
+		.form-group.has-error
+			.help-block
+				padding-left: 16px
+
+		.btn-guardar
+			background-color: transparent
+			border-color: transparent
+			background-image: url(../images/registro-ticket/guardar.png)
+			background-position: 50%
+			background-repeat: no-repeat
+			background-size: 160px 40px
+			display: block
+			height: 40px
+			margin: 0 auto
+			width: 160px
+
+		.pd-registro-ticket-form-actions
+			align-items: center
+			display: flex
+			flex-direction: column
+			justify-content: center
+			margin-top: 32px
+			.pd-registro-ticket-form-link
+				color: $link
+				@extend .fs-16
+				@extend .fw-regular
+				text-decoration: underline
+
+	.pd-registro-ticket-example
+		// background-color: yellow
+		background-image: url(../images/registro-ticket/ticket.png)
+		background-position: 50% 116%
+		background-repeat: no-repeat
+		background-size: 100%
+		height: 100%
+		position: relative
+		width: 25%
+
+	
+	.pd-registro-ticket-super-farmacia
+		bottom: 5vh
+		left: 25vw
+		position: absolute
+		img
+			width: 140px
