@@ -160,9 +160,12 @@ class SiteController extends Controller
 
             if($ticket->save()){
                 $mensajes = new Mensajes();
-                $url = Url::base(true) . '/site/ganador?token='.$ticket->uddi;
+                $link = Yii::$app->urlManager->createAbsoluteUrl([
+					'/site/ganador?token='.$ticket->uddi
+				]);
+				$urlCorta = $this->getShortUrl($link);
 
-				if($mensajes->mandarMensage('Se ha registrado tu ticket. Ingrese para revisar su premio. '.$url, $usuario->txt_telefono)){
+				if($mensajes->mandarMensage('Se ha registrado tu ticket. Ingrese para revisar su premio. '.$urlCorta, $usuario->txt_telefono)){
                     
                     $this->redirect(['ganador', 'token'=>$ticket->uddi]);
                 }else{
@@ -192,7 +195,27 @@ class SiteController extends Controller
         return $this->render('ganador');
     }
 
-
+    private function getShortUrl($url)
+	{
+		$urlAutenticate = 'http://dgom.mobi';
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL, $urlAutenticate);
+		curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
+		curl_setopt($ch, CURLOPT_POSTFIELDS, 'user=userGreenSaco&pass=passGreenSacro&app=GreenSacro&url=' . $url);
+		curl_setopt($ch, CURLOPT_POSTREDIR, 3);
+		curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+		
+		// in real life you should use something like:
+		// curl_setopt($ch, CURLOPT_POSTFIELDS,
+		// http_build_query(array('postvar1' => 'value1')));
+		
+		// receive server response ...
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		$server_output = curl_exec($ch);
+		curl_close($ch);
+		return $server_output;
+    }
+    
     public function actionAvisoPrivacidad(){
         
         return $this->render('aviso-privacidad');
