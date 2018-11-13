@@ -160,8 +160,8 @@ class SiteController extends Controller
 
             if($ticket->save()){
                 $mensajes = new Mensajes();
-                $url = Url::base() . '/site/ganador?token='.$ticket->uddi;
-                
+                $url = Url::base(true) . '/site/ganador?token='.$ticket->uddi;
+
 				if($mensajes->mandarMensage('Se ha registrado tu ticket. Ingrese para revisar su premio. '.$url, $usuario->txt_telefono)){
                     
                     $this->redirect(['ganador', 'token'=>$ticket->uddi]);
