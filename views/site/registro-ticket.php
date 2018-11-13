@@ -4,6 +4,8 @@ use kartik\form\ActiveForm;
 use yii\helpers\Html;
 use app\assets\AppAsset;
 
+$this->title = "Registro";
+
 $this->registerJsFile(
     '@web/webAssets/js/site/ticket.js',
     ['depends' => [AppAsset::className()]]
@@ -41,8 +43,8 @@ $this->registerJsFile(
         <?php ActiveForm::end(); ?>
 
         <div class="pd-registro-ticket-form-actions">
-            <a class="pd-registro-ticket-form-link" href="">Términos y condiciones</a>
-            <a class="pd-registro-ticket-form-link" href="">Aviso de Privacidad</a>
+            <a class="pd-registro-ticket-form-link" href="<?= Url::base() ?>/site/terminos-condiciones">Términos y condiciones</a>
+            <a class="pd-registro-ticket-form-link" href="<?= Url::base() ?>/site/aviso-privacidad">Aviso de Privacidad</a>
         </div>
     
     </div>

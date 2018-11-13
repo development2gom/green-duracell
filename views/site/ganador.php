@@ -2,6 +2,8 @@
 use yii\helpers\Url;
 use yii\helpers\Html;
 use app\assets\AppAsset;
+
+$this->title = "Ganador";
 ?>
 
 <?= $this->render("//components/classic/topbar/nav-left")?>
