@@ -165,15 +165,15 @@
 			border: 3px solid $white
 			border-radius: 16px
 			color: $gray-300
-			@extend .fs-30
+			@extend .fs-28
 			@extend .fw-bold
 			height: 48px
 			padding: .5rem 1rem
 			text-align: center
-			text-transform: uppercase
-			width: 281px
+			width: 394px
 			+placeholder
 				color: $gray-900
+				text-transform: uppercase
 
 			&.form-control-name,
 			&.form-control-pass
@@ -182,13 +182,13 @@
 				background-image: url(../images/login/input.png)
 				background-position: 50%
 				background-repeat: no-repeat
-				background-size: 275px 42px
-			
-			// &.form-control-name
-			// 	background-image: url(../images/login/name.png)
+				background-size: 394px 42px
 
-			// &.form-control-pass
-			// 	background-image: url(../images/login/pass.png)
+			&.form-control-name
+				@extend .fs-24
+			
+			&.form-control-pass
+				text-transform: uppercase
 
 		.btn-login
 			background-color: transparent
