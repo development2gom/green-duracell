@@ -36,11 +36,16 @@ $this->title = 'Login';
 
 
 
-			<!-- <div class="form-group form-group-actions">
-			<?= Html::submitButton('<span class="ladda-label">Ingresar</span>', ["data-style" => "zoom-in", 'class' => 'btn btn-primary btn-login ladda-button', 'name' => 'login-button']); ?>
-			</div> -->
+			<div class="form-group form-group-actions">
+				<?= Html::submitButton('<span class="ladda-label"> </span>', ["data-style" => "zoom-in", 'class' => 'btn btn-primary btn-login ladda-button', 'name' => 'login-button']); ?>
+			</div>
 
 		<?php ActiveForm::end(); ?>
+
+		<div class="pd-login-form-actions">
+            <a class="pd-login-form-link" href="<?= Url::base() ?>/sign-up">Crear cuenta</a>
+        </div>
+
 	</div>
 
 		
