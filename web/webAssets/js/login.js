@@ -44,16 +44,5 @@ $(document).ready(function(){
 
     });
 
-    $('.js-btn-submit').on('click', function(e){
-        var l = Ladda.create(this);
-        l.start();
-
-        if ($("#styled-checkbox-1").is(':checked')) {   
-            l.stop();
-            $("#form-ajax-login").submit();
-        }else{
-            swal('Espera', 'Aceptar aviso de privacidad para continuar', 'warning');
-            l.stop();
-        }
-    });
+    
 });
