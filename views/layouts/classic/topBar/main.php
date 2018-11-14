@@ -19,13 +19,13 @@ AppAsset::register($this);
     <![endif]-->
   <?php $this->beginBody();?>
   
-  <? # $this->render("//components/classic/topbar/nav-bar")?>
+  <?php # $this->render("//components/classic/topbar/nav-bar")?>
 
-  <? # $this->render("//components/classic/topbar/menu")?>
+  <?php # $this->render("//components/classic/topbar/menu")?>
 
   <?=$this->render("//components/classic/topbar/body", ["content"=>$content])?>
   
-  <? # $this->render("//components/classic/topbar/footer")?>
+  <?php # $this->render("//components/classic/topbar/footer")?>
 
   <div id="pleca-cookies" class="pleca-cookies">
     <div class="container-1220">
