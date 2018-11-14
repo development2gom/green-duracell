@@ -35,7 +35,6 @@ $this->title = 'Login';
 			<?= $form->field($model, 'password')->passwordInput(["class" => "form-control form-control-pass", "placeholder" => "Contraseña"])->label(false) ?>
 
 
-
 			<div class="form-group form-group-actions">
 				<?= Html::submitButton('<span class="ladda-label"> </span>', ["data-style" => "zoom-in", 'class' => 'btn btn-primary btn-login ladda-button', 'name' => 'login-button']); ?>
 			</div>

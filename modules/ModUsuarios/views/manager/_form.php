@@ -7,6 +7,9 @@ use yii\widgets\ActiveForm;
 /* @var $this yii\web\View */
 /* @var $model app\models\EntUsuarios */
 /* @var $form yii\widgets\ActiveForm */
+
+
+
 ?>
 
 <?php
@@ -28,9 +31,20 @@ $form = ActiveForm::begin([
 
     <?= $form->field($model, 'repeatPassword')->passwordInput(["class" => "form-control", "placeholder" => "Confirmar contraseña"])->label(false) ?>
 
+    <div class="form-group form-group-check">
+        <ul class="unstyled centered">
+            <li>
+                <input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="value1">
+                <label for="styled-checkbox-1">
+                    <span>He leído y acepto el aviso de privacidad</span>
+                </label>
+                <div class="styled-mask js-mask-check"></div>
+            </li>
+        </ul>
+    </div>
 
     <div class="form-group form-group-actions">
-        <?= Html::submitButton(' ', ['class' => "btn btn-primary btn-enviar"]) ?>
+        <?= Html::submitButton(' ', ['class' => "btn btn-primary btn-enviar js-btn-submit"]) ?>
 	</div>
 
     <!-- <div class="form-group necesito-cuenta">

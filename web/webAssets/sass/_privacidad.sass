@@ -307,6 +307,114 @@
 				@extend .fw-regular
 				text-decoration: underline
 
+		.form-group-check
+			position: relative
+
+			.checkbox-custom
+				position: relative
+				z-index: 3
+
+			.checkbox-mask
+				bottom: 0
+				cursor: pointer
+				left: 0
+				position: absolute
+				right: 0
+				top: 0
+				z-index: 6
+
+		.form-group-check
+			ul
+				list-style: none
+				text-align: center
+				li
+					align-items: center
+					display: inline-block
+					justify-content: center
+					position: relative
+					label
+						margin-bottom: 0
+					.styled-mask
+						// background-color: rgba(blue,.7)
+						bottom: 0
+						cursor: pointer
+						height: 100%
+						left: 0
+						position: absolute
+						right: 0
+						top: 0
+						width: 100%
+						z-index: 9
+
+			.styled-checkbox 
+				position: absolute // take it out of document flow
+				opacity: 0 // hide it
+
+				& + label 
+					// background-color: rgba(red, .3)
+					position: relative
+					cursor: pointer
+					padding: 0
+					span
+						color: $white
+						@extend .fs-15
+						@extend .fw-regular
+						text-decoration: underline
+						text-transform: uppercase
+				
+
+				// Box.
+				& + label:before 
+					content: ''
+					margin-right: 10px
+					display: inline-block
+					vertical-align: middle
+					width: 20px
+					height: 20px
+					background: $white
+					border-radius: 3px
+					margin-bottom: 3px
+					
+
+				// Box hover
+				&:hover + label:before 
+					background: rgba($white,.65)
+					
+
+				// Box focus
+				&:focus + label:before 
+					box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12)
+					
+
+				// Box checked
+				&:checked + label:before 
+					background: $white
+					
+
+				// Disabled state label.
+				&:disabled + label 
+					color: #b8b8b8
+					cursor: auto
+					
+
+				// Disabled box.
+				&:disabled + label:before 
+					box-shadow: none
+					background: #ddd
+					
+
+				// Checkmark. Could be replaced with an image
+				&:checked + label:after 
+					content: ''
+					position: absolute
+					left: 5px
+					top: 12px
+					background: $black
+					width: 2px
+					height: 2px
+					box-shadow: 2px 0 0 $black, 4px 0 0 $black, 4px -2px 0 $black, 4px -4px 0 $black, 4px -6px 0 $black, 4px -8px 0 $black
+					transform: rotate(45deg)
+					z-index: 4
 	
 	.pd-sign-up-super-farmacia
 		bottom: 5vh
@@ -314,3 +422,99 @@
 		position: absolute
 		img
 			width: 140px
+			
+
+/*  Modal
+	============================== */
+.modal-backdrop
+	background-color: rgba($black,.75)
+	position: absolute
+	z-index: 9906
+
+.modal
+	top: 5vh
+	bottom: 5vh
+	height: 90vh
+	position: fixed
+	z-index: 9999
+	.modal-dialog
+		height: auto
+		.modal-header
+			button.close
+				position: absolute
+				right: 24px
+				top: 16px
+.modal-aviso
+	.modal-header
+		background-color: $black
+		border-radius: 3px 3px 0 0
+		.close
+			color: $white
+		h4.modal-title
+			color: $white
+
+
+.modal-aviso
+	.modal-dialog
+		.modal-content
+			.modal-header
+				background-color: $black
+			
+			.modal-body
+				padding: 24px
+				h3
+					color: $font-color
+					font-size: 1rem
+					font-weight: $bold
+					letter-spacing: 1px
+					margin-bottom: 2px
+
+				ul
+					list-style-position: outside
+					margin-bottom: 30px
+					padding-left: 26px
+					li
+						color: $font-color
+						letter-spacing: 1px
+						line-height: 1.6
+						margin-bottom: 6px
+
+				table
+					border: 1px solid $font-color
+					margin-bottom: 32px
+					tr
+						td,
+						th
+							border: 1px solid $font-color
+							color: $font-color
+							padding: 12px 8px
+
+					thead
+						tr
+							th
+								@extend .fw-regular
+								text-align: center
+								text-transform: uppercase
+
+				ol
+					li
+						color: $font-color
+
+				p
+					color: $font-color
+					font-size: 1rem
+					letter-spacing: 1px
+					line-height: 1.6
+					margin-bottom: 30px
+					text-align: justify
+					&.text-italic
+						font-style: italic
+					
+					.bold
+						font-weight: $bold
+					.up
+						text-transform: uppercase
+
+					a
+						color: $link
+						text-decoration: underline
