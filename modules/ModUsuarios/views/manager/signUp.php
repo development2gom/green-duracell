@@ -38,8 +38,8 @@ $this->registerJsFile(
         ]) ?>
 
         <div class="pd-sign-up-form-actions">
-            <a class="pd-sign-up-form-link" href="<?= Url::base() ?>/site/terminos-condiciones">Términos y condiciones</a>
-            <a class="pd-sign-up-form-link" href="<?= Url::base() ?>/site/aviso-privacidad">Aviso de Privacidad</a>
+            <a target='_blank' class="pd-sign-up-form-link" href="<?= Url::base() ?>/site/terminos-condiciones">Términos y condiciones</a>
+            <a target='_blank' class="pd-sign-up-form-link" href="<?= Url::base() ?>/site/aviso-privacidad">Aviso de Privacidad</a>
         </div>
     
     </div>

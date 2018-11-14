@@ -4,7 +4,7 @@ use kartik\form\ActiveForm;
 use yii\helpers\Html;
 use app\assets\AppAsset;
 
-$this->title = "Registro";
+$this->title = "Registro de ticket";
 
 $this->registerJsFile(
     '@web/webAssets/js/site/ticket.js',

@@ -256,7 +256,7 @@ class EntUsuarios extends \yii\db\ActiveRecord implements IdentityInterface
 				]
 				],
 				['txt_email', 'email'],
-				[['txt_telefono'], 'string', 'max'=>10, 'message'=>'El numero de celular maximo de 10 dígitos'],
+				[['txt_telefono'], 'string', 'max'=>10, 'min'=>10, 'tooLong'=>'El numero de celular debe contener 10 dígitos','tooShort'=>'El numero de celular debe contener 10 dígitos'],
 		];
 	}
 
