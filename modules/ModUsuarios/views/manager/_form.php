@@ -14,7 +14,7 @@ use yii\widgets\ActiveForm;
 
 <?php
 $form = ActiveForm::begin([
-    'id' => 'form-ajax',
+    'id' => 'form-ajax-signup',
     'enableAjaxValidation' => true,
     'enableClientValidation' => true,
 ]);?>
