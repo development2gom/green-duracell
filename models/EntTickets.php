@@ -42,7 +42,7 @@ class EntTickets extends \yii\db\ActiveRecord
             [['txt_sucursal'], 'string', 'max' => 200],
             [['txt_productos'], 'string', 'max' => 500],
             [['uddi'], 'unique'],
-            [['txt_codigo_ticket'], 'unique'],
+            //[['txt_codigo_ticket'], 'unique'],
             [['id_usuario'], 'exist', 'skipOnError' => true, 'targetClass' => EntUsuarios::className(), 'targetAttribute' => ['id_usuario' => 'id_usuario']],
         ];
     }
