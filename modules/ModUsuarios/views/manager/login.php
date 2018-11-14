@@ -30,7 +30,7 @@ $this->title = 'Login';
 		]);
 		?>
 
-			<?= $form->field($model, 'username')->textInput(["class" => "form-control form-control-name", "placeholder" => "Nombre"])->label(false) ?>
+			<?= $form->field($model, 'username')->textInput(["class" => "form-control form-control-name", "placeholder" => "Correo electrónico"])->label(false) ?>
 
 			<?= $form->field($model, 'password')->passwordInput(["class" => "form-control form-control-pass", "placeholder" => "Contraseña"])->label(false) ?>
 
