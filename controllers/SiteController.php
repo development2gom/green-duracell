@@ -166,12 +166,12 @@ class SiteController extends Controller
 				]);
 				$urlCorta = $this->getShortUrl($link);
 
-				if($mensajes->mandarMensage('Se ha registrado tu ticket. Ingrese para revisar su premio. '.$urlCorta, $usuario->txt_telefono)){
+				// if($mensajes->mandarMensage('Se ha registrado tu ticket. Ingrese para revisar su premio. '.$urlCorta, $usuario->txt_telefono)){
                     
-                    $this->redirect(['ganador', 'token'=>$ticket->uddi]);
-                }else{
-                    echo 'error mensaje';exit;
-                }
+                //     $this->redirect(['ganador', 'token'=>$ticket->uddi]);
+                // }else{
+                //     echo 'error mensaje';exit;
+                // }
             }else{
                 print_r($ticket->errors);
                 echo 'error';exit;
