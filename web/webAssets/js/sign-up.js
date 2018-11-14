@@ -9,7 +9,7 @@ $(document).ready(function () {
     $(".btn-enviar").on("click", function(e){
         e.preventDefault();
         if(!$(".styled-checkbox-1").prop("checked")){
-            swal("Espera", "Debes aceptar el aviso de privacidad");
+            swal("Espera", "Debes aceptar el aviso de privacidad", "warning");
             return false;
         }
 
