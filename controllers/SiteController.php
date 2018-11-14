@@ -15,6 +15,7 @@ use app\modules\ModUsuarios\models\Utils;
 use app\models\Mensajes;
 use yii\web\BadRequestHttpException;
 use yii\helpers\Url;
+use app\modules\ModUsuarios\models\EntUsuarios;
 
 class SiteController extends Controller
 {
@@ -224,5 +225,44 @@ class SiteController extends Controller
     public function actionTerminosCondiciones(){
         
         return $this->render('terminos-condiciones');
+    }
+
+    public function actionExportarUsuariosCsv(){
+        $nuevoFichero = fopen('Usuario.csv', 'w+');
+        fputs($nuevoFichero, $bom = (chr(0xEF) . chr(0xBB) . chr(0xBF)));
+
+        if($nuevoFichero){
+            $usuarios = EntUsuarios::find()->all();
+            
+            $delimiter = ",";
+            $campos = [
+                'Nombre',
+                'Edad',
+                'Telefono',
+                'txt_email',
+                'Premio',
+                'Token premio'
+            ];
+        }
+
+            fputcsv($nuevoFichero, $campos, $delimiter);
+
+            foreach($usuarios as $usuario){
+                $datos = [
+                    $usuario->txt_username,
+                    $usuario->num_edad,
+                    $usuario->txt_telefono,
+                    $usuario->txt_email,
+                    null,
+                    null
+                ];
+
+                fputcsv($nuevoFichero, $datos, $delimiter);
+            }
+            fseek($nuevoFichero, 0);
+            header('Content-Type: text/csv');
+            header("Content-disposition: attachment; filename=\"Localidades.csv\"");
+
+            fpassthru($nuevoFichero);exit;
     }
 }
