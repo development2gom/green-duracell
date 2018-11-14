@@ -2,7 +2,21 @@ var inputFile = $("#entusuarios-image");
 var tamanioAdmitido = 3;
 var tipoImagenesAdmitidas = ["image/jpeg", "image/png", "image/jpg", "image/gif"];
 
+
+
 $(document).ready(function () {
+
+    $(".btn-enviar").on("click", function(e){
+        e.preventDefault();
+        if(!$(".styled-checkbox-1").prop("checked")){
+            swal("Espera", "Debes aceptar el aviso de privacidad");
+            return false;
+        }
+
+        $("#form-ajax-signup").submit();
+
+    });
+
     $(".js-img-avatar").on("click", function (e) {
         e.preventDefault();
         inputFile.trigger("click");
