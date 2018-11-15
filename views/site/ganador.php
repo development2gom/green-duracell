@@ -13,8 +13,8 @@ $this->title = "Ganador";
     <div class="pd-ganador-textos">
         <h3>¡Felicidades!</h3>
         <h5>Duracell te regala</h5>
-        <h4>APPLE WATCH</h4>
-        <h6>Serie 3</h6>
+        <h4>$100 pesos en STARBUCKS </h4>
+        <!-- <h6>Serie 3</h6> -->
     </div>    
 
     <div class="pd-ganador-imagen">
