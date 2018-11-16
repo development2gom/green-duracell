@@ -30,11 +30,25 @@ $this->registerJsFile(
 
             <?= $form->field($ticket, 'txt_codigo_ticket')->textInput(["class" => "form-control form-control-yellow", "placeholder" => "Código de ticket"])->label(false) ?>
 
-            <?= $form->field($ticket, 'txt_codigo_barras')->textInput(["class" => "form-control form-control-red", "placeholder" => "Código de barras de empaque"])->label(false) ?>
+            <?= $form->field($ticket, 'txt_productos')->dropDownList([
+                "AA 4+2pz"=>"AA 4+2pz",
+                "AAA 4+2pz"=>"AAA 4+2pz",
+                "AA 2pz"=>"AA 2pz",
+                "AAA 2pz"=>"AAA 2pz",
+                "C 2pz"=>"C 2pz",
+                "D 2pz"=>"D 2pz",
+                "9V 1pz"=>"9V 1pz",
+            ], ["class" => "form-control", "placeholder" => "Producto que compraste"])->label(false) ?>
 
-            <?= $form->field($ticket, 'txt_productos')->textInput(["class" => "form-control", "placeholder" => "Producto que compraste"])->label(false) ?>
-
-            <?= $form->field($ticket, 'num_productos')->textInput(["class" => "form-control", "placeholder" => "Cantidad de producto"])->label(false) ?>
+            <?= $form->field($ticket, 'num_productos')->dropDownList(
+                [
+                    "1"=>"1",
+                    "2"=>"2",
+                    "3"=>"3",
+                    "4"=>"4",
+                    "5"=>"5+",
+                ],
+["class" => "form-control", "placeholder" => "Cantidad de producto"])->label(false) ?>
 
             <div class="form-group form-group-actions">
             <?= Html::submitButton(' ', ['class' => "btn btn-primary btn-guardar"]) ?>

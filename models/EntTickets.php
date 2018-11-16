@@ -36,7 +36,7 @@ class EntTickets extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id_usuario', 'uddi', 'txt_sucursal', 'txt_codigo_ticket', 'txt_codigo_barras', 'txt_productos', 'num_productos'], 'required'],
+            [['id_usuario', 'uddi', 'txt_sucursal', 'txt_codigo_ticket',  'txt_productos', 'num_productos'], 'required'],
             [['id_usuario', 'num_productos', 'b_habilitado'], 'integer'],
             [['uddi', 'txt_codigo_ticket', 'txt_codigo_barras'], 'string', 'max' => 100],
             [['txt_sucursal'], 'string', 'max' => 200],
