@@ -846,17 +846,55 @@ h6
 	background-size: inherit
 	display: flex
 	padding: 0 32px
+	position: relative
 	width: 100%
+	.btn-logout
+		position: absolute
+		top: 50%
+		margin-top: -20px
+
 	&.nav-left
 		height: 90px
 		justify-content: flex-start
+		// +respond-to(tl)
+		// 	justify-content: center
+		// +respond-to(tp)
+		// 	justify-content: center
+		+respond-to(sl)
+			justify-content: center
+		+respond-to(sp)
+			justify-content: center
+
+		.btn-logout
+			right: 24px
+
 	&.nav-right
 		height: 90px
 		justify-content: flex-end
+		// +respond-to(tl)
+		// 	justify-content: center
+		// +respond-to(tp)
+		// 	justify-content: center
+		+respond-to(sl)
+			justify-content: center
+		+respond-to(sp)
+			justify-content: center
+
+		.btn-logout
+			left: 24px
+
 	h1
 		margin: 0
 		img
 			height: 40px
+			+respond-to(tl)
+				height: 36px
+			+respond-to(tp)
+				height: 34px
+			+respond-to(sl)
+				height: 28px
+			+respond-to(sp)
+				height: 24px
 
 	.btn-logout
 		align-items: center
