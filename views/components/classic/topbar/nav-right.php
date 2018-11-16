@@ -8,7 +8,9 @@ use yii\helpers\Url;
   <?php
   if(!Yii::$app->user->isGuest){
 ?>
-<a style="position: absolute;left: 23px;" class="btn btn-success" href="<?=Url::base()."site/logout"?>">Salir</a>
+<a style="position: absolute;left: 23px;" class="btn btn-primary btn-logout" href="<?=Url::base()."site/logout"?>">
+<i class="icon ion-ios-log-out" aria-hidden="true"></i>
+</a>
 <?php
   }
 
