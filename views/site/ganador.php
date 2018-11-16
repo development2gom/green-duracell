@@ -32,6 +32,8 @@ $this->title = "Ganador";
         </div>
 
         <h6>Válido hasta: <span>31 de Enero de 2019</span></h6>    
+
+       <a class="btn btn-success" href="<?=Url::base()?>">Registrar otro ticket</a>
     </div> 
 
 </div>

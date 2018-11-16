@@ -48,7 +48,7 @@ $this->registerJsFile(
                     "4"=>"4",
                     "5"=>"5+",
                 ],
-["class" => "form-control", "placeholder" => "Cantidad de producto"])->label(false) ?>
+                ["class" => "form-control", "placeholder" => "Cantidad de producto"])->label(false) ?>
 
             <div class="form-group form-group-actions">
             <?= Html::submitButton(' ', ['class' => "btn btn-primary btn-guardar"]) ?>
