@@ -78,6 +78,7 @@ h6
 	border: 1px solid transparent
 	padding: .375rem .75rem
 	line-height: 1.5
+	font-family: $f-base
 	font-size: $fs-16
 	font-weight: $regular
 	letter-spacing: 1px
@@ -87,6 +88,7 @@ h6
 .btn-primary
 	border-color: $primary
 	background-color: $primary
+	color: $black
 	&:active,
 	&:focus,
 	&:hover,
@@ -102,7 +104,8 @@ h6
 	&:not(:disabled):not(.disabled).active
 		border-color: darken( $primary, 10% )
 		background-color: darken( $primary, 10% )
-		box-shadow: 0 0 0 0.1rem rgba($primary,0.1)
+		box-shadow: none
+		color: $black
 
 .btn-secondary
 	border-color: $black

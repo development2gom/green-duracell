@@ -36,13 +36,27 @@
 		a.btn-ingresar
 			background-color: transparent
 			border-color: transparent
-			background-image: url(../images/ingresar/ingresa-aqui.png)
+			background-image: url(../images/login/input.png)
 			background-position: 50%
 			background-repeat: no-repeat
-			background-size: 463px 70px
+			background-size: 100% 70px
 			display: block
+			font-size: 3rem
+			@extend .fw-regular
 			height: 70px
+			line-height: 70px
+			max-width: 90%
+			text-transform: uppercase
 			width: 463px
+			+respond-to(tl)
+				font-size: 2.9rem
+			+respond-to(tp)
+				font-size: 2.6rem
+			+respond-to(sl)
+				font-size: 2.3rem
+			+respond-to(sp)
+				font-size: 2rem
+
 
 	.pd-ingresar-farmacia
 		bottom: 3vh
