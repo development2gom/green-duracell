@@ -63,7 +63,9 @@ $this->registerJsFile(
     
     </div>
 
-    <div class="pd-registro-ticket-example"></div>
+    <div class="pd-registro-ticket-example">
+        <img src="<?= Url::base() ?>/webAssets/images/registro-ticket/ticket.png" alt="">
+    </div>
 
     <div class="pd-registro-ticket-super-farmacia">
         <img src="<?= Url::base() ?>/webAssets/images/farmacias-guadalajara.png" alt="">
