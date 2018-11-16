@@ -24,4 +24,8 @@ $this->registerJsFile(
         <a href="<?= Url::base() ?>/login" class="btn btn-primary btn-ingresar"></a>
     </div>
 
+    <div class="pd-ingresar-farmacia">
+        <img src="<?= Url::base() ?>/webAssets/images/farmacias-guadalajara.png" alt="">
+    </div> 
+
 </div>
