@@ -63,17 +63,54 @@
 			.help-block
 				padding-left: 16px
 
-		.btn-guardar
-			background-color: transparent
-			border-color: transparent
-			background-image: url(../images/registro-ticket/guardar.png)
-			background-position: 50%
-			background-repeat: no-repeat
-			background-size: 160px 40px
-			display: block
-			height: 40px
-			margin: 0 auto
-			width: 160px
+		.form-group-elements
+			.form-group
+				margin-bottom: 0
+			.col-padding-right
+				padding-right: 0
+
+		.form-group-actions
+			align-items: center
+			display: flex
+			justify-content: center
+
+			.btn-mas-producto
+				background-color: $grey-e
+				color: $font-color
+				@extend .fs-20
+				margin-right: 8px
+				text-transform: uppercase
+				&:active,
+				&:focus,
+				&:hover,
+				&:active,
+				&:active:focus,
+				&:active:hover,
+				&:disabled,
+				&[disabled]:hover,
+				&[disabled]:focus,
+				&:hover,
+				&:focus
+					background-color: $grey-e
+					color: $font-color
+
+			.btn-ver-imagen
+				margin-right: 8px
+				.icon
+					color: $font-color
+					@extend .fs-24
+
+			.btn-guardar
+				background-color: transparent
+				border-color: transparent
+				background-image: url(../images/registro-ticket/guardar.png)
+				background-position: 50%
+				background-repeat: no-repeat
+				background-size: 160px 40px
+				display: inline-block
+				height: 40px
+				// margin: 0 auto
+				width: 160px
 
 		.pd-registro-ticket-form-actions
 			align-items: center
