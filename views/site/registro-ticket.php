@@ -24,34 +24,48 @@ $this->registerJsFile(
 
         <h3>Registra tu ticket</h3>
 
-        <?php $form = ActiveForm::begin();?>
+        <?php $form = ActiveForm::begin([
+            'id' => 'js-form-ticket',
+            'options' => [
+                'data-url' => Url::base()
+            ]
+            
+        ]);?>
+            <input type="text" id="js-txt-sucursal" class="form-control form-control-yellow" placeholder="Sucursal" name="sucursal">
+            <p class="help-block help-block-error js-txt_sucursal"></p>
 
-            <?= $form->field($ticket, 'txt_sucursal')->textInput(["class" => "form-control form-control-blue", "placeholder" => "Sucursal"])->label(false) ?>
+            <input type="text" id="js-txt-codigo-ticket" class="form-control form-control-yellow" placeholder="Código de ticket" name="codigo_ticket">
+            <p class="help-block help-block-error js-txt_codigo_ticket"></p>
 
-            <?= $form->field($ticket, 'txt_codigo_ticket')->textInput(["class" => "form-control form-control-yellow", "placeholder" => "Código de ticket"])->label(false) ?>
+            <div class="row js_div_clone">
+                <div class="md-col-4">
+                    <?= Html::dropDownList('productos[]', null, [
+                        "AA 4+2pz"=>"AA 4+2pz",
+                        "AAA 4+2pz"=>"AAA 4+2pz",
+                        "AA 2pz"=>"AA 2pz",
+                        "AAA 2pz"=>"AAA 2pz",
+                        "C 2pz"=>"C 2pz",
+                        "D 2pz"=>"D 2pz",
+                        "9V 1pz"=>"9V 1pz",
+                    ], ["class" => "form-control", "placeholder" => "Producto que compraste"]) ?>
+                </div>
+                <div class="md-col-4">
+                    <input type="text" class="form-control form-control-yellow js-codigo_barras" placeholder="Código de barras" name="codigo_barras[]">
+                    <p class="help-block help-block-error js-codigo_barras-error" id="js-codigo_barras-0"></p>
+                </div>
+                <div class="md-col-4">
+                    <input type="text" class="form-control form-control-yellow js-txt_serial" placeholder="Serial" name="seriales[]">                
+                    <p class="help-block help-block-error js-txt_serial-error" id="js-txt_serial-0"></p>
+                </div>
+            </div>
+            <div class="row js_nuevo_clone">
 
-            <?= $form->field($ticket, 'txt_productos')->dropDownList([
-                "AA 4+2pz"=>"AA 4+2pz",
-                "AAA 4+2pz"=>"AAA 4+2pz",
-                "AA 2pz"=>"AA 2pz",
-                "AAA 2pz"=>"AAA 2pz",
-                "C 2pz"=>"C 2pz",
-                "D 2pz"=>"D 2pz",
-                "9V 1pz"=>"9V 1pz",
-            ], ["class" => "form-control", "placeholder" => "Producto que compraste"])->label(false) ?>
+            </div>
 
-            <?= $form->field($ticket, 'num_productos')->dropDownList(
-                [
-                    "1"=>"1",
-                    "2"=>"2",
-                    "3"=>"3",
-                    "4"=>"4",
-                    "5"=>"5+",
-                ],
-                ["class" => "form-control", "placeholder" => "Cantidad de producto"])->label(false) ?>
+            <button class="btn btn-default js_ingresar_producto">Ingresar mas producto</button>
 
             <div class="form-group form-group-actions">
-            <?= Html::submitButton(' ', ['class' => "btn btn-primary btn-guardar"]) ?>
+                <?= Html::button(' ', ['class' => "btn btn-primary btn-guardar js-btn-guardar"]) ?>
             </div>
 
         <?php ActiveForm::end(); ?>

@@ -16,6 +16,8 @@ use app\models\Mensajes;
 use yii\web\BadRequestHttpException;
 use yii\helpers\Url;
 use app\modules\ModUsuarios\models\EntUsuarios;
+use app\models\ResponseServices;
+use app\models\EntProductos;
 
 class SiteController extends Controller
 {
@@ -264,5 +266,78 @@ class SiteController extends Controller
             header("Content-disposition: attachment; filename=\"Localidades.csv\"");
 
             fpassthru($nuevoFichero);exit;
+    }
+
+    public function actionGuardarTickets(){
+        $response = new ResponseServices();
+        $usuario = Yii::$app->user->identity;
+
+        if(isset($_POST['sucursal']) && isset($_POST['codigo_ticket']) && isset($_POST['productos']) && isset($_POST['codigo_barras']) && isset($_POST['seriales'])){
+            $transaction = Yii::$app->db->beginTransaction();
+            $errores = [];
+
+            $ticket = new EntTickets();
+            $ticket->id_usuario = $usuario->id_usuario;
+            $ticket->uddi = Utils::generateToken('tck_');
+            $ticket->txt_sucursal = $_POST['sucursal'];
+            $ticket->txt_codigo_ticket = $_POST['codigo_ticket'];
+
+            $validarProd = true;
+            foreach($_POST['productos'] as $key => $value){
+                try{
+                    if(!$ticket->save()){
+                        $transaction->rollBack();
+                        $response->result = $ticket->errors;
+
+                        return $response;
+                    }
+
+                    $producto = new EntProductos();
+                    $producto->id_ticket = $ticket->id_ticket;
+                    $producto->uddi = Utils::generateToken('prod_');
+                    $producto->txt_codigo_barras = $_POST['codigo_barras'][$key];
+                    $producto->txt_serial = $_POST['seriales'][$key];
+                    $producto->txt_nombre = $value;
+                    
+                    if(!$producto->save()){
+                        $transaction->rollBack();
+                        
+                        $errores[$key] = $producto->errors;
+                        $validarProd = false;
+                        
+                        $response->result = $errores;
+                    }else{
+                        $array1 = [
+                            'txt_codigo_barras' => '',
+                            'txt_serial' => ''
+                        ];
+                        $errores[$key] = json_encode($array1);
+                    }
+                    
+                }catch(\Exception $e) {
+                    $transaction->rollBack();
+                    throw $e;
+                }
+            }
+            if(!$validarProd){
+                return $response;
+            }
+
+            $transaction->commit();
+
+            $mensajes = new Mensajes();
+            $link = Yii::$app->urlManager->createAbsoluteUrl([
+                '/site/ganador?token='.$ticket->uddi
+            ]);
+            $urlCorta = $this->getShortUrl($link);
+
+            $mensajes->mandarMensage('Se ha registrado tu ticket. Ingrese para revisar su premio. '.$urlCorta, $usuario->txt_telefono);
+
+            $response->status = "success";
+            $response->message = "Se guardo correctamente el ticket y los productos";
+            $response->result = $ticket;
+        }
+        
+        return $response;
     }
 }

@@ -240,7 +240,9 @@ class EntUsuarios extends \yii\db\ActiveRecord implements IdentityInterface
 			],
 			[
 				[
-					'txt_password_reset_token'
+					'txt_password_reset_token',
+					'txt_email',
+					'txt_telefono'
 				],
 				'unique'
 			],
