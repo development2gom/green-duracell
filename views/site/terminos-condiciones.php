@@ -27,7 +27,6 @@ $this->registerJsFile(
 
         <div class="pd-aviso-privacidad-texto">
 
-<p class="p2">&nbsp;</p>
 <p class="p3"><span class="s1"><strong>DURACELL DDI Batteries M&eacute;xico, S. de R.L. de D.V.</strong> (Que en lo sucesivo ser&aacute; denominada DURACELL), con domicilio en Av. Santa Fe no. 440 Int. Oficina 100, Col. Cruz Manca. Cuajimalpa de Morelos, Ciudad de M&eacute;xico C.P. 05349 y PUBLICDAD Y SOLUCIONES GREEN S.A. DE C.V. (Que en lo sucesivo ser&aacute; mencionado como P. GREEN) ponen a disposici&oacute;n del p&uacute;blico general los siguientes t&eacute;rminos y condiciones de LA PROMOCI&Oacute;N &ldquo;Compra, registra, gana&rdquo; (Que en lo sucesivo ser&aacute; denominada LA PROMOCI&Oacute;N). </span></p>
 <p class="p2">&nbsp;</p>
 <ol class="ol1">
@@ -39578,7 +39577,7 @@ $this->registerJsFile(
 <p class="p2">&nbsp;</p>
 <p class="p2">&nbsp;</p>
 <p class="p4"><span class="s1"><strong>1.Registro.&nbsp;</strong></span></p>
-<p class="p3"><span class="s1">Ingresa en a <a href="http://www.ganaduracell.com"><span class="s2">www.ganaduracell.com</span></a> realiza el registro de tus datos y crea una contrase&ntilde;a para acceder despu&eacute;s y seguir registrando m&aacute;s producto DURACELL. Los datos solicitados son:&nbsp;</span></p>
+<p class="p3"><span class="s1">Ingresa en a <a href="http://www.ganaduracell.com" target="_blank"><span class="s2">www.ganaduracell.com</span></a> realiza el registro de tus datos y crea una contrase&ntilde;a para acceder despu&eacute;s y seguir registrando m&aacute;s producto DURACELL. Los datos solicitados son:&nbsp;</span></p>
 <p class="p13">&nbsp;</p>
 <ul class="ul1">
 <li class="li3"><span class="s1">Nombre Completo </span></li>
@@ -39872,13 +39871,13 @@ $this->registerJsFile(
 <p class="p2">&nbsp;</p>
 <p class="p3"><span class="s1">C&Oacute;DIGO DE REGALO STARBUCKS, v&aacute;lido por $100.00 MXN para ser utilizado en la App de Starbucks, deber&aacute; ingresar la Starbucks Card digital y su PIN en la APP. V&aacute;lido al 28 de febrero de 2019. </span></p>
 <p class="p2">&nbsp;</p>
-<p class="p3"><span class="s1">TIEMPO AIRE, con valor de $50.00 MXN para ser utilizado en el portal <a href="http://www.mirecarga.com/"><span class="s4">www.mirecarga.com</span>,</a> seleccionar la compa&ntilde;&iacute;a telef&oacute;nica, ingresar c&oacute;digo de regalo.<span class="Apple-converted-space">&nbsp; </span>V&aacute;lido al 28 de febrero de 2019.&nbsp;</span></p>
+<p class="p3"><span class="s1">TIEMPO AIRE, con valor de $50.00 MXN para ser utilizado en el portal <a href="http://www.mirecarga.com/" target="_blank"><span class="s4">www.mirecarga.com</span>,</a> seleccionar la compa&ntilde;&iacute;a telef&oacute;nica, ingresar c&oacute;digo de regalo.<span class="Apple-converted-space">&nbsp; </span>V&aacute;lido al 28 de febrero de 2019.&nbsp;</span></p>
 <p class="p2">&nbsp;</p>
 <p class="p30"><span class="s1">CORTES&Iacute;A CIN&Eacute;POLIS, valido por 1 Boleto Tradicional de lunes a jueves. V&aacute;lido de lunes a jueves. Vale por un boleto en canjeable en la taquilla o en la p&aacute;gina de internet. V&aacute;lido de lunes a jueves en cualquier funci&oacute;n 2D. V&aacute;lido en Cin&eacute;polis&reg; Tradicional y Xtreme Cinemas&reg;. Sujeto a disponibilidad y clasificaci&oacute;n. No es v&aacute;lido en Cin&eacute;polis VIP&reg;, Cin&eacute;polis IMAX&reg;, Macro XE&reg;, 4DXTM, Cinema Park&reg;, ni en funciones 3D. No es v&aacute;lida en venta avanzada, premieres, eventos especiales, Cineticket&reg; y otras promociones. V&aacute;lido al 28 de febrero de 2019. </span></p>
 <p class="p2"><span class="s1"><strong><span class="Apple-converted-space">&nbsp; &nbsp;</span></strong></span></p>
 <p class="p4"><span class="s1"><strong>2. PREMIOS QUINCENALES Y FINAL.<span class="Apple-converted-space">&nbsp; &nbsp;</span></strong></span></p>
 <p class="p31"><span class="s1">Para la entrega de premios quincenales y el premio final se solicitar&aacute;n los tickets de compra originales para validaci&oacute;n. Si el participante no cuenta con los documentos solicitados perder&aacute; el derecho a reclamar el premio y se seleccionar&aacute; al siguiente participante con mayor puntaje, as&iacute; sucesivamente hasta obtener un ganador.&nbsp;</span></p>
-<p class="p3"><span class="s1">El participante deber&aacute; enviar un correo electr&oacute;nico a </span><span class="s4">promociones@publicidadgreen.com.mx</span><span class="s1"> con los siguientes documentos que acrediten su identidad como ganador: </span></p>
+<p class="p3"><span class="s1">El participante deber&aacute; enviar un correo electr&oacute;nico a </span><a href="mailto:promociones@publicidadgreen.com.mx" target="_blank"><span class="s4">promociones@publicidadgreen.com.mx</span></a><span class="s1"> con los siguientes documentos que acrediten su identidad como ganador: </span></p>
 <p class="p13">&nbsp;</p>
 <ul class="ul1">
 <li class="li3"><span class="s1">Identificaci&oacute;n oficial vigente. </span></li>
@@ -39949,15 +39948,15 @@ $this->registerJsFile(
 </ol>
 <p class="p3"><span class="s1"><strong>DURACELL Y PUBLICIDAD Y SOLUCIONES GREEN S.A. DE C.V.</strong> manifiestan que han adoptado los niveles de seguridad de protecci&oacute;n de datos personales legalmente requeridos y procuran instalar mediadas t&eacute;cnicas adicionales a su alcance para evitar la p&eacute;rdida, mal uso, alteraci&oacute;n, acceso no autorizado o robo. </span></p>
 <p class="p2">&nbsp;</p>
-<p class="p3"><span class="s1"><strong>DURACELL DDI BATTERIES M&eacute;xico, S. de R.L. de D.V.</strong> est&aacute; comprometida con la transparencia, seguridad y privacidad de los Datos Personales de nuestros clientes, proveedores y usuarios. Al recopilar y tratar sus Datos Personales, <strong>DURACELL DDI Batteries M&eacute;xico, S. de R.L. de D.V.</strong>, se compromete y obliga a observar y cumplir los principios de licitud, consentimiento, calidad, informaci&oacute;n, finalidad, lealtad, proporcionalidad y responsabilidad previstos en la Ley. puede consultar nuestro aviso de privacidad completo en </span><span class="s4">https://www.duracell.mx/politica-deprivacidad/</span></p>
+<p class="p3"><span class="s1"><strong>DURACELL DDI BATTERIES M&eacute;xico, S. de R.L. de D.V.</strong> est&aacute; comprometida con la transparencia, seguridad y privacidad de los Datos Personales de nuestros clientes, proveedores y usuarios. Al recopilar y tratar sus Datos Personales, <strong>DURACELL DDI Batteries M&eacute;xico, S. de R.L. de D.V.</strong>, se compromete y obliga a observar y cumplir los principios de licitud, consentimiento, calidad, informaci&oacute;n, finalidad, lealtad, proporcionalidad y responsabilidad previstos en la Ley. puede consultar nuestro aviso de privacidad completo en </span><a href="https://www.duracell.mx/politica-deprivacidad/" target="_blank"><span class="s4">https://www.duracell.mx/politica-deprivacidad/</span></a></p>
 <p class="p2">&nbsp;</p>
 <p class="p3"><span class="s1"><strong>PUBLICIDAD Y SOLUCIONES GREEN S.A. DE C.V.</strong>, con domicilio en calle Convento de Santa Br&iacute;gida </span></p>
-<p class="p3"><span class="s1">#19, Colonia Jardines de Santa M&oacute;nica, Tlalnepantla, Estado de M&eacute;xico, C.P. 54050, utilizar&aacute; los Datos Personales aqu&iacute; recabados para proveerle los servicios o productos que comercializa y/o administra e informarle por cualquier medio, lo relacionado a los servicios o productos mencionados. Su informaci&oacute;n ser&aacute; compartida con personas f&iacute;sicas o morales con las cuales tenemos relaci&oacute;n jur&iacute;dica o de negocios, para fines de identificaci&oacute;n y para proveer informaci&oacute;n sobre los servicios y/o productos comercializados y/o administrados por dichas personas. Para mayor informaci&oacute;n acerca del tratamiento y de los derechos que puede hacer valer, puede consultar nuestro aviso de privacidad completo en <a href="http://www.publicidadgreen.com/aviso-de-privacidad/"><span class="s4">www.publicidadgreen.com/aviso-deprivacidad/</span> </a> </span></p>
+<p class="p3"><span class="s1">#19, Colonia Jardines de Santa M&oacute;nica, Tlalnepantla, Estado de M&eacute;xico, C.P. 54050, utilizar&aacute; los Datos Personales aqu&iacute; recabados para proveerle los servicios o productos que comercializa y/o administra e informarle por cualquier medio, lo relacionado a los servicios o productos mencionados. Su informaci&oacute;n ser&aacute; compartida con personas f&iacute;sicas o morales con las cuales tenemos relaci&oacute;n jur&iacute;dica o de negocios, para fines de identificaci&oacute;n y para proveer informaci&oacute;n sobre los servicios y/o productos comercializados y/o administrados por dichas personas. Para mayor informaci&oacute;n acerca del tratamiento y de los derechos que puede hacer valer, puede consultar nuestro aviso de privacidad completo en <a href="http://www.publicidadgreen.com/aviso-de-privacidad/" target="_blank"><span class="s4">www.publicidadgreen.com/aviso-deprivacidad/</span> </a> </span></p>
 <p class="p2">&nbsp;</p>
 <ol class="ol1">
 <li class="li4"><span class="s1"><strong>MODIFICACI&Oacute;N A LOS T&Eacute;RMINOS Y CONDICIONES.&nbsp;</strong></span></li>
 </ol>
-<p class="p3"><span class="s1">CENTRO SANTA FE y P. GREEN se reserva el derecho de ampliar o modificar en cualquier momento los presentes t&eacute;rminos y condiciones, por lo que el participante deber&aacute; consultar bases y condiciones constantemente y hasta el t&eacute;rmino de LA PROMOCI&Oacute;N. Podr&aacute; consultar en: www.ganaduracell.com</span></p>
+<p class="p3"><span class="s1">CENTRO SANTA FE y P. GREEN se reserva el derecho de ampliar o modificar en cualquier momento los presentes t&eacute;rminos y condiciones, por lo que el participante deber&aacute; consultar bases y condiciones constantemente y hasta el t&eacute;rmino de LA PROMOCI&Oacute;N. Podr&aacute; consultar en: <a href="https//www.ganaduracell.com" target="_blank">www.ganaduracell.com</a></span></p>
 <p class="p2">&nbsp;</p>
 <ol class="ol1">
 <li class="li19"><span class="s1"><strong>MEDIOS DE DIFUSI&Oacute;N DE LA PROMOCI&Oacute;N</strong></span></li>
@@ -39965,19 +39964,17 @@ $this->registerJsFile(
 <p class="p40"><span class="s1">Para la difusi&oacute;n de la informaci&oacute;n relacionada con LA PROMOCI&Oacute;N, los &uacute;nicos medios autorizados por DURACELL son: impresos dentro de sucursales FRAGUA: volantes, posters, templetes prensa, radio, p&aacute;ginas web y redes sociales que DURACELL estime conveniente.</span></p>
 <p class="p2">&nbsp;</p>
 <p class="p4"><span class="s1"><strong>XIV.RESULTADOS.&nbsp;</strong></span></p>
-<p class="p3"><span class="s1">El resultado de los ganadores se publicar&aacute; a trav&eacute;s de los siguientes medios: www.ganaduracell.com</span></p>
+<p class="p3"><span class="s1">El resultado de los ganadores se publicar&aacute; a trav&eacute;s de los siguientes medios: <a href="https://www.ganaduracell.com" target="_blank">www.ganaduracell.com</a></span></p>
 <p class="p2">&nbsp;</p>
 <ol class="ol1">
 <li class="li4"><span class="s1"><strong>CONTACTO. </strong></span></li>
 </ol>
-<p class="p3"><span class="s1">Para cualquier aclaraci&oacute;n o informaci&oacute;n relacionada con LA PROMOCI&Oacute;N, los &uacute;nicos medios autorizados por DURACELL son el sistema telef&oacute;nico de informaci&oacute;n 01 800 467 1897 de cobertura nacional o a trav&eacute;s del correo: <span class="Apple-converted-space">&nbsp; </span></span><span class="s4">promociones@publicidadgreen.com.mx</span></p>
+<p class="p3"><span class="s1">Para cualquier aclaraci&oacute;n o informaci&oacute;n relacionada con LA PROMOCI&Oacute;N, los &uacute;nicos medios autorizados por DURACELL son el sistema telef&oacute;nico de informaci&oacute;n 01 800 467 1897 de cobertura nacional o a trav&eacute;s del correo: <span class="Apple-converted-space">&nbsp; </span></span><a href="mailto:promociones@publicidadgreen.com.mx" target="_blank"><span class="s4">promociones@publicidadgreen.com.mx</span></a></p>
 <p class="p2">&nbsp;</p>
 <ol class="ol1">
 <li class="li4"><span class="s1"><strong>QUEJAS </strong></span></li>
 </ol>
-<p class="p3"><span class="s1">En caso de queja derivada con LA PROMOCI&Oacute;N, favor de acudir a la Procuradur&iacute;a Federal del Consumidor (PROFECO) ubicada en Av. Jos&eacute; Vasconcelos No.208 col. Condesa, Del. Cuauht&eacute;moc, C.P. 06140, Ciudad de M&eacute;xico o comunicarse al tel&eacute;fono 56256700 ext.16968, correo electr&oacute;nico </span><span class="s4">contacto_ciudadano@profeco.gob.mx</span></p>
-<p class="p2">&nbsp;</p>
-<p class="p2">&nbsp;</p>
+<p class="p3"><span class="s1">En caso de queja derivada con LA PROMOCI&Oacute;N, favor de acudir a la Procuradur&iacute;a Federal del Consumidor (PROFECO) ubicada en Av. Jos&eacute; Vasconcelos No.208 col. Condesa, Del. Cuauht&eacute;moc, C.P. 06140, Ciudad de M&eacute;xico o comunicarse al tel&eacute;fono 56256700 ext.16968, correo electr&oacute;nico </span><a href="mailto:contacto_ciudadano@profeco.gob.mx" target="_blank"><span class="s4">contacto_ciudadano@profeco.gob.mx</span></a></p>
 
         </div>
 
