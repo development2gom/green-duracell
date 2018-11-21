@@ -35,7 +35,9 @@ class EntProductos extends \yii\db\ActiveRecord
             [['id_ticket', 'uddi', 'txt_codigo_barras', 'txt_serial'], 'required'],
             [['id_ticket', 'b_habilitado'], 'integer'],
             [['uddi'], 'string', 'max' => 100],
-            [['txt_codigo_barras', 'txt_serial', 'txt_nombre'], 'string', 'max' => 50],
+            [['txt_nombre'], 'string', 'max' => 50],
+            [['txt_codigo_barras'], 'string', 'min' => 12],
+            [['txt_serial'], 'string', 'min' => 10],
             [['txt_serial'], 'unique'],
             [['uddi'], 'unique'],
             [['id_ticket'], 'exist', 'skipOnError' => true, 'targetClass' => EntTickets::className(), 'targetAttribute' => ['id_ticket' => 'id_ticket']],
@@ -51,8 +53,8 @@ class EntProductos extends \yii\db\ActiveRecord
             'id_producto' => 'Id Producto',
             'id_ticket' => 'Id Ticket',
             'uddi' => 'Uddi',
-            'txt_codigo_barras' => 'Txt Codigo Barras',
-            'txt_serial' => 'Txt Serial',
+            'txt_codigo_barras' => 'Codigo de barras',
+            'txt_serial' => 'Serial',
             'b_habilitado' => 'B Habilitado',
         ];
     }

@@ -31,10 +31,11 @@ $this->registerJsFile(
             ]
             
         ]);?>
+            <input type="text" id="js-txt-sucursal" class="form-control form-control-yellow" placeholder="Sucursal" name="sucursal">
+            <p class="help-block help-block-error js-txt_sucursal"></p>
 
-            <?= $form->field($ticket, 'txt_sucursal')->textInput(["class" => "form-control form-control-blue", "placeholder" => "Sucursal"])->label(false) ?>
-
-            <?= $form->field($ticket, 'txt_codigo_ticket')->textInput(["class" => "form-control form-control-yellow", "placeholder" => "Código de ticket"])->label(false) ?>
+            <input type="text" id="js-txt-codigo-ticket" class="form-control form-control-yellow" placeholder="Código de ticket" name="codigo_ticket">
+            <p class="help-block help-block-error js-txt_codigo_ticket"></p>
 
             <div class="row js_div_clone">
                 <div class="md-col-4">
@@ -49,10 +50,12 @@ $this->registerJsFile(
                     ], ["class" => "form-control", "placeholder" => "Producto que compraste"]) ?>
                 </div>
                 <div class="md-col-4">
-                    <input type="text" class="form-control form-control-yellow" placeholder="Código de barras" name="codigo_barras[]">
+                    <input type="text" class="form-control form-control-yellow js-codigo_barras" placeholder="Código de barras" name="codigo_barras[]">
+                    <p class="help-block help-block-error js-codigo_barras-error" id="js-codigo_barras-0"></p>
                 </div>
                 <div class="md-col-4">
-                    <input type="text" class="form-control form-control-yellow" placeholder="Serial" name="seriales[]">                
+                    <input type="text" class="form-control form-control-yellow js-txt_serial" placeholder="Serial" name="seriales[]">                
+                    <p class="help-block help-block-error js-txt_serial-error" id="js-txt_serial-0"></p>
                 </div>
             </div>
             <div class="row js_nuevo_clone">

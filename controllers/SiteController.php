@@ -272,16 +272,17 @@ class SiteController extends Controller
         $response = new ResponseServices();
         $usuario = Yii::$app->user->identity;
 
-        if(isset($_POST['EntTickets']) && isset($_POST['productos']) && isset($_POST['codigo_barras']) && isset($_POST['seriales'])){
+        if(isset($_POST['sucursal']) && isset($_POST['codigo_ticket']) && isset($_POST['productos']) && isset($_POST['codigo_barras']) && isset($_POST['seriales'])){
             $transaction = Yii::$app->db->beginTransaction();
             $errores = [];
 
             $ticket = new EntTickets();
             $ticket->id_usuario = $usuario->id_usuario;
             $ticket->uddi = Utils::generateToken('tck_');
-            $ticket->txt_sucursal = $_POST['EntTickets']['txt_sucursal'];
-            $ticket->txt_codigo_ticket = $_POST['EntTickets']['txt_codigo_ticket'];
+            $ticket->txt_sucursal = $_POST['sucursal'];
+            $ticket->txt_codigo_ticket = $_POST['codigo_ticket'];
 
+            $validarProd = true;
             foreach($_POST['productos'] as $key => $value){
                 try{
                     if(!$ticket->save()){
@@ -300,11 +301,17 @@ class SiteController extends Controller
                     
                     if(!$producto->save()){
                         $transaction->rollBack();
-
+                        
                         $errores[$key] = $producto->errors;
+                        $validarProd = false;
+                        
                         $response->result = $errores;
-
-                        return $response;
+                    }else{
+                        $array1 = [
+                            'txt_codigo_barras' => '',
+                            'txt_serial' => ''
+                        ];
+                        $errores[$key] = json_encode($array1);
                     }
                     
                 }catch(\Exception $e) {
@@ -312,6 +319,10 @@ class SiteController extends Controller
                     throw $e;
                 }
             }
+            if(!$validarProd){
+                return $response;
+            }
+
             $transaction->commit();
 
             $mensajes = new Mensajes();

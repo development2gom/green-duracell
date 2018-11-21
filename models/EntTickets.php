@@ -53,8 +53,8 @@ class EntTickets extends \yii\db\ActiveRecord
             'id_ticket' => 'Id Ticket',
             'id_usuario' => 'Id Usuario',
             'uddi' => 'Uddi',
-            'txt_sucursal' => 'Txt Sucursal',
-            'txt_codigo_ticket' => 'Txt Codigo Ticket',
+            'txt_sucursal' => 'Sucursal',
+            'txt_codigo_ticket' => 'Codigo de Ticket',
             'b_habilitado' => 'B Habilitado',
         ];
     }
