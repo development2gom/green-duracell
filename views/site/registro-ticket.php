@@ -68,7 +68,7 @@ $this->registerJsFile(
                 </div>
             </div>
             
-            <div class="row no-gutters js_nuevo_clone">
+            <div class="row row-cloner js_nuevo_clone">
             </div>
 
             <div class="form-group form-group-actions">
