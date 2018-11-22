@@ -81,7 +81,10 @@ $this->registerJsFile(
             </div>
 
             <div class="form-group form-group-actions form-group-actions-mt-40">
-                <?= Html::button(' ', ['class' => "btn btn-primary btn-guardar js-btn-guardar"]) ?>
+                <?= Html::button('<span class="ladda-label"></span>', [
+                    'class' => "btn btn-primary btn-guardar js-btn-guardar ladda-button",
+                    "data-style"=>"zoom-in"
+                    ]) ?>
             </div>
 
         <?php ActiveForm::end(); ?>
