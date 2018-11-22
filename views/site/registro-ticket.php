@@ -66,8 +66,8 @@ $this->registerJsFile(
                         </div>
                     </div>
                     <div class="md-col-3">
-                        <button style='display:none' class="btn btn-default js_quitar_producto">quitar producto</button>
-                    </div>
+                        <button type="button" style='display:none' class="btn btn-icon btn-danger btn-round js_quitar_producto"><i class="icon wb-close" aria-hidden="true"></i></button>
+                      </div>
                    
                 </div>
             </div>
