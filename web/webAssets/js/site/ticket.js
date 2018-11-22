@@ -8,7 +8,7 @@ $(document).ready(function(){
     });
 
    
-    $('.js_ingresar_producto').on('click', (e) => {
+    $('.js_ingresar_producto').on('click', function(e) {
         e.preventDefault();
         
         var nuevoDiv = $(".js_div_clone").html();
@@ -26,7 +26,9 @@ $(document).ready(function(){
 
     /////////////////////////////////////////
 
-    $(".js-btn-guardar").on('click', () => {
+    $(".js-btn-guardar").on('click', function(e){
+        var l = Ladda.create(this);
+        l.start();
         var data = $("#js-form-ticket").serialize();
         var url = $("#js-form-ticket").data('url');
 
@@ -44,6 +46,8 @@ $(document).ready(function(){
                     if(resp.result.txt_codigo_ticket){
                         $(".js-txt_codigo_ticket").text(resp.result.txt_codigo_ticket);                        
                     }
+
+                    l.stop();
                     //console.log(resp.result.length);
                     resp.result.forEach( (item, index) => {
                         if(!Object.values(item).indexOf('txt_codigo_barras') > -1){
@@ -58,10 +62,11 @@ $(document).ready(function(){
                         }
                         // console.log( index + ": " + item.txt_codigo_barras );
                       });
+                      
                 }
             },
             error: () => {
-
+                l.stop();
             }
         });
     });
@@ -95,13 +100,14 @@ $(document).on({
     }
 }, ".js-txt_serial");
 
-$(document).on('click','.js_quitar_producto', (e) => {
+$(document).on('click','.js_quitar_producto', function(e){
     e.preventDefault();
     //$('.js_nuevo_clone .row:last').remove();
-    
-    var elementoborrar = $(this).parents('row')
+    console.log($(this));
+    var elementoborrar = $(this).parents('.row')
     console.log(elementoborrar);
     elementoborrar.remove();
     index--;
 
 });
+

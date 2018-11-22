@@ -287,7 +287,7 @@ class SiteController extends Controller
                 try{
                     if(!$ticket->save()){
                         $transaction->rollBack();
-                        $response->result = $ticket->errors;
+                        $response->result = $ticket->firstErrors;
 
                         return $response;
                     }
