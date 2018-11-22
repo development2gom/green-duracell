@@ -100,22 +100,21 @@ $this->registerJsFile(
 </div>
 
 
-<div class="modal fade" id="modal-example-imagen" aria-labelledby="modal-example-imagen" role="dialog" tabindex="-1" style="display: none;">
+<div class="modal modal-ejemplo-imagen fade" id="modal-example-imagen" aria-labelledby="modal-example-imagen" role="dialog" tabindex="-1" style="display: none;">
     <div class="modal-dialog modal-simple modal-center">
-    <div class="modal-content">
-    <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-    <span aria-hidden="true">×</span>
-    </button>
-    <h4 class="modal-title">Ejemplo de Ticket</h4>
-    </div>
-    <div class="modal-body">
-        <img src="<?= Url::base() ?>/webAssets/images/example-ticket.png" alt="">
-    </div>
-    <div class="modal-footer">
-    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-    </div>
-    </div>
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+            </button>
+            <h4 class="modal-title">Ejemplo de Ticket</h4>
+            </div>
+            <div class="modal-body">
+                <img src="<?= Url::base() ?>/webAssets/images/example-ticket.png" alt="">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
     </div>
 </div>
