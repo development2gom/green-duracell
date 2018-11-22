@@ -40,9 +40,9 @@ $this->registerJsFile(
                 <input type="text" id="js-txt-codigo-ticket" class="form-control form-control-yellow" placeholder="Código de ticket" name="codigo_ticket">
                 <p class="help-block help-block-error js-txt_codigo_ticket"></p>
             </div>
-            <div class="form-group form-group-elements">
-                <div class="row js_div_clone">
-                    <div class="col-md-4 col-padding-right">
+            <div class="form-group form-group-elements js_div_clone">
+                <div class="row">
+                    <div class="col-md-3 col-padding-right">
                         <?= Html::dropDownList('productos[]', null, [
                             "AA 4+2pz"=>"AA 4+2pz",
                             "AAA 4+2pz"=>"AAA 4+2pz",
@@ -53,24 +53,28 @@ $this->registerJsFile(
                             "9V 1pz"=>"9V 1pz",
                         ], ["class" => "form-control", "placeholder" => "Producto que compraste"]) ?>
                     </div>
-                    <div class="col-md-4 col-padding-right">
+                    <div class="col-md-3 col-padding-right">
                         <div class="form-group">
                             <input type="text" class="form-control js-codigo_barras" placeholder="Código de barras" name="codigo_barras[]">
                             <p class="help-block help-block-error js-codigo_barras-error" id="js-codigo_barras-0"></p>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3  col-padding-right">
                         <div class="form-group">
                             <input type="text" class="form-control js-txt_serial" placeholder="Serial" name="seriales[]">                
                             <p class="help-block help-block-error js-txt_serial-error" id="js-txt_serial-0"></p>
                         </div>
                     </div>
+                    <div class="md-col-3">
+                        <button style='display:none' class="btn btn-default js_quitar_producto">quitar producto</button>
+                    </div>
+                   
                 </div>
             </div>
             
-            <div class="row row-cloner js_nuevo_clone">
-            </div>
+            <div class="js_nuevo_clone">
 
+            </div>
             <div class="form-group form-group-actions">
                 <button class="btn btn-success btn-mas-producto js_ingresar_producto"><i class="icon ion-md-add" aria-hidden="true"></i> Otro producto</button>
                 <button class="btn btn-warning btn-ver-imagen" data-target="#modal-example-imagen" data-toggle="modal" type="button"><i class="icon ion-md-image" aria-hidden="true"></i></button>

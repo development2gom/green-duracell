@@ -1,3 +1,4 @@
+var index = 1;
 $(document).ready(function(){
     $('#enttickets-num_productos').keypress(function (e) {
         if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
@@ -6,7 +7,7 @@ $(document).ready(function(){
         }
     });
 
-    var index = 1;
+   
     $('.js_ingresar_producto').on('click', (e) => {
         e.preventDefault();
         
@@ -16,8 +17,14 @@ $(document).ready(function(){
         
         $(".js_nuevo_clone #js-codigo_barras-0").last().prop('id', 'js-codigo_barras-'+index);
         $(".js_nuevo_clone #js-txt_serial-0").last().prop('id', 'js-txt_serial-'+index);
+        $(".js_nuevo_clone .js_quitar_producto").last().css('display','block');
         index++;
     });
+    
+   
+
+
+    /////////////////////////////////////////
 
     $(".js-btn-guardar").on('click', () => {
         var data = $("#js-form-ticket").serialize();
@@ -87,3 +94,14 @@ $(document).on({
         }
     }
 }, ".js-txt_serial");
+
+$(document).on('click','.js_quitar_producto', (e) => {
+    e.preventDefault();
+    //$('.js_nuevo_clone .row:last').remove();
+    
+    var elementoborrar = $(this).parents('row')
+    console.log(elementoborrar);
+    elementoborrar.remove();
+    index--;
+
+});
