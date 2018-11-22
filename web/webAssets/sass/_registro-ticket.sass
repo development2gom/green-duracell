@@ -46,7 +46,7 @@
 			color: $gray-300
 			@extend .fs-18
 			@extend .fw-regular
-			height: 42px
+			height: 42px !important
 			padding: .5rem 1rem
 			+placeholder
 				color: $gray-900
@@ -79,12 +79,26 @@
 			display: flex
 			justify-content: center
 
+			.btn-mas-producto,
+			.btn-ver-imagen
+				align-items: center
+				display: flex
+				height: 40px
+				justify-content: center
+				padding: 0 8px 0 8px
+
 			.btn-mas-producto
-				background-color: $grey-e
-				color: $font-color
 				@extend .fs-20
+				@extend .fw-regular
 				margin-right: 8px
 				text-transform: uppercase
+
+			.btn-ver-imagen
+				display: flex
+				margin-right: 8px
+				.icon
+					color: $font-color
+					@extend .fs-24
 				&:active,
 				&:focus,
 				&:hover,
@@ -96,14 +110,8 @@
 				&[disabled]:focus,
 				&:hover,
 				&:focus
-					background-color: $grey-e
-					color: $font-color
-
-			.btn-ver-imagen
-				margin-right: 8px
-				.icon
-					color: $font-color
-					@extend .fs-24
+					.icon
+						color: $font-color
 
 			.btn-guardar
 				background-color: transparent
@@ -116,6 +124,9 @@
 				height: 40px
 				// margin: 0 auto
 				width: 160px
+		
+		.form-group-actions-mt-40
+			margin-top: 40px
 
 		.pd-registro-ticket-form-actions
 			align-items: center
@@ -148,3 +159,25 @@
 		position: absolute
 		img
 			width: 140px
+
+
+.modal-ejemplo-imagen
+	.modal-dialog
+		.modal-content
+			.modal-header
+				background-color: $black
+				h4.modal-title
+					color: $white
+				.close
+					color: $white
+			
+			.modal-body
+				align-items: center
+				display: flex
+				justify-content: center
+				padding: 0
+				width: 100%
+				img
+					margin: 0 auto
+					max-width: 90%
+					width: 100%

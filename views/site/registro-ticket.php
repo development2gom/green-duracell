@@ -76,8 +76,11 @@ $this->registerJsFile(
 
             </div>
             <div class="form-group form-group-actions">
-                <button class="btn btn-default btn-mas-producto js_ingresar_producto"><i class="icon ion-md-add" aria-hidden="true"></i> Otro producto</button>
-                <button class="btn btn-default btn-ver-imagen" data-target="#modal-example-imagen" data-toggle="modal" type="button"><i class="icon ion-md-image" aria-hidden="true"></i></button>
+                <button class="btn btn-success btn-mas-producto js_ingresar_producto"><i class="icon ion-md-add" aria-hidden="true"></i> Otro producto</button>
+                <button class="btn btn-warning btn-ver-imagen" data-target="#modal-example-imagen" data-toggle="modal" type="button"><i class="icon ion-md-image" aria-hidden="true"></i></button>
+            </div>
+
+            <div class="form-group form-group-actions form-group-actions-mt-40">
                 <?= Html::button(' ', ['class' => "btn btn-primary btn-guardar js-btn-guardar"]) ?>
             </div>
 
@@ -101,22 +104,21 @@ $this->registerJsFile(
 </div>
 
 
-<div class="modal fade" id="modal-example-imagen" aria-labelledby="modal-example-imagen" role="dialog" tabindex="-1" style="display: none;">
+<div class="modal modal-ejemplo-imagen fade" id="modal-example-imagen" aria-labelledby="modal-example-imagen" role="dialog" tabindex="-1" style="display: none;">
     <div class="modal-dialog modal-simple modal-center">
-    <div class="modal-content">
-    <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-    <span aria-hidden="true">×</span>
-    </button>
-    <h4 class="modal-title">Ejemplo de Ticket</h4>
-    </div>
-    <div class="modal-body">
-        <img src="<?= Url::base() ?>/webAssets/images/example-ticket.png" alt="">
-    </div>
-    <div class="modal-footer">
-    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-    </div>
-    </div>
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+            </button>
+            <h4 class="modal-title">Ejemplo de Ticket</h4>
+            </div>
+            <div class="modal-body">
+                <img src="<?= Url::base() ?>/webAssets/images/example-ticket.png" alt="">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
     </div>
 </div>
