@@ -97,11 +97,11 @@ $(document).on({
 
 $(document).on('click','.js_quitar_producto', (e) => {
     e.preventDefault();
-    $('.js_nuevo_clone .row:last').remove();
+    //$('.js_nuevo_clone .row:last').remove();
     
-    // var elementoborrar = $(this).parents('.row')
-    // console.log(elementoborrar);
-    // elementoborrar.remove();
+    var elementoborrar = $(this).parents('row')
+    console.log(elementoborrar);
+    elementoborrar.remove();
     index--;
 
 });
