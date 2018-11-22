@@ -72,8 +72,11 @@ $this->registerJsFile(
             </div>
 
             <div class="form-group form-group-actions">
-                <button class="btn btn-default btn-mas-producto js_ingresar_producto"><i class="icon ion-md-add" aria-hidden="true"></i> Otro producto</button>
-                <button class="btn btn-default btn-ver-imagen" data-target="#modal-example-imagen" data-toggle="modal" type="button"><i class="icon ion-md-image" aria-hidden="true"></i></button>
+                <button class="btn btn-success btn-mas-producto js_ingresar_producto"><i class="icon ion-md-add" aria-hidden="true"></i> Otro producto</button>
+                <button class="btn btn-warning btn-ver-imagen" data-target="#modal-example-imagen" data-toggle="modal" type="button"><i class="icon ion-md-image" aria-hidden="true"></i></button>
+            </div>
+
+            <div class="form-group form-group-actions form-group-actions-mt-40">
                 <?= Html::button(' ', ['class' => "btn btn-primary btn-guardar js-btn-guardar"]) ?>
             </div>
 
