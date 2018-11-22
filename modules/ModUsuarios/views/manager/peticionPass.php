@@ -6,8 +6,16 @@ use yii\helpers\Url;
 $this->title = 'Recuperar contraseña';
 $this->params['classBody'] = "page-login-v3 layout-full login-page";
 ?>
-<div class="panel">
-	<div class="panel-body">
+
+<?= $this->render("//components/classic/topbar/nav-left")?>
+
+<div class="pd-login">
+
+	<img class="pd-login-img-texto" src="<?= Url::base() ?>/webAssets/images/ingresar/texto.png" alt="">
+
+	<div class="pd-login-conejo">
+
+		<img src="<?= Url::base() ?>/webAssets/images/ingresar/conejo.png" alt="">
 
 		<?php if (Yii::$app->session->hasFlash('success')): ?>
 			<div class="alert dark alert-success alert-dismissible" role="alert">
@@ -20,40 +28,26 @@ $this->params['classBody'] = "page-login-v3 layout-full login-page";
 
 		<?php 
 		$form = ActiveForm::begin([
-			'id' => 'login-form',
-			'fieldConfig' => [
-				"template" => "{input}{label}{error}",
-				"options" => [
-					"class" => "form-group form-material floating",
-					"data-plugin" => "formMaterial"
-				],
-				"labelOptions" => [
-					"class" => "floating-label"
-				]
-			]
+			'id' => 'login-form'
 		]); 
 		?>
 
-		<?= $form->field($model, 'username')->textInput(["class"=>"form-control"]) ?>
+			<?= $form->field($model, 'username')->textInput(["class" => "form-control form-control-name", "placeholder" => "Correo electrónico"])->label(false) ?>
 
-		<div class="form-group clearfix">
-			<a class="float-right" href="<?=Url::base()?>/sign-up">Necesito una cuenta</a>
-		</div>
-
-		<?= Html::submitButton('<span class="ladda-label">Recuperar contraseña</span>', ["data-style"=>"zoom-in", 'class' => 'btn btn-primary btn-block btn-lg mt-20 ladda-button', 'name' => 'login-button'])
-        ?>
-        <div class="form-group clearfix  text-center mt-20">
-			<a href="<?=Url::base()?>/login">Iniciar sesión</a>
-		</div>
-        
-
+			<?= Html::submitButton('<span class="ladda-label">Recuperar contraseña</span>', ["data-style"=>"zoom-in", 'class' => 'btn btn-primary btn-recuperar ladda-button', 'name' => 'login-button']) ?>
 
 		<?php ActiveForm::end(); ?>
 
-		<div class="ayuda-soporte">
+		<!-- <div class="ayuda-soporte">
 			<span>¿Necesitas ayuda? escribe a:</span>
 			<a class="no-redirect login-link" href="mailto:soporte@2gom.com.mx?Subject=Solicitud%de%Soporte">soporte@2gom.com.mx</a>
-		</div>
+		</div> -->
+
+		<div class="pd-login-form-actions">
+            <a class="pd-login-form-link" href="<?= Url::base() ?>/sign-up">Necesito una cuenta</a>
+            <a class="pd-login-form-link" href="<?= Url::base() ?>/login">Iniciar sesión</a>
+        </div>
 
 	</div>
+
 </div>
