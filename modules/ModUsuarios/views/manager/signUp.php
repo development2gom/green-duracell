@@ -36,6 +36,7 @@ $this->registerJsFile(
         <?= $this->render('_form', [
           'model' => $model,
         ]) ?>
+        <a class="pd-sign-up-form-link" href="<?= Url::base() ?>/login">Ya tengo cuenta</a>
 
         <div class="pd-sign-up-form-actions">
             <a target='_blank' class="pd-sign-up-form-link" href="<?= Url::base() ?>/site/terminos-condiciones">Términos y condiciones</a>
