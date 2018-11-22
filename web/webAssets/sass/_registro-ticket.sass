@@ -72,15 +72,41 @@
 				padding-left: 16px
 
 		.form-group-elements
+
+			.col-padding-right
+				padding-right: 0
+
 			.form-group
 				margin-bottom: 0
-			.col-padding-right
-				padding-right: 0
+
+				.col-padding-right
+					padding-right: 0
 
 
-		.row-cloner
-			.col-padding-right
-				padding-right: 0
+		.section-cloner
+			.row
+
+				.btn-delete
+					align-items: center
+					border-radius: 50%
+					// color: $error
+					display: flex
+					height: 24px !important
+					justify-content: center
+					margin-top: 8px
+					padding: 0
+					width: 24px
+
+				.btn-icon
+					.icon
+						@extend .fs-15
+						margin: 0
+
+				.col-padding-right
+					padding-right: 0
+				
+				.col-padding-left
+					padding-left: 4px
 
 		.form-group-actions
 			align-items: center
