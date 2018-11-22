@@ -55,13 +55,13 @@ $this->registerJsFile(
                     </div>
                     <div class="col-md-3 col-padding-right">
                         <div class="form-group">
-                            <input type="text" class="form-control js-codigo_barras" placeholder="Código de barras" name="codigo_barras[]">
+                            <input type="text" class="form-control form-control-green js-codigo_barras" placeholder="Código de barras" name="codigo_barras[]">
                             <p class="help-block help-block-error js-codigo_barras-error" id="js-codigo_barras-0"></p>
                         </div>
                     </div>
                     <div class="col-md-3  col-padding-right">
                         <div class="form-group">
-                            <input type="text" class="form-control js-txt_serial" placeholder="Serial" name="seriales[]">                
+                            <input type="text" class="form-control form-control-pink js-txt_serial" placeholder="Serial" name="seriales[]">                
                             <p class="help-block help-block-error js-txt_serial-error" id="js-txt_serial-0"></p>
                         </div>
                     </div>
