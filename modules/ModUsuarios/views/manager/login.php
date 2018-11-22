@@ -43,6 +43,7 @@ $this->title = 'Login';
 
 		<div class="pd-login-form-actions">
             <a class="pd-login-form-link" href="<?= Url::base() ?>/sign-up">Crear cuenta</a>
+            <a class="pd-login-form-link" href="<?= Url::base() ?>/peticion-pass">Recuperar contraseña</a>
         </div>
 
 	</div>
