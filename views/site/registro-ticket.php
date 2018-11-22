@@ -36,33 +36,38 @@ $this->registerJsFile(
 
             <input type="text" id="js-txt-codigo-ticket" class="form-control form-control-yellow" placeholder="Código de ticket" name="codigo_ticket">
             <p class="help-block help-block-error js-txt_codigo_ticket"></p>
-
-            <div class="row js_div_clone">
-                <div class="md-col-4">
-                    <?= Html::dropDownList('productos[]', null, [
-                        "AA 4+2pz"=>"AA 4+2pz",
-                        "AAA 4+2pz"=>"AAA 4+2pz",
-                        "AA 2pz"=>"AA 2pz",
-                        "AAA 2pz"=>"AAA 2pz",
-                        "C 2pz"=>"C 2pz",
-                        "D 2pz"=>"D 2pz",
-                        "9V 1pz"=>"9V 1pz",
-                    ], ["class" => "form-control", "placeholder" => "Producto que compraste"]) ?>
-                </div>
-                <div class="md-col-4">
-                    <input type="text" class="form-control form-control-yellow js-codigo_barras" placeholder="Código de barras" name="codigo_barras[]">
-                    <p class="help-block help-block-error js-codigo_barras-error" id="js-codigo_barras-0"></p>
-                </div>
-                <div class="md-col-4">
-                    <input type="text" class="form-control form-control-yellow js-txt_serial" placeholder="Serial" name="seriales[]">                
-                    <p class="help-block help-block-error js-txt_serial-error" id="js-txt_serial-0"></p>
+            <div class="row js_div_clone" >
+                <div class="row">
+                    <div class="md-col-3">
+                        <?= Html::dropDownList('productos[]', null, [
+                            "AA 4+2pz"=>"AA 4+2pz",
+                            "AAA 4+2pz"=>"AAA 4+2pz",
+                            "AA 2pz"=>"AA 2pz",
+                            "AAA 2pz"=>"AAA 2pz",
+                            "C 2pz"=>"C 2pz",
+                            "D 2pz"=>"D 2pz",
+                            "9V 1pz"=>"9V 1pz",
+                        ], ["class" => "form-control", "placeholder" => "Producto que compraste"]) ?>
+                    </div>
+                    <div class="md-col-3">
+                        <input type="text" class="form-control form-control-yellow js-codigo_barras" placeholder="Código de barras" name="codigo_barras[]">
+                        <p class="help-block help-block-error js-codigo_barras-error" id="js-codigo_barras-0"></p>
+                    </div>
+                    <div class="md-col-3">
+                        <input type="text" class="form-control form-control-yellow js-txt_serial" placeholder="Serial" name="seriales[]">                
+                        <p class="help-block help-block-error js-txt_serial-error" id="js-txt_serial-0"></p>
+                    </div>
+                    <div class="md-col-3">
+                        <button style='display:none' class="btn btn-default js_quitar_producto">quitar producto</button>
+                    </div>
                 </div>
             </div>
-            <div class="row js_nuevo_clone">
+            <div class="js_nuevo_clone">
 
             </div>
 
             <button class="btn btn-default js_ingresar_producto">Ingresar mas producto</button>
+            
 
             <div class="form-group form-group-actions">
                 <?= Html::button(' ', ['class' => "btn btn-primary btn-guardar js-btn-guardar"]) ?>
