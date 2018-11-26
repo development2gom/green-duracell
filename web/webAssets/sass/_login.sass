@@ -141,7 +141,7 @@
 
 	.pd-sign-up-form
 		// background-color: green
-		max-height: 90%
+		max-height: 98%
 		min-height: 200px
 		overflow-y: auto
 		text-align: center
@@ -156,7 +156,7 @@
 			width: 100%
 
 		img
-			margin: 0 auto 24px
+			margin: 0 auto 32px
 			max-width: 80%
 			width: 390px
 
@@ -194,6 +194,9 @@
 			height: 40px
 			margin: 0 auto
 			width: 146px
+
+		.form-group-actions
+			margin-bottom: 4px
 
 		.pd-sign-up-form-actions
 			align-items: center
@@ -315,7 +318,159 @@
 					box-shadow: 2px 0 0 $black, 4px 0 0 $black, 4px -2px 0 $black, 4px -4px 0 $black, 4px -6px 0 $black, 4px -8px 0 $black
 					transform: rotate(45deg)
 					z-index: 4
-	
+
+	// INGRESAR
+	.registro-form-ingresar
+		align-items: center
+		display: flex
+		flex-direction: column
+		justify-content: center
+		max-height: 90%
+		min-height: 200px
+		overflow-y: auto
+		text-align: center
+		width: 50%
+
+		.registro-form-ingresar-img-duracell
+			margin: 0 auto
+			max-width: 90%
+			width: 90%
+
+		.registro-form-ingresar-img-ganan
+			margin: 0 auto
+			max-width: 60%
+			width: 60%
+
+		a.btn-ingresar
+			background-color: transparent
+			border-color: transparent
+			background-image: url(../images/login/input.png)
+			background-position: 50%
+			background-repeat: no-repeat
+			background-size: 100% 70px
+			display: block
+			font-size: 3rem
+			@extend .fw-regular
+			height: 70px
+			line-height: 70px
+			margin: 32px auto 40px
+			max-width: 90%
+			text-transform: uppercase
+			width: 463px
+			+respond-to(tl)
+				font-size: 2.9rem
+			+respond-to(tp)
+				font-size: 2.6rem
+			+respond-to(sl)
+				font-size: 2.3rem
+			+respond-to(sp)
+				font-size: 2rem
+
+	// LOGIN
+	.registro-form-login
+		align-items: center
+		display: flex
+		flex-direction: column
+		justify-content: center
+		max-height: 90%
+		min-height: 200px
+		overflow-y: auto
+		text-align: center
+		width: 50%
+
+		.registro-form-login-img-duracell
+			margin: 0 auto
+			max-width: 80%
+			width: 80%
+
+		.registro-form-login-img-ganan
+			margin: 0 auto
+			max-width: 50%
+			width: 50%
+
+		form
+			.form-control
+				border: 3px solid $white
+				border-radius: 16px
+				color: $gray-300
+				@extend .fs-28
+				@extend .fw-bold
+				height: 48px
+				padding: .5rem 1rem
+				text-align: center
+				width: 394px
+				+placeholder
+					color: $gray-900
+					text-transform: uppercase
+
+				&.form-control-name,
+				&.form-control-pass
+					background-color: transparent
+					border-color: transparent
+					background-image: url(../images/login/input.png)
+					background-position: 50%
+					background-repeat: no-repeat
+					background-size: 394px 42px
+
+				&.form-control-name
+					@extend .fs-24
+				
+				&.form-control-pass
+					text-transform: uppercase
+
+			.btn-login
+				background-color: transparent
+				border-color: transparent
+				background-image: url(../images/login/entrar.png)
+				background-position: 50%
+				background-repeat: no-repeat
+				background-size: 146px 40px
+				display: block
+				height: 40px
+				margin: 0 auto
+				width: 146px
+
+			.btn-recuperar
+				background-color: $white
+				border-color: $white
+				background-size: 100% 40px
+				display: block
+				@extend .fs-20
+				@extend .fw-regular
+				height: 40px
+				margin: 0 auto
+				text-transform: uppercase
+
+		.pd-login-form-actions
+			align-items: center
+			display: flex
+			flex-direction: column
+			justify-content: center
+			margin-top: 24px
+			margin-bottom: 16px
+			.pd-login-form-link
+				color: $link
+				@extend .fs-16
+				@extend .fw-regular
+				text-decoration: underline
+
+		.ayuda-soporte
+			align-items: center
+			display: flex
+			flex-direction: column
+			justify-content: center
+			margin-top: 32px
+			span
+				@extend .fs-15
+				@extend .fw-light
+				color: $white
+
+			.pd-login-form-link
+				color: $link
+				@extend .fs-16
+				@extend .fw-regular
+				text-decoration: underline
+
 	.pd-sign-up-super-farmacia
 		bottom: 5vh
 		left: 38vw
