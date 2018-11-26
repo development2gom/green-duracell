@@ -18,7 +18,7 @@ $this->registerJsFile(
 <div class="pd-registro-ticket">
 
     <div class="pd-registro-ticket-imagen">
-        <img src="<?= Url::base() ?>/webAssets/images/regalos.png" alt="">
+        <img src="<?= Url::base() ?>/webAssets/images/aviso-privacidad/conejoregalos.png" alt="">
     </div>
 
     <div class="pd-registro-ticket-form">
@@ -90,7 +90,7 @@ $this->registerJsFile(
 
             <div class="form-group form-group-actions">
                 <button class="btn btn-success btn-mas-producto js_ingresar_producto"><i class="icon ion-md-add" aria-hidden="true"></i> Otro producto</button>
-                <button class="btn btn-warning btn-ver-imagen" data-target="#modal-example-imagen" data-toggle="modal" type="button"><i class="icon ion-md-image" aria-hidden="true"></i></button>
+                <button class="btn btn-warning btn-ver-imagen" data-target="#modal-example-imagen" data-toggle="modal" type="button"><i class="icon ion-md-help-circle" aria-hidden="true"></i></button>
             </div>
 
             <div class="form-group form-group-actions form-group-actions-mt-40">
@@ -127,7 +127,7 @@ $this->registerJsFile(
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">×</span>
             </button>
-            <h4 class="modal-title">Ejemplo de Ticket</h4>
+            <h4 class="modal-title">Serial</h4>
             </div>
             <div class="modal-body">
                 <img src="<?= Url::base() ?>/webAssets/images/example-ticket.png" alt="">
