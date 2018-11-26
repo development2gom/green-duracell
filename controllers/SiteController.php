@@ -196,6 +196,7 @@ class SiteController extends Controller
         $beneficio = $ticket->beneficio;
         if(!$beneficio){
             $beneficio = new CatBeneficios();
+            $beneficio->txt_leyenda = '<h3>Gracias por participar</h3>';
         }
 
         if(!$ticket){
