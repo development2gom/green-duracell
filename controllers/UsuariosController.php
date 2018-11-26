@@ -409,4 +409,9 @@ class UsuariosController extends Controller
         ] );
         
     }
+
+    public function actionSigueParticipando()
+    {
+        return $this->render ( 'sigue-participando');
+    }
 }

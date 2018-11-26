@@ -19,6 +19,8 @@ $this->registerJsFile(
     '@web/webAssets/js/login.js',
     ['depends' => [\app\assets\AppAsset::className()]]
 );
+
+
 ?>
 
 <?= $this->render("//components/classic/topbar/nav-right")?>
