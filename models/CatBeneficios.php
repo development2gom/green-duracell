@@ -62,7 +62,7 @@ class CatBeneficios extends \yii\db\ActiveRecord
 
     public static function getBeneficio()
     {
-        $beneficio = self::find()->where(['num_cantidad'>0])->orderBy('rand()')->one();
+        $beneficio = self::find()->orderBy('rand()')->one();
         return $beneficio;
         
     }
