@@ -3,6 +3,7 @@ use yii\helpers\Url;
 use kartik\form\ActiveForm;
 use yii\helpers\Html;
 use app\assets\AppAsset;
+use app\models\ConstantesWeb;
 
 $this->title = "Registro de ticket";
 
@@ -43,15 +44,26 @@ $this->registerJsFile(
             <div class="form-group form-group-elements js_div_clone">
                 <div class="row">
                     <div class="col-md-3 col-padding-right">
+
                         <?= Html::dropDownList('productos[]', null, [
-                            "AA 4+2pz"=>"AA 4+2pz",
-                            "AAA 4+2pz"=>"AAA 4+2pz",
-                            "AA 2pz"=>"AA 2pz",
-                            "AAA 2pz"=>"AAA 2pz",
-                            "C 2pz"=>"C 2pz",
-                            "D 2pz"=>"D 2pz",
-                            "9V 1pz"=>"9V 1pz",
+                            ConstantesWeb::PRODUCTOS['index1']['value'] => ConstantesWeb::PRODUCTOS['index1']['txt_prod'],
+                            ConstantesWeb::PRODUCTOS['index2']['value'] => ConstantesWeb::PRODUCTOS['index2']['txt_prod'],
+                            ConstantesWeb::PRODUCTOS['index3']['value'] => ConstantesWeb::PRODUCTOS['index3']['txt_prod'],
+                            ConstantesWeb::PRODUCTOS['index4']['value'] => ConstantesWeb::PRODUCTOS['index4']['txt_prod'],
+                            ConstantesWeb::PRODUCTOS['index5']['value'] => ConstantesWeb::PRODUCTOS['index5']['txt_prod'],
+                            ConstantesWeb::PRODUCTOS['index6']['value'] => ConstantesWeb::PRODUCTOS['index6']['txt_prod'],
+                            ConstantesWeb::PRODUCTOS['index7']['value'] => ConstantesWeb::PRODUCTOS['index7']['txt_prod']
                         ], ["class" => "form-control", "placeholder" => "Producto que compraste"]) ?>
+
+                        <?php // Html::dropDownList('productos[]', null, [
+                        //     "1"=>"AA 4+2pz",
+                        //     "AAA 4+2pz"=>"AAA 4+2pz",
+                        //     "AA 2pz"=>"AA 2pz",
+                        //     "AAA 2pz"=>"AAA 2pz",
+                        //     "C 2pz"=>"C 2pz",
+                        //     "D 2pz"=>"D 2pz",
+                        //     "9V 1pz"=>"9V 1pz",
+                        // ], ["class" => "form-control", "placeholder" => "Producto que compraste"]) ?>
                     </div>
                     <div class="col-md-4 col-padding-right">
                         <div class="form-group">

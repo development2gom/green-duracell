@@ -144,7 +144,8 @@ class EntUsuarios extends \yii\db\ActiveRecord implements IdentityInterface
 			],
 			[
 				[
-					'id_status'
+					'id_status',
+					'num_puntuacion'
 				],
 				'integer'
 			],
@@ -261,6 +262,7 @@ class EntUsuarios extends \yii\db\ActiveRecord implements IdentityInterface
 				[['txt_telefono'], 'string', 'max'=>10, 'min'=>10, 'tooLong'=>'El numero de celular debe contener 10 dígitos','tooShort'=>'El numero de celular debe contener 10 dígitos'],
 				
 				[['num_edad'], 'integer', 'max'=>99, 'min'=>0, 'tooBig'=>'La edad no puede ser mayor a 99 años','tooSmall'=>'La edad no puede ser menor a 0 años'],
+				
 
 		];
 	}

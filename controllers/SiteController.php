@@ -18,6 +18,7 @@ use yii\helpers\Url;
 use app\modules\ModUsuarios\models\EntUsuarios;
 use app\models\ResponseServices;
 use app\models\EntProductos;
+use app\models\ConstantesWeb;
 
 class SiteController extends Controller
 {
@@ -268,7 +269,7 @@ class SiteController extends Controller
             fpassthru($nuevoFichero);exit;
     }
 
-    public function actionGuardarTickets(){
+    public function actionGuardarTickets(){ 
         $response = new ResponseServices();
         $usuario = Yii::$app->user->identity;
 
@@ -281,9 +282,11 @@ class SiteController extends Controller
             $ticket->uddi = Utils::generateToken('tck_');
             $ticket->txt_sucursal = $_POST['sucursal'];
             $ticket->txt_codigo_ticket = $_POST['codigo_ticket'];
+            $ticket->id_beneficio = 1;
+            $ticket->txt_codigo = EntTickets::generarCodigo();
 
             $validarProd = true;
-            foreach($_POST['productos'] as $key => $value){
+            foreach($_POST['productos'] as $key => $value){ 
                 try{
                     if(!$ticket->save()){
                         $transaction->rollBack();
@@ -292,12 +295,21 @@ class SiteController extends Controller
                         return $response;
                     }
 
+                    $productoConstante = ConstantesWeb::PRODUCTOS[$value];
+
                     $producto = new EntProductos();
                     $producto->id_ticket = $ticket->id_ticket;
                     $producto->uddi = Utils::generateToken('prod_');
                     $producto->txt_codigo_barras = $_POST['codigo_barras'][$key];
                     $producto->txt_serial = $_POST['seriales'][$key];
-                    $producto->txt_nombre = $value;
+                    $producto->txt_nombre = $productoConstante['txt_prod'];
+
+                    $usuario->num_puntuacion += $productoConstante['num_valor'];
+
+                    if(!$usuario->save()){
+                        $transaction->rollBack();
+                        $response->result = $usuario->errors;
+                    }
                     
                     if(!$producto->save()){
                         $transaction->rollBack();
