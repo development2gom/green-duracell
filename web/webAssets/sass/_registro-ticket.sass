@@ -17,13 +17,16 @@
 	position: relative
 
 	.pd-registro-ticket-imagen
-		// background-color: red
-		text-align: center
-		width: 30%
+		height: 100%
+		position: relative
+		width: 40%
+		z-index: 8
 		img
-			margin: 0 auto
-			max-width: 90%
-			width: 90%
+			bottom: 0
+			left: 0
+			max-width: 100%
+			position: absolute
+			width: 100%
 
 	.pd-registro-ticket-form
 		// background-color: green
@@ -32,7 +35,9 @@
 		min-height: 200px
 		overflow-x: hidden
 		overflow-y: auto
+		position: relative
 		width: 520px
+		z-index: 9
 
 		h3
 			color: $white
@@ -72,15 +77,41 @@
 				padding-left: 16px
 
 		.form-group-elements
+
+			.col-padding-right
+				padding-right: 0
+
 			.form-group
 				margin-bottom: 0
-			.col-padding-right
-				padding-right: 0
+
+				.col-padding-right
+					padding-right: 0
 
 
-		.row-cloner
-			.col-padding-right
-				padding-right: 0
+		.section-cloner
+			.row
+
+				.btn-delete
+					align-items: center
+					border-radius: 50%
+					// color: $error
+					display: flex
+					height: 24px !important
+					justify-content: center
+					margin-top: 8px
+					padding: 0
+					width: 24px
+
+				.btn-icon
+					.icon
+						@extend .fs-15
+						margin: 0
+
+				.col-padding-right
+					padding-right: 0
+				
+				.col-padding-left
+					padding-left: 4px
 
 		.form-group-actions
 			align-items: center
@@ -150,12 +181,16 @@
 
 	.pd-registro-ticket-example
 		align-items: flex-end
+		background-color: transparent
 		display: flex
 		height: 100%
 		justify-content: center
-		position: relative
+		position: absolute
+		right: 0
+		top: 0
 		text-align: center
-		width: 25%
+		width: 40%
+		z-index: 2
 		img
 			max-width: 96%
 			width: 96%

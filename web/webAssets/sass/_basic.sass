@@ -830,6 +830,7 @@ h6
 // 
 // BODY
 .duracell-page
+	background-color: $black
 	padding: 0 !important
 	.page
 		background-color: $black
@@ -909,3 +910,23 @@ h6
 		.icon
 			color: $font-color
 			font-size: 1.9rem !important
+
+
+// ERROR FORM
+.help-block
+	// background-color: green
+	&.help-block-error
+		color: $error
+		display: block
+		@extend .fs-15
+		padding-left: 12px
+		text-align: left
+		
+.form-group
+	&.has-error
+		.help-block
+			color: $error
+			display: block
+			@extend .fs-15
+			padding-left: 12px
+			text-align: left

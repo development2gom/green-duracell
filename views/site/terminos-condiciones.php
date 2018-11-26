@@ -39978,6 +39978,10 @@ $this->registerJsFile(
 
         </div>
 
+        <div class="pd-aviso-privacidad-btns">
+            <a class="btn-regresar" href="<?= Url::base() ?>">Regresar</a>
+        </div>
+
     </div>
 
     <div class="pd-aviso-privacidad-farmacia">
