@@ -222,14 +222,14 @@ a[x-apple-data-detectors=true] {
 		<td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top">
     <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" style="background-color: #F0F0F0;"><![endif]-->
 
-    <div style="background-color:#E59A65;">
+    <div style="background-color:#E59A65; background-image: url('https://dev.2geeksonemonkey.com/green/green-duracell/web/webAssets/images/tira.png'); background-position: 50%; background-repeat: repeat; background-size: inherit;">
       <div style="Margin: 0 auto;min-width: 320px;max-width: 460px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #FFF;" class="block-grid ">
         <div style="border-collapse: collapse;display: table;width: 100%;background-color:#FFF;">
-          <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:#E59A65;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width: 600px;"><tr class="layout-full-width" style="background-color:#FFF;"><![endif]-->
+          <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:#E59A65; background-image: url('https://dev.2geeksonemonkey.com/green/green-duracell/web/webAssets/images/tira.png'); background-position: 50%; background-repeat: repeat; background-size: inherit;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width: 600px;"><tr class="layout-full-width" style="background-color:#FFF;"><![endif]-->
 
-              <!--[if (mso)|(IE)]><td align="center" width="600" style="background-color:#E59A65; width:600px; padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><![endif]-->
+              <!--[if (mso)|(IE)]><td align="center" width="600" style="background-color:#E59A65; background-image: url('https://dev.2geeksonemonkey.com/green/green-duracell/web/webAssets/images/tira.png'); background-position: 50%; background-repeat: repeat; background-size: inherit; width:600px; padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><![endif]-->
             <div class="col num12" style="min-width: 320px;max-width: 460px;display: table-cell;vertical-align: top;">
-              <div style="background-color: #E59A65; width: 100% !important;">
+              <div style="background-color: #E59A65; background-image: url('https://dev.2geeksonemonkey.com/green/green-duracell/web/webAssets/images/tira.png'); background-position: 50%; background-repeat: repeat; background-size: inherit; width: 100% !important;">
               <!--[if (!mso)&(!IE)]><!--><div style="border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:18px; padding-bottom:18px; padding-right: 0px; padding-left: 0px;"><!--<![endif]-->
 
                   
@@ -295,7 +295,7 @@ a[x-apple-data-detectors=true] {
 
 
             <p style="margin: 0;line-height: 24px;text-align: left;" dir="ltr">
-              <a href="#" target="_blank" style="display: block;text-decoration: none;-webkit-text-size-adjust: none;text-align: left;color: #3C86E9; width: auto; font-family: 'Verdanaf', Georgia, Times, 'Times New Roman', serif; mso-border-alt: none; font-weight: 300;  line-height: 16px;">
+              <a href="<?=$url?>" target="_blank" style="display: block;text-decoration: none;-webkit-text-size-adjust: none;text-align: left;color: #3C86E9; width: auto; font-family: 'Verdanaf', Georgia, Times, 'Times New Roman', serif; mso-border-alt: none; font-weight: 300;  line-height: 16px;">
                 <span style="line-height:24px;"><span style=" line-height: 32px; font-size: 15px; color: #3C86E9;" data-mce-style=" line-height: 32px;">www.web.com.mx</span></span>
               </a>
             </p>
