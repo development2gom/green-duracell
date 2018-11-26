@@ -31,7 +31,7 @@ $this->registerJsFile(
 
     <div class="pd-sign-up-form">
 
-        <img src="<?= Url::base() ?>/webAssets/images/ingresar/texto.png" alt="">
+        <img src="<?= Url::base() ?>/webAssets/images/ingresar/text-duracell-line.png" alt="">
 
         <?= $this->render('_form', [
           'model' => $model,

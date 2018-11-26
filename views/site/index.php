@@ -15,21 +15,6 @@ $this->registerJsFile(
 
 <?= $this->render("//components/classic/topbar/nav-right")?>
 
-<!-- <div class="pd-ingresar">
-
-    <img class="pd-ingresar-img-texto" src="<?= Url::base() ?>/webAssets/images/ingresar/texto.png" alt="">
-
-    <div class="pd-ingresar-conejo">
-        <img src="<?= Url::base() ?>/webAssets/images/ingresar/conejo.png" alt="">
-        <a href="<?= Url::base() ?>/login" class="btn btn-primary btn-ingresar">Ingresa aquí</a>
-    </div>
-
-    <div class="pd-ingresar-farmacia">
-        <img src="<?= Url::base() ?>/webAssets/images/farmacias-guadalajara.png" alt="">
-    </div> 
-
-</div> -->
-
 <div class="pd-sign-up">
 
     <div class="pd-sign-up-imagen">

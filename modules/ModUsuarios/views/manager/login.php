@@ -13,14 +13,17 @@ $this->title = 'Login';
 
 ?>
 
-<?= $this->render("//components/classic/topbar/nav-left")?>
+<?= $this->render("//components/classic/topbar/nav-right")?>
 
-<div class="pd-login">
+<div class="pd-sign-up">
 
-	<img class="pd-login-img-texto" src="<?= Url::base() ?>/webAssets/images/ingresar/texto.png" alt="">
+    <div class="pd-sign-up-imagen">
+        <img src="<?= Url::base() ?>/webAssets/images/aviso-privacidad/conejoregalos.png" alt="">
+    </div>
 
-	<div class="pd-login-conejo">
-		<img src="<?= Url::base() ?>/webAssets/images/ingresar/conejo.png" alt="">
+    <div class="registro-form-login">
+
+		<img class="registro-form-login-img-duracell" src="<?= Url::base() ?>/webAssets/images/ingresar/text-duracell.png" alt="">
 
 		<?php 
 		$form = ActiveForm::begin([
@@ -46,8 +49,12 @@ $this->title = 'Login';
             <a class="pd-login-form-link" href="<?= Url::base() ?>/peticion-pass">Recuperar contraseña</a>
         </div>
 
-	</div>
+		<img class="registro-form-login-img-ganan" src="<?= Url::base() ?>/webAssets/images/ingresar/texto-ganan.png" alt="">
 
-		
+    </div>
+
+    <div class="pd-sign-up-super-farmacia">
+        <img src="<?= Url::base() ?>/webAssets/images/farmacias-guadalajara.png" alt="">
+    </div>    
 
 </div>

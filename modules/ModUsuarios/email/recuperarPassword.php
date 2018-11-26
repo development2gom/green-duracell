@@ -222,20 +222,20 @@ a[x-apple-data-detectors=true] {
 		<td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top">
     <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" style="background-color: #F0F0F0;"><![endif]-->
 
-    <div style="background-color:#9A364A;">
+    <div style="background-color:#E59A65; background-image: url('https://dev.2geeksonemonkey.com/green/green-duracell/web/webAssets/images/tira.png'); background-position: 50%; background-repeat: repeat; background-size: inherit;">
       <div style="Margin: 0 auto;min-width: 320px;max-width: 460px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #FFF;" class="block-grid ">
         <div style="border-collapse: collapse;display: table;width: 100%;background-color:#FFF;">
-          <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:#9A364A;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width: 600px;"><tr class="layout-full-width" style="background-color:#FFF;"><![endif]-->
+          <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:#E59A65; background-image: url('https://dev.2geeksonemonkey.com/green/green-duracell/web/webAssets/images/tira.png'); background-position: 50%; background-repeat: repeat; background-size: inherit;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width: 600px;"><tr class="layout-full-width" style="background-color:#FFF;"><![endif]-->
 
-              <!--[if (mso)|(IE)]><td align="center" width="600" style="background-color:#9A364A; width:600px; padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><![endif]-->
+              <!--[if (mso)|(IE)]><td align="center" width="600" style="background-color:#E59A65; background-image: url('https://dev.2geeksonemonkey.com/green/green-duracell/web/webAssets/images/tira.png'); background-position: 50%; background-repeat: repeat; background-size: inherit; width:600px; padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><![endif]-->
             <div class="col num12" style="min-width: 320px;max-width: 460px;display: table-cell;vertical-align: top;">
-              <div style="background-color: #9A364A; width: 100% !important;">
+              <div style="background-color: #E59A65; background-image: url('https://dev.2geeksonemonkey.com/green/green-duracell/web/webAssets/images/tira.png'); background-position: 50%; background-repeat: repeat; background-size: inherit; width: 100% !important;">
               <!--[if (!mso)&(!IE)]><!--><div style="border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:18px; padding-bottom:18px; padding-right: 0px; padding-left: 0px;"><!--<![endif]-->
 
                   
                     <div align="center" class="img-container center  autowidth  fullwidth " style="padding-right: 0px;  padding-left: 0px;">
                     <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr style="line-height:0px;line-height:0px;"><td style="padding-right: 0px; padding-left: 0px;" align="center"><![endif]-->
-                      <img class="center  autowidth  fullwidth" align="center" border="0" src="https://dev.2geeksonemonkey.com/vinevera/sale-force/web/webAssets/images/logo-white.png" alt="Logo" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: 0;height: auto;float: none;width: 160px;max-width: 100%" width="160">
+                      <img class="center  autowidth  fullwidth" align="center" border="0" src="https://dev.2geeksonemonkey.com/green/green-duracell/web/webAssets/images/duracell.png" alt="Logo" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: 0;height: auto;float: none;width: 160px;max-width: 100%" width="160">
                     <!--[if mso]></td></tr></table><![endif]-->
                     </div>
 
@@ -295,7 +295,7 @@ a[x-apple-data-detectors=true] {
 
 
             <p style="margin: 0;line-height: 24px;text-align: left;" dir="ltr">
-              <a href="#" target="_blank" style="display: block;text-decoration: none;-webkit-text-size-adjust: none;text-align: left;color: #3C86E9; width: auto; font-family: 'Verdanaf', Georgia, Times, 'Times New Roman', serif; mso-border-alt: none; font-weight: 300;  line-height: 16px;">
+              <a href="<?=$url?>" target="_blank" style="display: block;text-decoration: none;-webkit-text-size-adjust: none;text-align: left;color: #3C86E9; width: auto; font-family: 'Verdanaf', Georgia, Times, 'Times New Roman', serif; mso-border-alt: none; font-weight: 300;  line-height: 16px;">
                 <span style="line-height:24px;"><span style=" line-height: 32px; font-size: 15px; color: #3C86E9;" data-mce-style=" line-height: 32px;">www.web.com.mx</span></span>
               </a>
             </p>
@@ -309,8 +309,8 @@ a[x-apple-data-detectors=true] {
                   
                     
 <div align="center" class="button-container center " style="padding-right: 10px; padding-left: 10px; padding-top:25px; padding-bottom:30px;">
-  <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-spacing: 0; border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top:25px; padding-bottom:30px;" align="center"><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="<?=$url?>" style="height:35pt; v-text-anchor:middle; width:196pt;" arcsize="13%" strokecolor="#9A364A" fillcolor="#9A364A"><w:anchorlock/><v:textbox inset="0,0,0,0"><center style="color:#ffffff; font-family:'Verdanaf', Georgia, Times, 'Times New Roman', serif; font-size:16px;"><![endif]-->
-    <a href="<?=$url?>" target="_blank" style="display: block;text-decoration: none;-webkit-text-size-adjust: none;text-align: center;color: #FFFFFF; background-color: #9A364A; border-radius: 6px; -webkit-border-radius: 6px; -moz-border-radius: 6px; max-width: 262px; width: 222px;width: auto; border-top: 0px solid transparent; border-right: 0px solid transparent; border-bottom: 0px solid transparent; border-left: 0px solid transparent; padding-top: 10px; padding-right: 20px; padding-bottom: 10px; padding-left: 20px; font-family: 'Verdanaf', Georgia, Times, 'Times New Roman', serif;mso-border-alt: none; font-weight: 300;">
+  <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-spacing: 0; border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top:25px; padding-bottom:30px;" align="center"><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="<?=$url?>" style="height:35pt; v-text-anchor:middle; width:196pt;" arcsize="13%" strokecolor="#000000" fillcolor="#000000"><w:anchorlock/><v:textbox inset="0,0,0,0"><center style="color:#ffffff; font-family:'Verdanaf', Georgia, Times, 'Times New Roman', serif; font-size:16px;"><![endif]-->
+    <a href="<?=$url?>" target="_blank" style="display: block;text-decoration: none;-webkit-text-size-adjust: none;text-align: center;color: #FFFFFF; background-color: #000000; border-radius: 6px; -webkit-border-radius: 6px; -moz-border-radius: 6px; max-width: 262px; width: 222px;width: auto; border-top: 0px solid transparent; border-right: 0px solid transparent; border-bottom: 0px solid transparent; border-left: 0px solid transparent; padding-top: 10px; padding-right: 20px; padding-bottom: 10px; padding-left: 20px; font-family: 'Verdanaf', Georgia, Times, 'Times New Roman', serif;mso-border-alt: none; font-weight: 300;">
       <span style="font-size:12px;line-height:24px;"><span style="font-size: 14px; line-height: 32px;" data-mce-style="font-size: 14px; line-height: 32px; color: #2B3736;">Ingreso automático al portal</span></span>
     </a>
   <!--[if mso]></center></v:textbox></v:roundrect></td></tr></table><![endif]-->
@@ -339,9 +339,9 @@ a[x-apple-data-detectors=true] {
 	<div style="color:#555555;line-height:120%;font-family:'Verdanaf', Georgia, Times, 'Times New Roman', serif; padding-right: 20px; padding-left: 20px; padding-top: 40px; padding-bottom: 20px;">	
 		<div style="font-size:12px;line-height:14px;color:#555555;font-family:'Verdanaf', Georgia, Times, 'Times New Roman', serif;text-align: center;">
 
-            <p style="margin: 0;font-size: 14px;line-height: 24px;text-align: justify;">Este correo electrónico fue generado de manera automática por el sistema y no es necesario contestes a el, si necesitas asistencia o soporte favor de escribirme a: <a href="mailto:ayuda@sanofi.com.mx?Subject=Ayuda%20Web" target="_blank" style="display: inline-block;text-decoration: none;-webkit-text-size-adjust: none;text-align: left; width: auto; font-family: 'Verdanaf', Georgia, Times, 'Times New Roman', serif; mso-border-alt: none; font-weight: 300; color: #3C86E9; font-size: 14px; line-height: 16px;"><span style="font-size: 14px; line-height: 20px;" data-mce-style="font-size: 14px; line-height: 20px;">ayuda@web.com.mx</span></a></p>
+            <p style="margin: 0;font-size: 14px;line-height: 24px;text-align: justify;">Este correo electrónico fue generado de manera automática por el sistema y no es necesario contestes a el.</p>
             <p style="margin: 0;line-height: 24px;text-align: left;font-size: 12px" dir="ltr">&#160;<br><br></p>
-            <p style="margin: 0;font-size: 14px;line-height: 17px;text-align: center;">&copy; Empresa 2018 </p>
+            <p style="margin: 0;font-size: 14px;line-height: 17px;text-align: center;">&copy; Duracell 2018 </p>
             <p style="margin: 0;line-height: 24px;text-align: left;font-size: 12px" dir="ltr">&#160;<br><br></p>
             
         </div>	
