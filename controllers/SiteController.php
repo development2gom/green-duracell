@@ -18,6 +18,8 @@ use yii\helpers\Url;
 use app\modules\ModUsuarios\models\EntUsuarios;
 use app\models\ResponseServices;
 use app\models\EntProductos;
+use app\models\ConstantesWeb;
+use app\models\CatBeneficios;
 
 class SiteController extends Controller
 {
@@ -191,11 +193,21 @@ class SiteController extends Controller
         }
 
         $ticket = EntTickets::find()->where(['uddi'=>$token])->one();
+        $beneficio = $ticket->beneficio;
+        if(!$beneficio){
+            $beneficio = new CatBeneficios();
+            $beneficio->txt_leyenda = '<h3>Gracias por participar</h3>';
+            $ticket->txt_codigo = null;
+        }
+
         if(!$ticket){
             throw new BadRequestHttpException;
         }
 
-        return $this->render('ganador');
+        return $this->render('ganador',[
+            'beneficio' => $beneficio,
+            'ticket' => $ticket
+        ]);
     }
 
     private function getShortUrl($url)
@@ -268,7 +280,7 @@ class SiteController extends Controller
             fpassthru($nuevoFichero);exit;
     }
 
-    public function actionGuardarTickets(){
+    public function actionGuardarTickets(){ 
         $response = new ResponseServices();
         $usuario = Yii::$app->user->identity;
 
@@ -276,14 +288,18 @@ class SiteController extends Controller
             $transaction = Yii::$app->db->beginTransaction();
             $errores = [];
 
+            $beneficio = CatBeneficios::getBeneficio();
+
             $ticket = new EntTickets();
             $ticket->id_usuario = $usuario->id_usuario;
             $ticket->uddi = Utils::generateToken('tck_');
             $ticket->txt_sucursal = $_POST['sucursal'];
             $ticket->txt_codigo_ticket = $_POST['codigo_ticket'];
+            $ticket->id_beneficio = $beneficio->id_beneficio;
+            $ticket->txt_codigo = EntTickets::generarCodigo();
 
             $validarProd = true;
-            foreach($_POST['productos'] as $key => $value){
+            foreach($_POST['productos'] as $key => $value){ 
                 try{
                     if(!$ticket->save()){
                         $transaction->rollBack();
@@ -292,12 +308,21 @@ class SiteController extends Controller
                         return $response;
                     }
 
+                    $productoConstante = ConstantesWeb::PRODUCTOS[$value];
+
                     $producto = new EntProductos();
                     $producto->id_ticket = $ticket->id_ticket;
                     $producto->uddi = Utils::generateToken('prod_');
                     $producto->txt_codigo_barras = $_POST['codigo_barras'][$key];
                     $producto->txt_serial = $_POST['seriales'][$key];
-                    $producto->txt_nombre = $value;
+                    $producto->txt_nombre = $productoConstante['txt_prod'];
+
+                    $usuario->num_puntuacion += $productoConstante['num_valor'];
+
+                    if(!$usuario->save()){
+                        $transaction->rollBack();
+                        $response->result = $usuario->errors;
+                    }
                     
                     if(!$producto->save()){
                         $transaction->rollBack();
@@ -325,13 +350,13 @@ class SiteController extends Controller
 
             $transaction->commit();
 
-            $mensajes = new Mensajes();
-            $link = Yii::$app->urlManager->createAbsoluteUrl([
-                '/site/ganador?token='.$ticket->uddi
-            ]);
-            $urlCorta = $this->getShortUrl($link);
+            // $mensajes = new Mensajes();
+            // $link = Yii::$app->urlManager->createAbsoluteUrl([
+            //     '/site/ganador?token='.$ticket->uddi
+            // ]);
+            // $urlCorta = $this->getShortUrl($link);
 
-            $mensajes->mandarMensage('Se ha registrado tu ticket. Ingrese para revisar su premio. '.$urlCorta, $usuario->txt_telefono);
+            // $mensajes->mandarMensage('Se ha registrado tu ticket. Ingrese para revisar su premio. '.$urlCorta, $usuario->txt_telefono);
 
             $response->status = "success";
             $response->message = "Se guardo correctamente el ticket y los productos";
