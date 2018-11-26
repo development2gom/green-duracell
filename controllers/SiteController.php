@@ -19,6 +19,7 @@ use app\modules\ModUsuarios\models\EntUsuarios;
 use app\models\ResponseServices;
 use app\models\EntProductos;
 use app\models\ConstantesWeb;
+use app\models\CatBeneficios;
 
 class SiteController extends Controller
 {
@@ -192,11 +193,19 @@ class SiteController extends Controller
         }
 
         $ticket = EntTickets::find()->where(['uddi'=>$token])->one();
+        $beneficio = $ticket->beneficio;
+        if(!$beneficio){
+            $beneficio = new CatBeneficios();
+        }
+
         if(!$ticket){
             throw new BadRequestHttpException;
         }
 
-        return $this->render('ganador');
+        return $this->render('ganador',[
+            'beneficio' => $beneficio,
+            'ticket' => $ticket
+        ]);
     }
 
     private function getShortUrl($url)
@@ -277,12 +286,14 @@ class SiteController extends Controller
             $transaction = Yii::$app->db->beginTransaction();
             $errores = [];
 
+            $beneficio = CatBeneficios::getBeneficio();
+
             $ticket = new EntTickets();
             $ticket->id_usuario = $usuario->id_usuario;
             $ticket->uddi = Utils::generateToken('tck_');
             $ticket->txt_sucursal = $_POST['sucursal'];
             $ticket->txt_codigo_ticket = $_POST['codigo_ticket'];
-            $ticket->id_beneficio = 1;
+            $ticket->id_beneficio = $beneficio->id_beneficio;
             $ticket->txt_codigo = EntTickets::generarCodigo();
 
             $validarProd = true;
@@ -337,13 +348,13 @@ class SiteController extends Controller
 
             $transaction->commit();
 
-            $mensajes = new Mensajes();
-            $link = Yii::$app->urlManager->createAbsoluteUrl([
-                '/site/ganador?token='.$ticket->uddi
-            ]);
-            $urlCorta = $this->getShortUrl($link);
+            // $mensajes = new Mensajes();
+            // $link = Yii::$app->urlManager->createAbsoluteUrl([
+            //     '/site/ganador?token='.$ticket->uddi
+            // ]);
+            // $urlCorta = $this->getShortUrl($link);
 
-            $mensajes->mandarMensage('Se ha registrado tu ticket. Ingrese para revisar su premio. '.$urlCorta, $usuario->txt_telefono);
+            // $mensajes->mandarMensage('Se ha registrado tu ticket. Ingrese para revisar su premio. '.$urlCorta, $usuario->txt_telefono);
 
             $response->status = "success";
             $response->message = "Se guardo correctamente el ticket y los productos";

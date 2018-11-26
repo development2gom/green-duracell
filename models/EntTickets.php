@@ -75,6 +75,14 @@ class EntTickets extends \yii\db\ActiveRecord
         return $this->hasOne(ModUsuariosEntUsuarios::className(), ['id_usuario' => 'id_usuario']);
     }
 
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getBeneficio()
+    {
+        return $this->hasOne(CatBeneficios::className(), ['id_beneficio' => 'id_beneficio']);
+    }
+
     public static function generarCodigo(){
         // $alpha = "123qwertyuiopa456sdfghjklzxcvbnm789";
         // $code = "";
