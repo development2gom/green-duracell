@@ -26,6 +26,15 @@ a
 		color: darken($link , 10% )
 		text-decoration: none
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+	font:
+		family: $f-base
+
 /*  Btn
 	================================================ */
 .ladda-button
@@ -69,6 +78,7 @@ a
 	border: 1px solid transparent
 	padding: .375rem .75rem
 	line-height: 1.5
+	font-family: $f-base
 	font-size: $fs-16
 	font-weight: $regular
 	letter-spacing: 1px
@@ -78,6 +88,7 @@ a
 .btn-primary
 	border-color: $primary
 	background-color: $primary
+	color: $black
 	&:active,
 	&:focus,
 	&:hover,
@@ -93,11 +104,13 @@ a
 	&:not(:disabled):not(.disabled).active
 		border-color: darken( $primary, 10% )
 		background-color: darken( $primary, 10% )
-		box-shadow: 0 0 0 0.1rem rgba($primary,0.1)
+		box-shadow: none
+		color: $black
 
 .btn-secondary
-	border-color: $secondary
-	background-color: $secondary
+	border-color: $black
+	background-color: $black
+	color: $white
 	&:active,
 	&:focus,
 	&:hover,
@@ -109,9 +122,10 @@ a
 	&[disabled]:focus,
 	&:hover,
 	&:focus
-		border-color: darken( $secondary, 10% )
-		background-color: darken( $secondary, 10% )
-		box-shadow: 0 0 0 0.1rem rgba($secondary,0.1)
+		border-color: darken( $black, 10% )
+		background-color: darken( $black, 10% )
+		box-shadow: 0 0 0 0.1rem rgba($black,0.1)
+		color: $white
 
 .btn-outline-primary
 	border-color: $grey-d
@@ -150,8 +164,8 @@ a
 		box-shadow: none
 
 .btn-warning
-	border-color: $accent
-	background-color: $accent
+	border-color: $warning
+	background-color: $warning
 	&:active,
 	&:focus,
 	&:hover,
@@ -163,9 +177,9 @@ a
 	&[disabled]:focus,
 	&:hover,
 	&:focus
-		border-color: darken( $accent, 10% )
-		background-color: darken( $accent, 10% )
-		box-shadow: 0 0 0 0.1rem rgba($accent,0.1)
+		border-color: darken( $warning, 10% )
+		background-color: darken( $warning, 10% )
+		box-shadow: 0 0 0 0.1rem rgba($warning,0.1)
 
 .btn-error
 	border-color: $error
@@ -815,11 +829,104 @@ a
 
 // 
 // BODY
-.body-obracciones
-	// .page
-	// 	background-image: url(../images/lines.jpg)
-	// 	background-position: 0
-	// 	background-repeat: repeat
-	// 	background-size: 200px
+.duracell-page
+	background-color: $black
+	padding: 0 !important
 	.page
-		background-color: $grey-f5
+		background-color: $black
+		.page-content
+			padding: 0 !important
+
+// NAV
+.nav-duracell
+	align-items: center
+	background-color: $black
+	background-image: url(../images/tira.png)
+	background-position: 50%
+	background-repeat: repeat
+	background-size: inherit
+	display: flex
+	padding: 0 32px
+	position: relative
+	width: 100%
+	.btn-logout
+		position: absolute
+		top: 50%
+		margin-top: -20px
+		z-index: 999
+
+	&.nav-left
+		height: 90px
+		justify-content: flex-start
+		// +respond-to(tl)
+		// 	justify-content: center
+		// +respond-to(tp)
+		// 	justify-content: center
+		+respond-to(sl)
+			justify-content: center
+		+respond-to(sp)
+			justify-content: center
+
+		.btn-logout
+			right: 24px
+
+	&.nav-right
+		height: 90px
+		justify-content: flex-end
+		// +respond-to(tl)
+		// 	justify-content: center
+		// +respond-to(tp)
+		// 	justify-content: center
+		+respond-to(sl)
+			justify-content: center
+		+respond-to(sp)
+			justify-content: center
+
+		.btn-logout
+			left: 24px
+
+	a.logo-duracell
+		margin: 0
+		position: relative
+		z-index: 999
+		img
+			height: 40px
+			+respond-to(tl)
+				height: 36px
+			+respond-to(tp)
+				height: 34px
+			+respond-to(sl)
+				height: 28px
+			+respond-to(sp)
+				height: 24px
+
+	.btn-logout
+		align-items: center
+		display: flex
+		height: 40px
+		justify-content: center
+		padding: 0
+		width: 40px
+		.icon
+			color: $font-color
+			font-size: 1.9rem !important
+
+
+// ERROR FORM
+.help-block
+	// background-color: green
+	&.help-block-error
+		color: $error
+		display: block
+		@extend .fs-15
+		padding-left: 12px
+		text-align: left
+		
+.form-group
+	&.has-error
+		.help-block
+			color: $error
+			display: block
+			@extend .fs-15
+			padding-left: 12px
+			text-align: left

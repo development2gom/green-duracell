@@ -1,0 +1,225 @@
+/*!
+	-----------------------------------------------------------------------------
+	- Registro de Ticket
+	-----------------------------------------------------------------------------
+	*/
+
+.pd-ganador
+	// align-items: center
+	background-image: url(../images/fondo.png)
+	background-position: -38% 50%
+	background-repeat: no-repeat
+	background-size: 60%
+	display: flex
+	flex-wrap: wrap
+	min-height: calc(100vh - 90px)
+	justify-content: flex-start
+	position: relative
+	+respond-to(tl)
+		background-position: 50%
+		background-size: 90%
+	+respond-to(tp)
+		background-position: 50%
+		background-size: 90%
+	+respond-to(sl)
+		background-position: 50%
+		background-size: 90%
+	+respond-to(sp)
+		background-position: 50%
+		background-size: 90%
+
+	.pd-ganador-textos
+		align-items: center
+		display: flex
+		flex-direction: column
+		justify-content: center
+		padding: 40px 0 12px
+		width: 100%
+		+respond-to(tl)
+			position: relative
+			z-index: 6
+		+respond-to(tp)
+			position: relative
+			z-index: 6
+		+respond-to(tl)
+			position: relative
+			z-index: 6
+		+respond-to(tp)
+			position: relative
+			z-index: 6
+
+		h3,
+		h5,
+		h4,
+		h6
+			color: $white
+			margin: 0
+			text-align: center
+			text-transform: uppercase
+
+		h3
+			@extend .fw-bold
+			font-size: 4.2rem
+			+respond-to(tl)
+				font-size: 3.5rem
+			+respond-to(tp)
+				font-size: 3.25rem
+			+respond-to(sl)
+				font-size: 2.7rem
+			+respond-to(sp)
+				font-size: 2.5rem
+
+		h4
+			font-size: 6rem
+			@extend .fw-bold
+			margin: 16px auto
+			+respond-to(tl)
+				font-size: 4rem
+			+respond-to(tp)
+				font-size: 4rem
+			+respond-to(sl)
+				font-size: 4rem
+			+respond-to(sp)
+				font-size: 4rem
+
+		h5,
+		h6
+			@extend .fs-24
+			+respond-to(tl)
+				font-size: $fs-20
+			+respond-to(tp)
+				font-size: $fs-20
+			+respond-to(sl)
+				font-size: $fs-18
+			+respond-to(sp)
+				font-size: $fs-18
+			
+
+	.pd-ganador-imagen
+		// background-color: rgba(red,.1)
+		text-align: center
+		width: 50%
+		img
+			margin: 0 auto
+			max-width: 70%
+			width: 70%
+		+respond-to(tl)
+			left: -50%
+			opacity: .7
+			position: absolute
+			top: 25%
+			width: 100%
+			z-index: 1
+		+respond-to(tp)
+			left: -50%
+			opacity: .7
+			position: absolute
+			top: 25%
+			width: 100%
+			z-index: 1
+		+respond-to(tl)
+			left: -50%
+			opacity: .7
+			position: absolute
+			top: 25%
+			width: 100%
+			z-index: 1
+		+respond-to(tp)
+			left: -50%
+			opacity: .7
+			position: absolute
+			top: 25%
+			width: 100%
+			z-index: 1
+
+	.pd-ganador-codigo
+		align-items: center
+		// background-color: green
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		padding: 40px 32px 12px
+		width: 50%
+
+		+respond-to(tl)
+			position: relative
+			width: 100%
+			z-index: 6
+		+respond-to(tp)
+			position: relative
+			width: 100%
+			z-index: 6
+		+respond-to(tl)
+			position: relative
+			width: 100%
+			z-index: 6
+		+respond-to(tp)
+			position: relative
+			width: 100%
+			z-index: 6
+
+		h3,
+		h4,
+		h6
+			color: $white
+			margin: 0
+			text-align: center
+			width: 100%
+		
+		h3,
+		h4
+			@extend .fw-bold
+
+		h3
+			font-size: 2.8rem
+		
+		h4
+			font-size: 3.4rem
+			padding: 24px
+			white-space: pre-wrap
+			word-wrap: break-word
+			overflow-wrap: break-word
+
+		h6
+			@extend .fs-22
+			@extend .fw-regular
+			letter-spacing: 2px
+			margin: 0 auto
+			max-width: 90%
+
+		p
+			color: $white
+			@extend .fs-22
+			@extend .fw-regular
+			margin: 0 auto 32px
+			text-align: center
+			width: 80%
+			span
+				white-space: pre-wrap
+				word-wrap: break-word
+				overflow-wrap: break-word
+
+		.btn-registar-otro
+			background-color: transparent
+			border-color: transparent
+			background-image: url(../images/login/input.png)
+			background-position: 50%
+			background-repeat: no-repeat
+			background-size: 100% 60px
+			display: block
+			font-size: 2rem
+			@extend .fw-regular
+			height: 60px
+			line-height: 60px
+			max-width: 90%
+			margin-top: 24px
+			text-transform: uppercase
+			width: 463px
+			+respond-to(tl)
+				font-size: 1.9rem
+			+respond-to(tp)
+				font-size: 1.6rem
+			+respond-to(sl)
+				font-size: 1.3rem
+			+respond-to(sp)
+				font-size: 1rem

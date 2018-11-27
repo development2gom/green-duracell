@@ -1,0 +1,2 @@
+ALTER TABLE `mod_usuarios_ent_usuarios`
+	ADD COLUMN `num_puntuacion` INT(10) UNSIGNED NOT NULL DEFAULT '0' AFTER `id_status`;

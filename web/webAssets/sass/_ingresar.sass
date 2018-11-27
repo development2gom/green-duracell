@@ -1,0 +1,66 @@
+/*!
+	-----------------------------------------------------------------------------
+	- Ingrsar
+	-----------------------------------------------------------------------------
+	*/
+
+.pd-ingresar
+	align-items: center
+	background-image: url(../images/fondo.png)
+	background-position: 50%
+	background-repeat: no-repeat
+	background-size: 60%
+	display: flex
+	flex-direction: column
+	min-height: calc(100vh - 90px)
+	justify-content: flex-start
+	padding-top: 24px
+
+	.pd-ingresar-img-texto
+		margin: 0 auto
+		max-width: 80%
+		width: 720px
+
+	.pd-ingresar-conejo
+		align-items: center
+		display: flex
+		flex-direction: column
+		justify-content: center
+		margin: 0 auto
+		max-width: 80%
+		width: 720px
+		img
+			margin: 0 auto
+			max-width: 80%
+			width: 280px
+		a.btn-ingresar
+			background-color: transparent
+			border-color: transparent
+			background-image: url(../images/login/input.png)
+			background-position: 50%
+			background-repeat: no-repeat
+			background-size: 100% 70px
+			display: block
+			font-size: 3rem
+			@extend .fw-regular
+			height: 70px
+			line-height: 70px
+			max-width: 90%
+			text-transform: uppercase
+			width: 463px
+			+respond-to(tl)
+				font-size: 2.9rem
+			+respond-to(tp)
+				font-size: 2.6rem
+			+respond-to(sl)
+				font-size: 2.3rem
+			+respond-to(sp)
+				font-size: 2rem
+
+
+	.pd-ingresar-farmacia
+		bottom: 3vh
+		right: 3vw
+		position: absolute
+		img
+			width: 140px

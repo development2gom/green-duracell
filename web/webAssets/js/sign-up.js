@@ -1,7 +1,28 @@
 var inputFile = $("#entusuarios-image");
 var tamanioAdmitido = 3;
 var tipoImagenesAdmitidas = ["image/jpeg", "image/png", "image/jpg", "image/gif"];
+
+
+
 $(document).ready(function () {
+
+    $('.js-btn-submit').on('click', function(e){
+        e.preventDefault();
+        var l = Ladda.create(this);
+        l.start();
+
+        if ($("#styled-checkbox-1").is(':checked')) {   
+            l.stop();
+            $("#form-ajax-signup").submit();
+        }else{
+            swal('Espera', 'Debes aceptar aviso de privacidad para continuar', 'warning');
+            l.stop();
+            return false;
+        }
+    });
+
+   
+
     $(".js-img-avatar").on("click", function (e) {
         e.preventDefault();
         inputFile.trigger("click");
@@ -17,6 +38,20 @@ $(document).ready(function () {
             
         colocarImagen(file);
 
+    });
+    
+    $('#entusuarios-num_edad').keypress(function (e) {
+        if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+    
+            return false;
+        }
+    });
+
+    $('#entusuarios-txt_telefono').keypress(function (e) {
+        if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+    
+            return false;
+        }
     });
 });
 
