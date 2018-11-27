@@ -363,6 +363,7 @@ class UsuariosController extends Controller
         }
     }
 
+    
     public function actionRemoverUsuario(){
 
         if($_POST['supervisor'] && $_POST['call']){
