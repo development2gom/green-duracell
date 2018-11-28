@@ -365,4 +365,10 @@ class SiteController extends Controller
         
         return $response;
     }
+
+    public function actionPremiosAgotados(){
+        
+        return $this->render('premios-agotados');
+    }
+
 }
