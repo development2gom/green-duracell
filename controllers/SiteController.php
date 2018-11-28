@@ -195,9 +195,7 @@ class SiteController extends Controller
         $ticket = EntTickets::find()->where(['uddi'=>$token])->one();
         $beneficio = $ticket->beneficio;
         if(!$beneficio){
-            $beneficio = new CatBeneficios();
-            $beneficio->txt_leyenda = '<h3>Gracias por participar</h3>';
-            $ticket->txt_codigo = null;
+           return $this->redirect(["premios-agotados"]);
         }
 
         if(!$ticket){
