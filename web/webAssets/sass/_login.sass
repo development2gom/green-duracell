@@ -472,6 +472,59 @@
 				@extend .fw-regular
 				text-decoration: underline
 
+	// Premios Agotados
+	.premios-agotados-cont
+		align-items: center
+		display: flex
+		flex-direction: column
+		justify-content: center
+		max-height: 98%
+		min-height: 200px
+		overflow-y: auto
+		padding: 40px 0
+		text-align: center
+		width: 50%
+
+		p
+			color: $white
+			@extend .fs-36
+			margin: 0 auto 32px
+			width: 82%
+			&.principal
+				@extend .fs-44
+			&.secundario
+				@extend .fs-34
+
+		.pd-aviso-privacidad-btns
+			align-items: center
+			display: flex
+			justify-content: center
+			a.btn-regresar
+				align-items: center
+				background-color: $white
+				border-color: $white
+				border-radius: 16px
+				display: flex
+				font-size: 1.6rem
+				color: $font-color
+				@extend .fw-regular
+				height: 48px
+				justify-content: center
+				line-height: 48px
+				margin: 24px auto 0
+				max-width: 90%
+				padding: .6rem 1rem
+				text-align: center
+				text-transform: uppercase
+				+respond-to(tl)
+					font-size: 1.5rem
+				+respond-to(tp)
+					font-size: 1.4rem
+				+respond-to(sl)
+					font-size: 1.3rem
+				+respond-to(sp)
+					font-size: 1rem
+
 	.pd-sign-up-super-farmacia
 		bottom: 5vh
 		left: 38vw
