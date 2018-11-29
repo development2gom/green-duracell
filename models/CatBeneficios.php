@@ -66,6 +66,8 @@ class CatBeneficios extends \yii\db\ActiveRecord
         if(!$beneficio){
             return new CatBeneficios();
         }
+        $beneficio->num_cantidad--;
+        $beneficio->save();
         
         return $beneficio; 
     }
