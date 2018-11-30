@@ -29,14 +29,13 @@
 			width: 100%
 
 	.pd-registro-ticket-form
-		// background-color: green
 		max-height: 90%
-		max-width: 45%
+		max-width: 58%
 		min-height: 200px
 		overflow-x: hidden
 		overflow-y: auto
 		position: relative
-		width: 520px
+		width: 680px
 		z-index: 9
 
 		h3
@@ -58,6 +57,9 @@
 			+placeholder
 				color: $gray-900
 				font-style: italic
+		
+		.form-control-select
+			padding: .5rem .3rem
 
 		.form-control-blue
 			border-color: $info
@@ -87,31 +89,105 @@
 				.col-padding-right
 					padding-right: 0
 
-
-		.section-cloner
-			.row
+			.col-actions-btns
+				align-items: flex-start
+				display: flex
+				justify-content: flex-end
 
 				.btn-delete
 					align-items: center
-					border-radius: 50%
+					// border-radius: 50%
 					// color: $error
 					display: flex
-					height: 24px !important
+					height: 40px !important
 					justify-content: center
-					margin-top: 8px
+					margin-right: 8px
 					padding: 0
-					width: 24px
+					width: 40px
 
 				.btn-icon
 					.icon
 						@extend .fs-15
 						margin: 0
 
+				.btn-ver-imagen
+					align-items: center
+					display: flex
+					height: 40px
+					justify-content: center
+					padding: 0 8px 0 8px
+					width: 40px
+					.icon
+						color: $font-color
+						@extend .fs-24
+					&:active,
+					&:focus,
+					&:hover,
+					&:active,
+					&:active:focus,
+					&:active:hover,
+					&:disabled,
+					&[disabled]:hover,
+					&[disabled]:focus,
+					&:hover,
+					&:focus
+						.icon
+							color: $font-color
+
+
+		.section-cloner
+			.row
+
 				.col-padding-right
 					padding-right: 0
 				
 				.col-padding-left
 					padding-left: 4px
+
+				.col-actions-btns
+					align-items: flex-start
+					display: flex
+					justify-content: flex-end
+
+					.btn-delete
+						align-items: center
+						// border-radius: 50%
+						// color: $error
+						display: flex
+						height: 40px !important
+						justify-content: center
+						margin-right: 8px
+						padding: 0
+						width: 40px
+
+					.btn-icon
+						.icon
+							@extend .fs-15
+							margin: 0
+
+					.btn-ver-imagen
+						align-items: center
+						display: flex
+						height: 40px
+						justify-content: center
+						padding: 0 8px 0 8px
+						width: 40px
+						.icon
+							color: $font-color
+							@extend .fs-24
+						&:active,
+						&:focus,
+						&:hover,
+						&:active,
+						&:active:focus,
+						&:active:hover,
+						&:disabled,
+						&[disabled]:hover,
+						&[disabled]:focus,
+						&:hover,
+						&:focus
+							.icon
+								color: $font-color
 
 		.form-group-actions
 			align-items: center
@@ -178,6 +254,44 @@
 				@extend .fs-16
 				@extend .fw-regular
 				text-decoration: underline
+
+
+		.form-group-row
+			align-items: center
+			display: flex
+			flex-wrap: wrap
+			justify-content: center
+			width: 100%
+			.form-control
+				width: calc(100% - 48px)
+			.btn
+				margin-left: 8px
+				width: 40px
+				&.btn-ver-imagen
+					align-items: center
+					display: flex
+					height: 40px
+					justify-content: center
+					padding: 0 8px 0 8px
+					.icon
+						color: $font-color
+						@extend .fs-24
+					&:active,
+					&:focus,
+					&:hover,
+					&:active,
+					&:active:focus,
+					&:active:hover,
+					&:disabled,
+					&[disabled]:hover,
+					&[disabled]:focus,
+					&:hover,
+					&:focus
+						.icon
+							color: $font-color
+
+			.help-block
+				width: 100%
 
 	.pd-registro-ticket-example
 		align-items: flex-end

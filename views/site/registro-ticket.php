@@ -33,17 +33,19 @@ $this->registerJsFile(
             
         ]);?>
 
-            <div class="form-group">
+            <div class="form-group form-group-row">
                 <input type="text" id="js-txt-sucursal" class="form-control form-control-blue" placeholder="Sucursal" name="sucursal">
+                <button class="btn btn-warning btn-ver-imagen" data-target="#modal-example-imagen-2" data-toggle="modal" type="button"><i class="icon ion-md-help-circle" aria-hidden="true"></i></button>
                 <p class="help-block help-block-error js-txt_sucursal"></p>
             </div>
-            <div class="form-group">
+            <div class="form-group form-group-row">
                 <input type="text" id="js-txt-codigo-ticket" class="form-control form-control-yellow" placeholder="Código de ticket" name="codigo_ticket">
+                <button class="btn btn-warning btn-ver-imagen" data-target="#modal-example-imagen-3" data-toggle="modal" type="button"><i class="icon ion-md-help-circle" aria-hidden="true"></i></button>
                 <p class="help-block help-block-error js-txt_codigo_ticket"></p>
             </div>
             <div class="form-group form-group-elements js_div_clone">
                 <div class="row">
-                    <div class="col-md-3 col-padding-right">
+                    <div class="col-md-2 col-padding-right">
 
                         <?= Html::dropDownList('productos[]', null, [
                             ConstantesWeb::PRODUCTOS['index1']['value'] => ConstantesWeb::PRODUCTOS['index1']['txt_prod'],
@@ -53,7 +55,7 @@ $this->registerJsFile(
                             ConstantesWeb::PRODUCTOS['index5']['value'] => ConstantesWeb::PRODUCTOS['index5']['txt_prod'],
                             ConstantesWeb::PRODUCTOS['index6']['value'] => ConstantesWeb::PRODUCTOS['index6']['txt_prod'],
                             ConstantesWeb::PRODUCTOS['index7']['value'] => ConstantesWeb::PRODUCTOS['index7']['txt_prod']
-                        ], ["class" => "form-control", "placeholder" => "Producto que compraste"]) ?>
+                        ], ["class" => "form-control form-control-select", "placeholder" => "Producto que compraste"]) ?>
 
                         <?php // Html::dropDownList('productos[]', null, [
                         //     "1"=>"AA 4+2pz",
@@ -77,8 +79,9 @@ $this->registerJsFile(
                             <p class="help-block help-block-error js-txt_serial-error" id="js-txt_serial-0"></p>
                         </div>
                     </div>
-                    <div class="col-md-1 col-padding-right col-padding-left">
+                    <div class="col-md-2 col-actions-btns">
                         <button type="button" style='display:none' class="btn btn-icon btn-block btn-danger btn-round btn-delete js_quitar_producto"><i class="icon wb-close" aria-hidden="true"></i></button>
+                        <button class="btn btn-warning btn-ver-imagen" data-target="#modal-example-imagen-1" data-toggle="modal" type="button"><i class="icon ion-md-help-circle" aria-hidden="true"></i></button>
                       </div>
                    
                 </div>
@@ -90,7 +93,6 @@ $this->registerJsFile(
 
             <div class="form-group form-group-actions">
                 <button class="btn btn-success btn-mas-producto js_ingresar_producto"><i class="icon ion-md-add" aria-hidden="true"></i> Otro producto</button>
-                <button class="btn btn-warning btn-ver-imagen" data-target="#modal-example-imagen" data-toggle="modal" type="button"><i class="icon ion-md-help-circle" aria-hidden="true"></i></button>
             </div>
 
             <div class="form-group form-group-actions form-group-actions-mt-40">
@@ -109,9 +111,9 @@ $this->registerJsFile(
     
     </div>
 
-    <div class="pd-registro-ticket-example">
+    <!-- <div class="pd-registro-ticket-example">
         <img src="<?= Url::base() ?>/webAssets/images/registro-ticket/ticket.png" alt="">
-    </div>
+    </div> -->
 
     <div class="pd-registro-ticket-super-farmacia">
         <img src="<?= Url::base() ?>/webAssets/images/farmacias-guadalajara.png" alt="">
@@ -120,7 +122,7 @@ $this->registerJsFile(
 </div>
 
 
-<div class="modal modal-ejemplo-imagen fade" id="modal-example-imagen" aria-labelledby="modal-example-imagen" role="dialog" tabindex="-1" style="display: none;">
+<div class="modal modal-ejemplo-imagen fade" id="modal-example-imagen-1" aria-labelledby="modal-example-imagen-1" role="dialog" tabindex="-1" style="display: none;">
     <div class="modal-dialog modal-simple modal-center">
         <div class="modal-content">
             <div class="modal-header">
@@ -131,6 +133,44 @@ $this->registerJsFile(
             </div>
             <div class="modal-body">
                 <img src="<?= Url::base() ?>/webAssets/images/example-ticket.png" alt="">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-ejemplo-imagen fade" id="modal-example-imagen-2" aria-labelledby="modal-example-imagen-2" role="dialog" tabindex="-1" style="display: none;">
+    <div class="modal-dialog modal-simple modal-center">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+            </button>
+            <h4 class="modal-title">Sucursal</h4>
+            </div>
+            <div class="modal-body">
+                <img src="<?= Url::base() ?>/webAssets/images/registro-ticket/ticket2.png" alt="">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-ejemplo-imagen fade" id="modal-example-imagen-3" aria-labelledby="modal-example-imagen-3" role="dialog" tabindex="-1" style="display: none;">
+    <div class="modal-dialog modal-simple modal-center">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+            </button>
+            <h4 class="modal-title">Cógido de Ticket</h4>
+            </div>
+            <div class="modal-body">
+                <img src="<?= Url::base() ?>/webAssets/images/registro-ticket/ticket3.png" alt="">
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>
