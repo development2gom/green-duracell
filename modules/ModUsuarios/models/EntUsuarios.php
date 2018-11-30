@@ -784,7 +784,7 @@ class EntUsuarios extends \yii\db\ActiveRecord implements IdentityInterface
         $ganador->colocarPremio();
         
         // Parametros para el email
-        $parametrosEmail ['url'] = Yii::$app->urlManager->createAbsoluteUrl([]);
+        $parametrosEmail ['urlImagen'] = Yii::$app->urlManager->createAbsoluteUrl(['webAssets/images/mail/'.$ganador->id_premio.'.png']);
         $parametrosEmail ['nombre'] = $ganador->getNombreCompleto();
         $parametrosEmail ['txt_premio'] = "ssdsd";//$premio->txt_descripcion;
 
