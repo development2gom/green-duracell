@@ -34,7 +34,14 @@ $this->title = "Ganador";
             echo $beneficio->txt_codigo_leyenda;
             echo "<h4>".$ticket->txt_codigo."</h4>";
             ?>
-            <!-- <h4>545m4hj3j53h</h4> -->
+            <?php
+            if($ticket->id_beneficio==4 && $ticket->codigoGanador){
+            ?>
+             <h3>PIN</h3>
+            <h4><?=$ticket->codigoGanador->txt_pin?></h4>
+            <?php
+            }
+            ?>
         </div>
 
         <h6>Válido hasta: <span><?=$beneficio->txt_vigencia;?></span></h6>    

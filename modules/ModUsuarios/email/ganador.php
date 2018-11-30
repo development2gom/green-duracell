@@ -278,8 +278,12 @@ a[x-apple-data-detectors=true] {
                   
                     <div class="">
 	<!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 30px; padding-left: 30px; padding-top: 10px; padding-bottom: 10px;"><![endif]-->
-	<div style="line-height:200%;color:#555555;font-family:'Verdanaf', Georgia, Times, 'Times New Roman', serif; padding-right: 30px; padding-left: 30px; padding-top: 10px; padding-bottom: 10px;">	
-		<div style="font-size:16px;line-height:24px;font-family:'Verdana', Georgia, Times, 'Times New Roman', serif;color:#555555;text-align:left;"><p style="margin: 0;font-size: 16px;line-height: 28px;text-align: left"><span style="font-size: 24px; font-weight: bold; color: #2B3736; line-height: 48px;">Hola <?=$user?></span></p></div>	
+	<div style="line-height:200%;color:#666666;font-family:'Verdana', Georgia, Times, 'Times New Roman', serif; padding-right: 30px; padding-left: 30px; padding-top: 10px; padding-bottom: 10px;">	
+		<div style="font-size:16px;line-height:24px;font-family:'Verdana', Georgia, Times, 'Times New Roman', serif;color:#666666;text-align:left;">
+      <p style="margin: 0;font-size: 16px;line-height: 28px;text-align: left">
+        <span style="font-size: 24px; color: #666666; line-height: 48px;">Hola <?=$user?></span>
+      </p>
+    </div>	
 	</div>
 	<!--[if mso]></td></tr></table><![endif]-->
 </div>
@@ -287,20 +291,20 @@ a[x-apple-data-detectors=true] {
                   
                     <div class="">
 	<!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 30px; padding-left: 30px; padding-top: 10px; padding-bottom: 10px;"><![endif]-->
-	<div style="line-height:200%;color:#555555;font-family:'Verdanaf', Georgia, Times, 'Times New Roman', serif; padding-right: 30px; padding-left: 30px; padding-top: 10px; padding-bottom: 10px;">	
-        <div style="line-height:24px;font-size:12px;color:#555555;font-family:'Verdanaf', Georgia, Times, 'Times New Roman', serif;text-align:left;">
-            <p style="margin: 0;font-size: 12px;line-height: 24px;text-align: justify;"><span style="font-size: 16px; line-height: 32px;">Este correo es para notificarte que <strong style="font-family: Verdana; font-size: 14px; font-style: italic; font-weight: bold;">has solicitado</strong>  un cambio de contraseña. para hacer el cambio da click en la siguiente liga:</span></p>
+	<div style="line-height:200%;color:#555555;font-family:'Verdana', Georgia, Times, 'Times New Roman', serif; padding-right: 30px; padding-left: 30px; padding-top: 10px; padding-bottom: 10px;">	
+        <div style="line-height:24px;font-size:12px;color:#2B3736;font-family:'Verdana', Georgia, Times, 'Times New Roman', serif;text-align:left;">
+            <p style="margin: 0;font-size: 12px;line-height: 24px;text-align: center;">
+              <span style="display: block; font-size: 16px; line-height: 32px; text-align: center; width: 100%;"><strong style="font-family: Verdana; font-size: 30px; font-weight: bold;">¡FELICIDADES!</strong></span>
+              <span style="display: block; font-size: 20px; line-height: 32px; margin: 10px auto 24px; text-align: center; width: 100%;">DURACELL TE REGALA UN</span>
+              <span style="display: block; font-size: 16px; line-height: 32px; text-align: center; width: 100%;"><strong style="font-family: Verdana; font-size: 48px; font-weight: bold;">APPLE WATCH</strong></span>
+              <span style="display: block; font-size: 26px; font-style: italic; margin-top: 8px; line-height: 32px; text-align: center; width: 100%;">SERIE 3</span>
+            </p>
 
             <p style="margin: 0;line-height: 24px;text-align: left;font-size: 12px" dir="ltr">&#160;<br></p>
 
-
-            <p style="margin: 0;line-height: 24px;text-align: left;" dir="ltr">
-              <a href="<?=$url?>" target="_blank" style="display: block;text-decoration: none;-webkit-text-size-adjust: none;text-align: left;color: #3C86E9; width: auto; font-family: 'Verdanaf', Georgia, Times, 'Times New Roman', serif; mso-border-alt: none; font-weight: 300;  line-height: 16px;">
-                <span style="line-height:24px;"><span style=" line-height: 32px; font-size: 15px; color: #3C86E9;" data-mce-style=" line-height: 32px;">www.web.com.mx</span></span>
-              </a>
-            </p>
-            
             <p style="margin: 0;font-size: 12px;line-height: 24px;text-align: left">&#160;<br></p>
+
+            <div style="display: block; margin: 0 auto; text-align: center; width: 100%;"><img style="display: inline-block; margin: 0 auto; width: 100%;" src="https://dev.2geeksonemonkey.com/green/green-duracell/web/webAssets/images/regalos.png" alt=""></div>
         </div>	
 	</div>
 	<!--[if mso]></td></tr></table><![endif]-->
@@ -309,11 +313,42 @@ a[x-apple-data-detectors=true] {
                   
                     
 <div align="center" class="button-container center " style="padding-right: 10px; padding-left: 10px; padding-top:25px; padding-bottom:30px;">
-  <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-spacing: 0; border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top:25px; padding-bottom:30px;" align="center"><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="<?=$url?>" style="height:35pt; v-text-anchor:middle; width:196pt;" arcsize="13%" strokecolor="#000000" fillcolor="#000000"><w:anchorlock/><v:textbox inset="0,0,0,0"><center style="color:#ffffff; font-family:'Verdanaf', Georgia, Times, 'Times New Roman', serif; font-size:16px;"><![endif]-->
-    <a href="<?=$url?>" target="_blank" style="display: block;text-decoration: none;-webkit-text-size-adjust: none;text-align: center;color: #FFFFFF; background-color: #000000; border-radius: 6px; -webkit-border-radius: 6px; -moz-border-radius: 6px; max-width: 262px; width: 222px;width: auto; border-top: 0px solid transparent; border-right: 0px solid transparent; border-bottom: 0px solid transparent; border-left: 0px solid transparent; padding-top: 10px; padding-right: 20px; padding-bottom: 10px; padding-left: 20px; font-family: 'Verdanaf', Georgia, Times, 'Times New Roman', serif;mso-border-alt: none; font-weight: 300;">
-      <span style="font-size:12px;line-height:24px;"><span style="font-size: 14px; line-height: 32px;" data-mce-style="font-size: 14px; line-height: 32px; color: #2B3736;">Ingreso automático al portal</span></span>
+  <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-spacing: 0; border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top:25px; padding-bottom:30px;" align="center"><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="<?=$url?>" style="height:35pt; v-text-anchor:middle; width:196pt;" arcsize="13%" strokecolor="#000000" fillcolor="#000000"><w:anchorlock/><v:textbox inset="0,0,0,0"><center style="color:#ffffff; font-family:'Verdana', Georgia, Times, 'Times New Roman', serif; font-size:16px;"><![endif]-->
+    <a href="<?=$url?>" target="_blank" style="display: block;text-decoration: none;-webkit-text-size-adjust: none;text-align: center;color: #FFFFFF; background-color: #000000; border-radius: 6px; -webkit-border-radius: 6px; -moz-border-radius: 6px; max-width: 262px; width: 222px;width: auto; border-top: 0px solid transparent; border-right: 0px solid transparent; border-bottom: 0px solid transparent; border-left: 0px solid transparent; padding-top: 10px; padding-right: 20px; padding-bottom: 10px; padding-left: 20px; font-family: 'Verdana', Georgia, Times, 'Times New Roman', serif;mso-border-alt: none; font-weight: 300;">
+      <span style="font-size:12px;line-height:24px;"><span style="font-size: 14px; line-height: 32px;" data-mce-style="font-size: 14px; line-height: 32px; color: #2B3736;">Reclamar premio</span></span>
     </a>
   <!--[if mso]></center></v:textbox></v:roundrect></td></tr></table><![endif]-->
+</div>
+
+<div class="">
+	<!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 30px; padding-left: 30px; padding-top: 10px; padding-bottom: 10px;"><![endif]-->
+	<div style="line-height:200%;color:#555555;font-family:'Verdana', Georgia, Times, 'Times New Roman', serif; padding-right: 30px; padding-left: 30px; padding-top: 10px; padding-bottom: 10px;">	
+        <div style="line-height:20px;font-size:12px;color:#2B3736;font-family:'Verdana', Georgia, Times, 'Times New Roman', serif;text-align:left;">
+            <p style="margin: 0;font-size: 14px;line-height: 20px;text-align: justify;">
+              <span style="font-size: 14px; line-height: 20px;">Si tienes dificultado para visualizar el botón, puedes dar click al siguiente enlace</span>
+            </p>
+
+            <p style="margin: 0;line-height: 24px;text-align: left;" dir="ltr">
+              <a href="<?=$url?>" target="_blank" style="display: block;text-decoration: none;-webkit-text-size-adjust: none;text-align: left;color: #3C86E9; width: auto; font-family: 'Verdana', Georgia, Times, 'Times New Roman', serif; mso-border-alt: none; font-weight: 300;  line-height: 16px;">
+                <span style="line-height:24px;"><span style=" line-height: 40px; font-size: 15px; color: #3C86E9;" data-mce-style=" line-height: 40px;">www.web.com.mx</span></span>
+              </a>
+            </p>
+            
+            <p style="margin: 0;font-size: 12px;line-height: 24px;text-align: left">&#160;<br></p>
+
+            <p style="margin: 0;font-size: 14px;line-height: 20px;text-align: justify;">
+              <span style="display: block; font-size: 14px; line-height: 28px;"><strong style="font-family: Verdana; font-size: 14px; font-weight: bold;">IMPORTANTE</strong></span>
+              <span style="display: block; font-size: 14px; line-height: 20px;">Conserva este correo para poder reclarmar tu premio.</span>
+            </p>
+
+            <p style="margin: 0;font-size: 12px;line-height: 24px;text-align: left">&#160;<br></p>
+
+            <p style="margin: 0;font-size: 14px;line-height: 24px;text-align: justify;">
+              <span style="font-size: 14px; line-height: 32px;">Valido hasta el: <strong style="font-family: Verdana; font-size: 14px; font-style: italic; font-weight: bold;">31 de Enero de 2019</strong></span>
+            </p>
+        </div>	
+	</div>
+	<!--[if mso]></td></tr></table><![endif]-->
 </div>
 
                   
@@ -336,8 +371,8 @@ a[x-apple-data-detectors=true] {
                   
                     <div class="">
 	<!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 20px; padding-left: 20px; padding-top: 20px; padding-bottom: 20px;"><![endif]-->
-	<div style="color:#555555;line-height:120%;font-family:'Verdanaf', Georgia, Times, 'Times New Roman', serif; padding-right: 20px; padding-left: 20px; padding-top: 40px; padding-bottom: 20px;">	
-		<div style="font-size:12px;line-height:14px;color:#555555;font-family:'Verdanaf', Georgia, Times, 'Times New Roman', serif;text-align: center;">
+	<div style="color:#555555;line-height:120%;font-family:'Verdana', Georgia, Times, 'Times New Roman', serif; padding-right: 20px; padding-left: 20px; padding-top: 40px; padding-bottom: 20px;">	
+		<div style="font-size:12px;line-height:14px;color:#555555;font-family:'Verdana', Georgia, Times, 'Times New Roman', serif;text-align: center;">
 
             <p style="margin: 0;font-size: 14px;line-height: 24px;text-align: justify;">Este correo electrónico fue generado de manera automática por el sistema y no es necesario contestes a el.</p>
             <p style="margin: 0;line-height: 24px;text-align: left;font-size: 12px" dir="ltr">&#160;<br><br></p>

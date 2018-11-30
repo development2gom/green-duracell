@@ -194,10 +194,8 @@ class SiteController extends Controller
 
         $ticket = EntTickets::find()->where(['uddi'=>$token])->one();
         $beneficio = $ticket->beneficio;
-        if(!$beneficio){
-            $beneficio = new CatBeneficios();
-            $beneficio->txt_leyenda = '<h3>Gracias por participar</h3>';
-            $ticket->txt_codigo = null;
+        if(!$beneficio || !$ticket->id_codigo){
+           return $this->redirect(["premios-agotados"]);
         }
 
         if(!$ticket){
@@ -296,7 +294,11 @@ class SiteController extends Controller
             $ticket->txt_sucursal = $_POST['sucursal'];
             $ticket->txt_codigo_ticket = $_POST['codigo_ticket'];
             $ticket->id_beneficio = $beneficio->id_beneficio;
-            $ticket->txt_codigo = EntTickets::generarCodigo();
+
+            $codigo = EntTickets::generarCodigo($beneficio->id_beneficio);
+            $ticket->txt_codigo = $codigo->txt_codigo;
+            $ticket->id_codigo = $codigo->id_beneficio_codigo;
+            
 
             $validarProd = true;
             foreach($_POST['productos'] as $key => $value){ 
@@ -365,4 +367,10 @@ class SiteController extends Controller
         
         return $response;
     }
+
+    public function actionPremiosAgotados(){
+        
+        return $this->render('premios-agotados');
+    }
+
 }

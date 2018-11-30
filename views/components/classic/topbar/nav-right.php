@@ -2,9 +2,9 @@
 use yii\helpers\Url;
 ?>
 <div class="nav-duracell nav-right">
-  <a href="<?= Url::base() ?>" class="logo-duracell">
+  <!-- <a href="<?= Url::base() ?>" class="logo-duracell">
     <img src="<?= Url::base() ?>/webAssets/images/duracell.png" alt="">
-  </a>
+  </a> -->
   <?php
   if(!Yii::$app->user->isGuest){
 ?>
