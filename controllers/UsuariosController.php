@@ -17,6 +17,8 @@ use app\models\EntGruposTrabajo;
 use app\models\EntCitas;
 use app\models\ResponseServices;
 use kartik\form\ActiveForm;
+use app\models\CatPremios;
+use app\models\Calendario;
 
 /**
  * UsuariosController implements the CRUD actions for EntUsuarios model.
@@ -408,5 +410,28 @@ class UsuariosController extends Controller
             'model' => $model 
         ] );
         
+    }
+    public function actionGanador()
+    {
+        $ganador = EntUsuarios::getUsuarioGanador();
+        $ganador->colocarPremio();
+        print_r($ganador);
+        exit;
+       
+    }
+    public function actionPremio()
+    {
+        $premio = CatPremios::getPremio();
+        $fecha = Calendario::getFechaActual();
+       
+        print_r($premio);
+        print_r($fecha);
+        exit;
+    }
+    public function actionColocar()
+    {
+        $premio = EntUsuarios::colocarPremio();
+        print_r($premio);
+        exit;
     }
 }
