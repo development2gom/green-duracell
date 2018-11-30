@@ -374,7 +374,6 @@ class SiteController extends Controller
     }
 
     public function actionTestEmailGanador(){
-        $usuario = Yii::$app->user->identity;
-        $usuario->enviarEmailGanador('hdhdhd');
+        EntUsuarios::enviarEmailGanador();
     }
 }

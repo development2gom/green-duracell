@@ -60,7 +60,7 @@ class Utils {
 	 */
 	public  function sendEmailGanador($email,$parametrosEmail) {
 		// Envia el correo electronico
-		return $this->sendEmail ( '@app/modules/ModUsuarios/email/recuperarPassword', '@app/modules/ModUsuarios/email/layouts/text', Yii::$app->params ['modUsuarios'] ['email'] ['emailRecuperarPass'], $email, Yii::$app->params ['modUsuarios'] ['email'] ['subjectRecuperarPass'], $parametrosEmail );
+		return $this->sendEmail ( '@app/modules/ModUsuarios/email/ganador', '@app/modules/ModUsuarios/email/layouts/text', Yii::$app->params ['modUsuarios'] ['email'] ['emailActivacion'], $email, Yii::$app->params ['modUsuarios'] ['email'] ['subjectActivacion'], $parametrosEmail );
 	}
 	
 	/**

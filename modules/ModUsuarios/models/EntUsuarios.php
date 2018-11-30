@@ -778,29 +778,33 @@ class EntUsuarios extends \yii\db\ActiveRecord implements IdentityInterface
 		return implode($pass);
 	}
 
-	public function enviarEmailGanador(){
+	public static function enviarEmailGanador(){
 		$utils = new Utils();
-		$ganador = $this->getUsuarioGanador();
+		$ganador = self::getUsuarioGanador();
         $ganador->colocarPremio();
         
         // Parametros para el email
         $parametrosEmail ['url'] = Yii::$app->urlManager->createAbsoluteUrl([]);
-        $parametrosEmail ['nombre'] = $this->getNombreCompleto();
+        $parametrosEmail ['nombre'] = $ganador->getNombreCompleto();
         $parametrosEmail ['txt_premio'] = "ssdsd";//$premio->txt_descripcion;
 
         // Envio de correo electronico
-        $utils->sendEmailGanador ($this->txt_email, $parametrosEmail );
-    }
+        $utils->sendEmailGanador ($ganador->txt_email, $parametrosEmail );
+	}
+	
 	public static function getUsuarioGanador()
 	{
 		$puntuacion = self::find()->where(['id_status'=>2])->orderby('num_puntuacion DESC')->one();
+		
 		return $puntuacion;
 	}
+
 	public function colocarPremio()
 	{
 		$premio = CatPremios::getPremio();
 		$this->id_premio = $premio->id_premio;
 		$this->save();
+
 		return $premio;
 	}
 }
