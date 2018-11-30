@@ -171,7 +171,7 @@ class SiteController extends Controller
 				$urlCorta = $this->getShortUrl($link);
 
 				//if(){
-                    $mensajes->mandarMensage('Se ha registrado tu ticket. Ingrese para revisar su premio. '.$urlCorta, $usuario->txt_telefono);
+                    $mensajes->mandarMensage('Se ha registrado tu ticket. Ingrese para revisar su beneficio. '.$urlCorta, $usuario->txt_telefono);
                     $this->redirect(['ganador', 'token'=>$ticket->uddi]);
                 // }else{
                 // //     echo 'error mensaje';exit;
@@ -352,13 +352,13 @@ class SiteController extends Controller
 
             $transaction->commit();
 
-            // $mensajes = new Mensajes();
-            // $link = Yii::$app->urlManager->createAbsoluteUrl([
-            //     '/site/ganador?token='.$ticket->uddi
-            // ]);
-            // $urlCorta = $this->getShortUrl($link);
+            $mensajes = new Mensajes();
+            $link = Yii::$app->urlManager->createAbsoluteUrl([
+                '/site/ganador?token='.$ticket->uddi
+            ]);
+            $urlCorta = $this->getShortUrl($link);
 
-            // $mensajes->mandarMensage('Se ha registrado tu ticket. Ingrese para revisar su premio. '.$urlCorta, $usuario->txt_telefono);
+            $mensajes->mandarMensage('Se ha registrado tu ticket. Ingrese para revisar su beneficio. '.$urlCorta, $usuario->txt_telefono);
 
             $response->status = "success";
             $response->message = "Se guardo correctamente el ticket y los productos";
