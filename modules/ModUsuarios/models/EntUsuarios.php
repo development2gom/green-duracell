@@ -12,6 +12,7 @@ use yii\web\UploadedFile;
 use app\models\Email;
 use app\models\AuthItem;
 use app\models\Calendario;
+use app\models\CatPremios;
 
 /**
  * This is the model class for table "ent_usuarios".
@@ -145,7 +146,8 @@ class EntUsuarios extends \yii\db\ActiveRecord implements IdentityInterface
 			[
 				[
 					'id_status',
-					'num_puntuacion'
+					'num_puntuacion',
+					'id_premio'
 				],
 				'integer'
 			],
@@ -262,6 +264,7 @@ class EntUsuarios extends \yii\db\ActiveRecord implements IdentityInterface
 				[['txt_telefono'], 'string', 'max'=>10, 'min'=>10, 'tooLong'=>'El numero de celular debe contener 10 dígitos','tooShort'=>'El numero de celular debe contener 10 dígitos'],
 				
 				[['num_edad'], 'integer', 'max'=>99, 'min'=>0, 'tooBig'=>'La edad no puede ser mayor a 99 años','tooSmall'=>'La edad no puede ser menor a 0 años'],
+			
 				
 
 		];
@@ -289,7 +292,8 @@ class EntUsuarios extends \yii\db\ActiveRecord implements IdentityInterface
 			'id_status' => 'Status',
 			'repeatEmail' => 'Repetir email',
 			'repeatPassword' => 'Repetir contraseña',
-			'password' => 'Contraseña'
+			'password' => 'Contraseña',
+			
 		];
 	}
 
@@ -772,5 +776,17 @@ class EntUsuarios extends \yii\db\ActiveRecord implements IdentityInterface
 
 		}
 		return implode($pass);
+	}
+	public static function getUsuarioGanador()
+	{
+		$puntuacion = self::find()->where(['id_status'=>2])->orderby('num_puntuacion DESC')->one();
+		return $puntuacion;
+	}
+	public function colocarPremio()
+	{
+		$premio = CatPremios::getPremio();
+		$this->id_premio = $premio->id_premio;
+		$this->save();
+		return $premio;
 	}
 }
