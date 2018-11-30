@@ -17,6 +17,8 @@ use app\models\EntGruposTrabajo;
 use app\models\EntCitas;
 use app\models\ResponseServices;
 use kartik\form\ActiveForm;
+use app\models\CatPremios;
+use app\models\Calendario;
 
 /**
  * UsuariosController implements the CRUD actions for EntUsuarios model.
@@ -409,4 +411,5 @@ class UsuariosController extends Controller
         ] );
         
     }
+    
 }
