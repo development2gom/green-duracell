@@ -323,6 +323,17 @@ class EntUsuarios extends \yii\db\ActiveRecord implements IdentityInterface
 	 *
 	 * @return \yii\db\ActiveQuery
 	 */
+	public function getPremio()
+	{
+		return $this->hasOne(CatPremios::className(), [
+			'id_premio' => 'id_premio'
+		]);
+	}
+
+	/**
+	 *
+	 * @return \yii\db\ActiveQuery
+	 */
 	public function getEntUsuariosActivacions()
 	{
 		return $this->hasMany(EntUsuariosActivacion::className(), [
@@ -786,7 +797,7 @@ class EntUsuarios extends \yii\db\ActiveRecord implements IdentityInterface
         // Parametros para el email
         $parametrosEmail ['urlImagen'] = Yii::$app->urlManager->createAbsoluteUrl(['webAssets/images/mail/'.$ganador->id_premio.'.png']);
         $parametrosEmail ['nombre'] = $ganador->getNombreCompleto();
-        $parametrosEmail ['txt_premio'] = "ssdsd";//$premio->txt_descripcion;
+        $parametrosEmail ['txt_premio'] = $ganador->premio->txt_descripcion;
 
         // Envio de correo electronico
         $utils->sendEmailGanador ($ganador->txt_email, $parametrosEmail );
