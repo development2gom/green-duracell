@@ -411,27 +411,5 @@ class UsuariosController extends Controller
         ] );
         
     }
-    public function actionGanador()
-    {
-        $ganador = EntUsuarios::getUsuarioGanador();
-        $ganador->colocarPremio();
-        print_r($ganador);
-        exit;
-       
-    }
-    public function actionPremio()
-    {
-        $premio = CatPremios::getPremio();
-        $fecha = Calendario::getFechaActual();
-       
-        print_r($premio);
-        print_r($fecha);
-        exit;
-    }
-    public function actionColocar()
-    {
-        $premio = EntUsuarios::colocarPremio();
-        print_r($premio);
-        exit;
-    }
+    
 }
