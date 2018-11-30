@@ -51,6 +51,17 @@ class Utils {
 		// Envia el correo electronico
 		return $this->sendEmail ( '@app/modules/ModUsuarios/email/recuperarPassword', '@app/modules/ModUsuarios/email/layouts/text', Yii::$app->params ['modUsuarios'] ['email'] ['emailRecuperarPass'], $email, Yii::$app->params ['modUsuarios'] ['email'] ['subjectRecuperarPass'], $parametrosEmail );
 	}
+
+	/**
+	 * Envia el correo electronico para recuperar el correo electronico
+	 *
+	 * @param array $parametrosEmail
+	 * @return boolean
+	 */
+	public  function sendEmailGanador($email,$parametrosEmail) {
+		// Envia el correo electronico
+		return $this->sendEmail ( '@app/modules/ModUsuarios/email/recuperarPassword', '@app/modules/ModUsuarios/email/layouts/text', Yii::$app->params ['modUsuarios'] ['email'] ['emailRecuperarPass'], $email, Yii::$app->params ['modUsuarios'] ['email'] ['subjectRecuperarPass'], $parametrosEmail );
+	}
 	
 	/**
 	 * Envia mensaje de correo electronico

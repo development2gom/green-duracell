@@ -373,4 +373,8 @@ class SiteController extends Controller
         return $this->render('premios-agotados');
     }
 
+    public function actionTestEmailGanador(){
+        $usuario = Yii::$app->user->identity;
+        $usuario->enviarEmailGanador('hdhdhd');
+    }
 }

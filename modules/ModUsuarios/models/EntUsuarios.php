@@ -773,4 +773,16 @@ class EntUsuarios extends \yii\db\ActiveRecord implements IdentityInterface
 		}
 		return implode($pass);
 	}
+
+	public function enviarEmailGanador($premio){
+        $utils = new Utils();
+        
+        // Parametros para el email
+        $parametrosEmail ['url'] = Yii::$app->urlManager->createAbsoluteUrl([]);
+        $parametrosEmail ['nombre'] = $this->getNombreCompleto();
+        $parametrosEmail ['txt_premio'] = "ssdsd";//$premio->txt_descripcion;
+
+        // Envio de correo electronico
+        $utils->sendEmailGanador ($this->txt_email, $parametrosEmail );
+    }
 }
