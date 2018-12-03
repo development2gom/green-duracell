@@ -13,6 +13,7 @@ use app\models\Email;
 use app\models\AuthItem;
 use app\models\Calendario;
 use app\models\CatPremios;
+use app\models\RelUsusarioPremio;
 
 /**
  * This is the model class for table "ent_usuarios".
@@ -777,11 +778,11 @@ class EntUsuarios extends \yii\db\ActiveRecord implements IdentityInterface
 		}
 		return implode($pass);
 	}
-	public static function getUsuarioGanador()
-	{
-		$puntuacion = self::find()->where(['id_status'=>2])->orderby('num_puntuacion DESC')->one();
-		return $puntuacion;
-	}
+	// public static function getUsuarioGanador()
+	// {
+	// 	$puntuacion = self::find()->where(['id_status'=>2])->orderby('num_puntuacion DESC')->one();
+	// 	return $puntuacion;
+	// }
 	public function colocarPremio()
 	{
 		$premio = CatPremios::getPremio();
@@ -789,4 +790,20 @@ class EntUsuarios extends \yii\db\ActiveRecord implements IdentityInterface
 		$this->save();
 		return $premio;
 	}
+
+	public static function asignarGanador()
+    {
+		$puntuacion = EntUsuarios::find()->where(['id_status'=>2])->orderby('num_puntuacion DESC')->one();
+		$premio = CatPremios::getPremio();
+		
+        
+        if($puntuacion && $premio)
+        {
+			$relacion = new RelUsusarioPremio();
+            $relacion->id_usuario = $puntuacion->id_usuario;
+            $relacion->id_premio = $premio->id_premio;
+            $relacion->save();
+        }
+        return $puntuacion;
+    }
 }

@@ -20,6 +20,7 @@ use app\models\ResponseServices;
 use app\models\EntProductos;
 use app\models\ConstantesWeb;
 use app\models\CatBeneficios;
+use app\models\Calendario;
 
 class SiteController extends Controller
 {
@@ -202,6 +203,8 @@ class SiteController extends Controller
             throw new BadRequestHttpException;
         }
 
+        $fecha = Calendario::getFechaActual();
+
         return $this->render('ganador',[
             'beneficio' => $beneficio,
             'ticket' => $ticket
@@ -372,5 +375,9 @@ class SiteController extends Controller
         
         return $this->render('premios-agotados');
     }
-
+public function actionTester()
+{
+    $prueva = EntUsuarios::asignarGanador();
+    return $prueva;
+}
 }
