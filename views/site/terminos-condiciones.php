@@ -39967,7 +39967,10 @@ $this->registerJsFile(
             </ol>
             <p class="p41"><span class="s1">Para la difusi&oacute;n de la informaci&oacute;n relacionada con LA PROMOCI&Oacute;N, los &uacute;nicos medios autorizados por DURACELL son: impresos dentro de sucursales FRAGUA: volantes, posters, templetes prensa, radio, p&aacute;ginas web y redes sociales que DURACELL estime conveniente.</span></p>
             
-            <p class="p3"><span class="s1"><strong>XIV.RESULTADOS.&nbsp;</strong></span></p>
+            
+            <ol class="ol1">
+            <li class="li3"><span class="s1"><strong>XIV.RESULTADOS.</strong></span></li>
+            </ol>
             <p class="p1"><span class="s1">El resultado de los ganadores se  realizar&#225; en la sucursal donde el ganador compr&#243; la mayor cantidad de productos y que lo declaran ganador.</span></p>
             
             <ol class="ol1">
