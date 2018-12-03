@@ -3,7 +3,7 @@ use yii\helpers\Url;
 use app\assets\AppAsset;
 /* @var $this yii\web\View */
 
-$this->title = "Dashboard";
+$this->title = "DURACELL";
 
 $this->params['classBody'] = "site-navbar-small";
 
