@@ -39875,9 +39875,9 @@ $this->registerJsFile(
             
             <p class="p1"><span class="s1">C&Oacute;DIGO DE REGALO STARBUCKS, v&aacute;lido por $100.00 MXN para ser utilizado en la App de Starbucks, deber&aacute; ingresar la Starbucks Card digital y su PIN en la APP. V&aacute;lido al 28 de febrero de 2019. </span></p>
             
-            <p class="p1"><span class="s1">TIEMPO AIRE, con valor de $50.00 MXN para ser utilizado en el portal <a href="http://www.mirecarga.com/"><span class="s4">www.mirecarga.com</span>,</a> seleccionar la compa&ntilde;&iacute;a telef&oacute;nica, ingresar c&oacute;digo de regalo.<span class="Apple-converted-space">&nbsp; </span>V&aacute;lido al 28 de febrero de 2019.&nbsp;</span></p>
+            <p class="p1"><span class="s1">TIEMPO AIRE, con valor de $50.00 MXN para ser utilizado en el portal <a href="https://www.pagoexpress.com.mx/MV/Pages/Recarga.aspx"><span class="s4">www.pagoexpress.com.mx/MV/Pages/Recarga.aspx</span>,</a> seleccionar la compa&ntilde;&iacute;a telef&oacute;nica, ingresar c&oacute;digo de regalo.<span class="Apple-converted-space">&nbsp; </span>V&aacute;lido al 28 de febrero de 2019.&nbsp;</span></p>
             
-            <p class="p31"><span class="s1">CORTES&Iacute;A CIN&Eacute;POLIS, valido por 1 Boleto Tradicional de lunes a jueves. V&aacute;lido de lunes a jueves. Vale por un boleto en canjeable en la taquilla o en la p&aacute;gina de internet. V&aacute;lido de lunes a jueves en cualquier funci&oacute;n 2D. V&aacute;lido en Cin&eacute;polis&reg; Tradicional y Xtreme Cinemas&reg;. Sujeto a disponibilidad y clasificaci&oacute;n. No es v&aacute;lido en Cin&eacute;polis VIP&reg;, Cin&eacute;polis IMAX&reg;, Macro XE&reg;, 4DXTM, Cinema Park&reg;, ni en funciones 3D. No es v&aacute;lida en venta avanzada, premieres, eventos especiales, Cineticket&reg; y otras promociones. V&aacute;lido al 28 de febrero de 2019. </span></p>
+            <p class="p31"><span class="s1">CORTES&Iacute;A CIN&Eacute;POLIS, valido por 1 Boleto Tradicional de lunes a jueves. V&aacute;lido de lunes a jueves. Vale por un boleto en canjeable en la taquilla o en la p&aacute;gina de internet. V&aacute;lido de lunes a jueves en cualquier funci&oacute;n 2D. V&aacute;lido en Cin&eacute;polis&reg; Tradicional y Xtreme Cinemas&reg;. Sujeto a disponibilidad y clasificaci&oacute;n. No es v&aacute;lido en Cin&eacute;polis VIP&reg;, Cin&eacute;polis IMAX&reg;, Macro XE&reg;, 4DXTM, Cinema Park&reg;, ni en funciones 3D. No es v&aacute;lida en venta avanzada, premieres, eventos especiales, Cineticket&reg; y otras promociones. V&aacute;lido al 27 de febrero de 2019. </span></p>
             <p class="p2"><span class="s1"><strong><span class="Apple-converted-space">&nbsp; &nbsp;</span></strong></span></p>
             <p class="p3"><span class="s1"><strong>2. PREMIOS QUINCENALES Y FINAL.<span class="Apple-converted-space">&nbsp; &nbsp;</span></strong></span></p>
             <p class="p32"><span class="s1">Para la entrega de premios quincenales y el premio final se solicitar&aacute;n los tickets de compra originales para validaci&oacute;n. Si el participante no cuenta con los documentos solicitados perder&aacute; el derecho a reclamar el premio y se seleccionar&aacute; al siguiente participante con mayor puntaje, as&iacute; sucesivamente hasta obtener un ganador.&nbsp;</span></p>
@@ -39960,15 +39960,15 @@ $this->registerJsFile(
             <ol class="ol1">
             <li class="li3"><span class="s1"><strong>XII. MODIFICACI&Oacute;N A LOS T&Eacute;RMINOS Y CONDICIONES.&nbsp;</strong></span></li>
             </ol>
-            <p class="p1"><span class="s1">CENTRO SANTA FE y P. GREEN se reserva el derecho de ampliar o modificar en cualquier momento los presentes t&eacute;rminos y condiciones, por lo que el participante deber&aacute; consultar bases y condiciones constantemente y hasta el t&eacute;rmino de LA PROMOCI&Oacute;N. Podr&aacute; consultar en: <a href="https://www.ganaduracell.com" target="_blank">www.ganaduracell.com</a></span></p>
+            <p class="p1"><span class="s1">DURACELL y P. GREEN se reserva el derecho de ampliar o modificar en cualquier momento los presentes t&eacute;rminos y condiciones, por lo que el participante deber&aacute; consultar bases y condiciones constantemente y hasta el t&eacute;rmino de LA PROMOCI&Oacute;N. Podr&aacute; consultar en: <a href="https://www.ganaduracell.com" target="_blank">www.ganaduracell.com</a></span></p>
             
             <ol class="ol1">
             <li class="li20"><span class="s1"><strong>XIII. MEDIOS DE DIFUSI&Oacute;N DE LA PROMOCI&Oacute;N</strong></span></li>
             </ol>
             <p class="p41"><span class="s1">Para la difusi&oacute;n de la informaci&oacute;n relacionada con LA PROMOCI&Oacute;N, los &uacute;nicos medios autorizados por DURACELL son: impresos dentro de sucursales FRAGUA: volantes, posters, templetes prensa, radio, p&aacute;ginas web y redes sociales que DURACELL estime conveniente.</span></p>
             
-            <p class="p3"><span class="s1"><strong>XIV. RESULTADOS.&nbsp;</strong></span></p>
-            <p class="p1"><span class="s1">El resultado de los ganadores se publicar&aacute; a trav&eacute;s de los siguientes medios: <a href="http://www.ganaduracell.com" target="_blank">http://www.ganaduracell.com</a></span></p>
+            <p class="p3"><span class="s1"><strong>XIV.RESULTADOS.&nbsp;</strong></span></p>
+            <p class="p1"><span class="s1">El resultado de los ganadores se  realizar&#225; en la sucursal donde el ganador compr&#243; la mayor cantidad de productos y que lo declaran ganador.</span></p>
             
             <ol class="ol1">
             <li class="li3"><span class="s1"><strong>XV. CONTACTO. </strong></span></li>
