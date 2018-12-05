@@ -91,6 +91,10 @@ class EntTickets extends \yii\db\ActiveRecord
         return $this->hasOne(RelBeneficiosCodigos::className(), ['id_beneficio_codigo' => 'id_codigo']);
     }
 
+    public function obtenerGanadorRonda(){
+        
+    }
+
    
 
     public static function generarCodigo($idBeneficio){

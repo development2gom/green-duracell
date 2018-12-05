@@ -358,7 +358,7 @@ class SiteController extends Controller
             ]);
             $urlCorta = $this->getShortUrl($link);
 
-            $mensajes->mandarMensage('Se ha registrado tu ticket. Ingrese para revisar su beneficio. '.$urlCorta, $usuario->txt_telefono);
+            //$mensajes->mandarMensage('Se ha registrado tu ticket. Ingrese para revisar su beneficio. '.$urlCorta, $usuario->txt_telefono);
 
             $response->status = "success";
             $response->message = "Se guardo correctamente el ticket y los productos";

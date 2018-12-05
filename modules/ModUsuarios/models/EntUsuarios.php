@@ -782,6 +782,12 @@ class EntUsuarios extends \yii\db\ActiveRecord implements IdentityInterface
 		$puntuacion = self::find()->where(['id_status'=>2])->orderby('num_puntuacion DESC')->one();
 		return $puntuacion;
 	}
+
+	public function getPuntuacionFase($fecha){
+		
+	}
+
+
 	public function colocarPremio()
 	{
 		$premio = CatPremios::getPremio();
