@@ -318,7 +318,7 @@ class SiteController extends Controller
                     $producto->txt_codigo_barras = $_POST['codigo_barras'][$key];
                     $producto->txt_serial = $_POST['seriales'][$key];
                     $producto->txt_nombre = $productoConstante['txt_prod'];
-
+                    $producto->num_puntuacion = $productoConstante['num_valor'];
                     $usuario->num_puntuacion += $productoConstante['num_valor'];
 
                     if(!$usuario->save()){
