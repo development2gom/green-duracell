@@ -10,13 +10,8 @@ $this->title = "Ganador";
 
 <div class="pd-ganador">
 
-    <div class="pd-ganador-textos">
-        <!-- <h3>¡Felicidades!</h3>
-        <h5>Duracell te regala</h5>
-        <h4>$100 pesos en STARBUCKS </h4> -->
-        <!-- <h6>Serie 3</h6> -->
-
-       
+    <div class="pd-ganador-textos pd-ganador-premio-imagen">
+       <img src="<?= Url::base() ?>/webAssets/images/ganador/premio-ipad.png" alt="">
     </div>    
 
     <div class="pd-ganador-imagen">
@@ -26,12 +21,10 @@ $this->title = "Ganador";
     <div class="pd-ganador-codigo">
 
         <div>
-            <!-- <p>Envía tu ticket de compra y el código ganador al correo electrónico <span>promociones@publicidadgreen.com.mx</span> o llámanos al <span>01 800 467 1897</span>.</p>
-            <h3>CÓDIGO</h3> -->
-           
+            <p>Envía tu ticket de compra y el código ganador al correo electrónico <span>promociones@publicidadgreen.com.mx</span> o llámanos al <span>01 800 467 1897</span>.</p>
         </div>
 
-       
+        <h6>Válido hasta: <span>28 de Febrero de 2019</span></h6> 
 
     </div> 
 

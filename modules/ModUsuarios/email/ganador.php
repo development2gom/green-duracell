@@ -297,9 +297,13 @@ a[x-apple-data-detectors=true] {
               <img style="display: inline-block; margin: 0 auto; width: 100%;" src="https://dev.2geeksonemonkey.com/green/green-duracell/web/webAssets/images/mail/<?=$idPremio?>.png" alt="">
             </p>
 
-            <p style="margin: 0;line-height: 24px;text-align: left;font-size: 12px" dir="ltr">&#160;<br></p>
+            <p style="margin: 0;line-height: 32px;text-align: left;font-size: 14px" dir="ltr">&#160;<br></p>
 
-            <p style="margin: 0;font-size: 12px;line-height: 24px;text-align: left">&#160;<br></p>
+            <p style="color:#555555; margin: 0;font-size: 14px;line-height: 24px;text-align: center;">
+              Envía tu ticket de compra y el código ganador al correo electrónico <a href="javascript:void(0)" target="_blank" style="display: inline-block;text-decoration: none;-webkit-text-size-adjust: none;text-align: left;color: #3C86E9; width: auto; font-family: 'Verdana', Georgia, Times, 'Times New Roman', serif; mso-border-alt: none; font-weight: 300;  line-height: 16px;"><span style="color: #2B3736; white-space: pre-wrap; word-wrap: break-word; overflow-wrap: break-word;">promociones@publicidadgreen.com.mx</span></a> o llámanos al <a href="javascript:void(0)" target="_blank" style="display: inline-block;text-decoration: none;-webkit-text-size-adjust: none;text-align: left;color: #3C86E9; width: auto; font-family: 'Verdana', Georgia, Times, 'Times New Roman', serif; mso-border-alt: none; font-weight: 300;  line-height: 16px;"><span style="color: #2B3736; white-space: pre-wrap; word-wrap: break-word; overflow-wrap: break-word;">01 800 467 1897</span></a>.
+            </p>
+
+            <p style="margin: 0;font-size: 14px;line-height: 32px;text-align: left">&#160;<br></p>
 
             <div style="display: block; margin: 0 auto; text-align: center; width: 100%;"><img style="display: inline-block; margin: 0 auto; width: 100%;" src="https://dev.2geeksonemonkey.com/green/green-duracell/web/webAssets/images/regalos.png" alt=""></div>
         </div>	
