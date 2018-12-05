@@ -4,7 +4,7 @@ namespace app\models;
 
 use Yii;
 use app\modules\ModUsuarios\models\EntUsuarios;
-
+use yii\db\Expression;
 /**
  * This is the model class for table "ent_tickets".
  *
@@ -91,8 +91,10 @@ class EntTickets extends \yii\db\ActiveRecord
         return $this->hasOne(RelBeneficiosCodigos::className(), ['id_beneficio_codigo' => 'id_codigo']);
     }
 
-    public function obtenerGanadorRonda(){
-        
+    public static function getTicketsByDate($fchInicio, $fchFinal){
+        $tickets = self::find()->where(['between', "fch_registro", $fchInicio, $fchFinal])->all();
+
+        return $tickets;
     }
 
    

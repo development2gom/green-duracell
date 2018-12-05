@@ -13,6 +13,11 @@ use app\models\Email;
 use app\models\AuthItem;
 use app\models\Calendario;
 use app\models\CatPremios;
+use yii\db\Query;
+use yii\db\Expression;
+use app\models\EntTickets;
+use app\models\RelUsuarioPremio;
+use yii\web\HttpException;
 
 /**
  * This is the model class for table "ent_usuarios".
@@ -777,13 +782,51 @@ class EntUsuarios extends \yii\db\ActiveRecord implements IdentityInterface
 		}
 		return implode($pass);
 	}
-	public static function getUsuarioGanador()
+	public static function getUsuarioGanadorGlobal()
 	{
 		$puntuacion = self::find()->where(['id_status'=>2])->orderby('num_puntuacion DESC')->one();
 		return $puntuacion;
 	}
 
-	public function getPuntuacionFase($fecha){
+	public static function getUsuarioGanadorFase(){
+		$fase = CatPremios::getFase();
+		
+		if($fase){
+			$rows = (new \yii\db\Query())
+				->select(['T.id_usuario', 'PP.num_puntos'])
+				->from('ent_tickets T ')
+				->join('join', '(
+					select P.id_ticket, sum(P.num_puntos) as num_puntos 
+					FROM ent_productos P
+					GROUP BY P.id_ticket
+				) PP', 'PP.id_ticket = T.id_ticket')
+				->where(['between', 'T.fch_registro', $fase->fch_inicio, $fase->fch_final])
+				->orderBy('PP.num_puntos DESC')
+				->limit(1)
+				->one();
+			if($rows){
+				return self::find()->where(["id_usuario"=>$rows["id_usuario"]])->one();
+			}
+			return false;
+		}else{
+			return false;
+		}
+
+	}
+
+	public function enviarEmailGanador($relUsuarioPremio){
+		
+		if($relUsuarioPremio){
+			$params=[
+				"user"=>$this->nombreCompleto,
+				"idPremio"=>$relUsuarioPremio->id_premio,
+				"url"=>$params['url'] = Yii::$app->urlManager->createAbsoluteUrl([
+					'site/ganador-premio?token=' . $relUsuarioPremio->txt_token
+				])
+			];
+			$email = new Email(Email::EMAIL_GANADOR);
+			$email->sendEmail("humberto@2gom.com.mx", "Felicidades ganaste", $params);
+		}
 		
 	}
 
@@ -791,8 +834,20 @@ class EntUsuarios extends \yii\db\ActiveRecord implements IdentityInterface
 	public function colocarPremio()
 	{
 		$premio = CatPremios::getPremio();
-		$this->id_premio = $premio->id_premio;
-		$this->save();
-		return $premio;
+		$relUsuarioPremio = null;
+		if($premio){
+			$relUsuarioPremio = new RelUsuarioPremio();
+			$relUsuarioPremio->id_premio = $premio->id_premio;
+			$relUsuarioPremio->id_usuario = $this->id_usuario;
+			$relUsuarioPremio->txt_token = Utils::generateToken("pr_");
+			if(!$relUsuarioPremio->save()){
+				throw new HttpException(500, "Error Processing Request".print_r($relUsuarioPremio->errors));
+				
+			}
+		}else{
+			throw new HttpException(500, "No hay premios disponibles");
+		}
+		return $relUsuarioPremio;
 	}
+
 }

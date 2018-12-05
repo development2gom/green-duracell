@@ -10,10 +10,25 @@ class Email{
 	public $to;
 	public $subject;
 	public $params;
-	
 
-	function __construct() {
+	const EMAIL_GANADOR = 1;
+	const TEMPLATE_GANADOR = "@app/modules/ModUsuarios/email/ganador";
+
+	function __construct($tipoEmail) {
 		$this->from = Yii::$app->params ['modUsuarios'] ['email'] ['emailActivacion']; 
+		$this->setEmailHtml($tipoEmail);
+	}
+
+	public function setEmailHtml($tipoEmail){
+		switch ($tipoEmail) {
+			case self::EMAIL_GANADOR:
+				$this->emailHtml = self::TEMPLATE_GANADOR;
+				break;
+			
+			default:
+				# code...
+				break;
+		}
 	}
 
 	/**
@@ -21,12 +36,12 @@ class Email{
 	 *   	
 	 * @return boolean
 	 */
-	public function sendEmail() {
+	public function sendEmail($to, $subject, $params) {
 		return Yii::$app->mailer->compose ( [
 				// 'html' => '@app/mail/layouts/example',
 				// 'text' => '@app/mail/layouts/text'
 				'html' => $this->emailHtml,
 				//'text' => $templateText 
-		], $this->params )->setFrom ( $this->from )->setTo ( $this->to )->setSubject ( $this->subject )->send ();
+		], $params )->setFrom ( $this->from )->setTo ( $to )->setSubject ( $subject )->send ();
 	}
 }

@@ -20,6 +20,7 @@ use app\models\ResponseServices;
 use app\models\EntProductos;
 use app\models\ConstantesWeb;
 use app\models\CatBeneficios;
+use app\models\RelUsuarioPremio;
 
 class SiteController extends Controller
 {
@@ -371,6 +372,18 @@ class SiteController extends Controller
     public function actionPremiosAgotados(){
         
         return $this->render('premios-agotados');
+    }
+
+    public function actionElGanadorEs(){
+        $usuarioGanador = EntUsuarios::getUsuarioGanadorFase();
+        $premio = $usuarioGanador->colocarPremio();
+        $usuarioGanador->enviarEmailGanador($premio);
+    }
+
+    public function actionGanadorPremio($token){
+        $premio = RelUsuarioPremio::getPremioByToken($token);
+
+        return $this->render("ganador-premio", ["premio"=>$premio]);
     }
 
 }

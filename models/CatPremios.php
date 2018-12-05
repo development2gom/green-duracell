@@ -57,10 +57,17 @@ class CatPremios extends \yii\db\ActiveRecord
     {
         $premio = self::find()->where(['b_habilitado'=>1])->andwhere(['>','num_volumen',0])
         ->andWhere(new Expression('date_format(now(),"%Y-%m-%d")=date_format(txt_fecha,"%Y-%m-%d")'))->one();
-        if(!$premio)
-        {
-            throw new HttpException(404,'No se encontro el premio');
-        }
+        
         return $premio;
+    }
+
+    public static function getFase(){
+        $premioFase = self::find()->where([
+            "between", "NOW()", new Expression("fch_inicio"), new Expression("fch_final")
+        ])->one();
+
+        
+        return $premioFase;
+        
     }
 }

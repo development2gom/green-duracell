@@ -294,10 +294,7 @@ a[x-apple-data-detectors=true] {
 	<div style="line-height:200%;color:#555555;font-family:'Verdana', Georgia, Times, 'Times New Roman', serif; padding-right: 30px; padding-left: 30px; padding-top: 10px; padding-bottom: 10px;">	
         <div style="line-height:24px;font-size:12px;color:#2B3736;font-family:'Verdana', Georgia, Times, 'Times New Roman', serif;text-align:left;">
             <p style="margin: 0;font-size: 12px;line-height: 24px;text-align: center;">
-              <span style="display: block; font-size: 16px; line-height: 32px; text-align: center; width: 100%;"><strong style="font-family: Verdana; font-size: 30px; font-weight: bold;">¡FELICIDADES!</strong></span>
-              <span style="display: block; font-size: 20px; line-height: 32px; margin: 10px auto 24px; text-align: center; width: 100%;">DURACELL TE REGALA UN</span>
-              <span style="display: block; font-size: 16px; line-height: 32px; text-align: center; width: 100%;"><strong style="font-family: Verdana; font-size: 48px; font-weight: bold;">APPLE WATCH</strong></span>
-              <span style="display: block; font-size: 26px; font-style: italic; margin-top: 8px; line-height: 32px; text-align: center; width: 100%;">SERIE 3</span>
+              <img style="display: inline-block; margin: 0 auto; width: 100%;" src="https://dev.2geeksonemonkey.com/green/green-duracell/web/webAssets/images/mail/<?=$idPremio?>.png" alt="">
             </p>
 
             <p style="margin: 0;line-height: 24px;text-align: left;font-size: 12px" dir="ltr">&#160;<br></p>
@@ -330,7 +327,7 @@ a[x-apple-data-detectors=true] {
 
             <p style="margin: 0;line-height: 24px;text-align: left;" dir="ltr">
               <a href="<?=$url?>" target="_blank" style="display: block;text-decoration: none;-webkit-text-size-adjust: none;text-align: left;color: #3C86E9; width: auto; font-family: 'Verdana', Georgia, Times, 'Times New Roman', serif; mso-border-alt: none; font-weight: 300;  line-height: 16px;">
-                <span style="line-height:24px;"><span style=" line-height: 40px; font-size: 15px; color: #3C86E9;" data-mce-style=" line-height: 40px;">www.web.com.mx</span></span>
+                <span style="line-height:24px;"><span style=" line-height: 40px; font-size: 15px; color: #3C86E9;" data-mce-style=" line-height: 40px;">http://www.ganaduracell.com/web/</span></span>
               </a>
             </p>
             
