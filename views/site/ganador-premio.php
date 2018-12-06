@@ -23,9 +23,7 @@ $this->title = "Ganador";
         <div>
             <p>Envía tu ticket de compra y el código ganador al correo electrónico <span>promociones@publicidadgreen.com.mx</span> o llámanos al <span>01 800 467 1897</span>.</p>
         </div>
-
-        <h6>Válido hasta: <span>28 de Febrero de 2019</span></h6> 
-
+        
     </div> 
 
 </div>
