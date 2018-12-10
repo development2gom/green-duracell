@@ -343,10 +343,6 @@ a[x-apple-data-detectors=true] {
             </p>
 
             <p style="margin: 0;font-size: 12px;line-height: 24px;text-align: left">&#160;<br></p>
-
-            <p style="margin: 0;font-size: 14px;line-height: 24px;text-align: justify;">
-              <span style="font-size: 14px; line-height: 32px;">Valido hasta el: <strong style="font-family: Verdana; font-size: 14px; font-style: italic; font-weight: bold;">31 de Enero de 2019</strong></span>
-            </p>
         </div>	
 	</div>
 	<!--[if mso]></td></tr></table><![endif]-->
