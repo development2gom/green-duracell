@@ -11,7 +11,7 @@ $this->title = "Ganador";
 <div class="pd-ganador">
 
     <div class="pd-ganador-textos pd-ganador-premio-imagen">
-       <img src="<?= Url::base() ?>/webAssets/images/ganador/premio-ipad.png" alt="">
+       <img src="<?= Url::base() ?>/webAssets/images/ganador/<?=$premio->id_premio?>.png" alt="">
     </div>    
 
     <div class="pd-ganador-imagen">

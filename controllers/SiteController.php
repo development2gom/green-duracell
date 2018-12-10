@@ -21,6 +21,7 @@ use app\models\EntProductos;
 use app\models\ConstantesWeb;
 use app\models\CatBeneficios;
 use app\models\RelUsuarioPremio;
+use app\models\CatPremios;
 
 class SiteController extends Controller
 {
@@ -385,5 +386,5 @@ class SiteController extends Controller
 
         return $this->render("ganador-premio", ["premio"=>$premio]);
     }
-
+    
 }
