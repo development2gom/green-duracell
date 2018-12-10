@@ -1,6 +1,6 @@
-﻿Nombre,Edad,Telefono,txt_email,Premio,"Token premio"
-Admin,0,,development@2gom.com.mx,,
-"raul alanis",26,5512345678,raul@2gom.com.mx,,
-"qwerty qwerty",20,5538865483,raul1@2gom.com.mx,,
-"Humberto Antonio Marquez",28,5534440014,humberto@2gom.com.mx,,
-Alfonso,28,5519658700,alfonso@2gom.com.mx,,
+﻿Nombre,Edad,Telefono,Email,"Fecha de creación",Sucursal,Beneficio,Codigo,"Puntos del registro"
+"Humberto Antonio Marquez",28,5534440014,damian@2gom.com.mx,"2018-12-05 14:50:06","2 Geeks one Monkey",NETFLIX,LETHC870800,4
+usuario1,11,1234567895,usuario1@2gom.com.mx,"2018-12-05 15:32:20","Parque Alameda",RECARGA,F5JQ0O616,8
+usuario2,12,1234567892,usuario2@2gom.com.mx,"2018-12-05 15:34:15","Plaza Insurgentes",CINÉPOLIS,503188888205,10
+usuario3,13,1234567893,usuario3@2gom.com.mx,"2018-12-05 15:35:54","Pabellón Cuauhtémoc",RECARGA,K347F2P1P,12
+usuario4,14,1234567894,usuario4@2gom.com.mx,"2018-12-05 15:37:01","Plaza La Rosa",STARBUCKS,6156514551344738,14
