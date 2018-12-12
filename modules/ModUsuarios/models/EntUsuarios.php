@@ -788,6 +788,10 @@ class EntUsuarios extends \yii\db\ActiveRecord implements IdentityInterface
 		return $puntuacion;
 	}
 
+	public static function getUsuarioByFase(){
+		
+	}
+
 	public static function getUsuarioGanadorFase(){
 		$fase = CatPremios::getFase();
 		

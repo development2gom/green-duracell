@@ -240,6 +240,8 @@ class SiteController extends Controller
         return $this->render('terminos-condiciones');
     }
 
+   
+
     public function actionExportarUsuariosCsv(){
         $nuevoFichero = fopen('Usuario.csv', 'w+');
         fputs($nuevoFichero, $bom = (chr(0xEF) . chr(0xBB) . chr(0xBF)));
@@ -393,6 +395,10 @@ class SiteController extends Controller
         $premio = RelUsuarioPremio::getPremioByToken($token);
 
         return $this->render("ganador-premio", ["premio"=>$premio]);
+    }
+
+    public function actionUsuariosByFase(){
+        
     }
 
 }
