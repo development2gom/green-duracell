@@ -21,7 +21,6 @@ use app\models\EntProductos;
 use app\models\ConstantesWeb;
 use app\models\CatBeneficios;
 use app\models\RelUsuarioPremio;
-use app\models\CatPremios;
 
 class SiteController extends Controller
 {
@@ -241,41 +240,52 @@ class SiteController extends Controller
         return $this->render('terminos-condiciones');
     }
 
+   
+
     public function actionExportarUsuariosCsv(){
         $nuevoFichero = fopen('Usuario.csv', 'w+');
         fputs($nuevoFichero, $bom = (chr(0xEF) . chr(0xBB) . chr(0xBF)));
 
         if($nuevoFichero){
-            $usuarios = EntUsuarios::find()->all();
+            $connection = Yii::$app->getDb();
+            $datos = $connection->createCommand('
+            SELECT U.txt_username, U.num_edad, U.txt_telefono, U.txt_email, U.fch_creacion,T.uddi, T.txt_sucursal, B.txt_nombre, T.txt_codigo, puntos.num_puntos
+            FROM mod_usuarios_ent_usuarios U
+            INNER JOIN ent_tickets T ON T.id_usuario = U.id_usuario
+            INNER JOIN cat_beneficios B ON B.id_beneficio = T.id_beneficio 
+            INNER JOIN (
+                SELECT sum(num_puntos) as num_puntos, id_ticket 
+                FROM ent_productos
+                GROUP BY id_ticket
+            ) as puntos  on puntos.id_ticket = T.id_ticket
+            WHERE U.txt_auth_item <> "super-admin"
+            ')
+            ->queryAll();
             
             $delimiter = ",";
             $campos = [
                 'Nombre',
                 'Edad',
                 'Telefono',
-                'txt_email',
-                'Premio',
-                'Token premio'
+                'Email',
+                'Fecha de creación',
+                'Uddi',
+                'Sucursal',
+                'Beneficio',
+                'Codigo',
+                'Puntos del registro'
             ];
         }
 
             fputcsv($nuevoFichero, $campos, $delimiter);
 
-            foreach($usuarios as $usuario){
-                $datos = [
-                    $usuario->txt_username,
-                    $usuario->num_edad,
-                    $usuario->txt_telefono,
-                    $usuario->txt_email,
-                    null,
-                    null
-                ];
+            foreach($datos as $dato){
 
-                fputcsv($nuevoFichero, $datos, $delimiter);
+                fputcsv($nuevoFichero, $dato, $delimiter);
             }
             fseek($nuevoFichero, 0);
             header('Content-Type: text/csv');
-            header("Content-disposition: attachment; filename=\"Localidades.csv\"");
+            header("Content-disposition: attachment; filename=\"concursantes.csv\"");
 
             fpassthru($nuevoFichero);exit;
     }
@@ -386,5 +396,5 @@ class SiteController extends Controller
 
         return $this->render("ganador-premio", ["premio"=>$premio]);
     }
-    
+
 }
