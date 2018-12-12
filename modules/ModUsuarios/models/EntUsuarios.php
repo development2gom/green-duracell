@@ -306,6 +306,17 @@ class EntUsuarios extends \yii\db\ActiveRecord implements IdentityInterface
 	 *
 	 * @return \yii\db\ActiveQuery
 	 */
+	public function getTickets()
+	{
+		return $this->hasMany(EntTickets::className(), [
+			'id_usuario' => 'id_usuario'
+		]);
+	}
+
+	/**
+	 *
+	 * @return \yii\db\ActiveQuery
+	 */
 	public function getEntSesiones()
 	{
 		return $this->hasMany(EntSesiones::className(), [
