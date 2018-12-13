@@ -249,7 +249,7 @@ class SiteController extends Controller
         if($nuevoFichero){
             $connection = Yii::$app->getDb();
             $datos = $connection->createCommand('
-            SELECT U.txt_username, U.num_edad, U.txt_telefono, U.txt_email, U.fch_creacion,T.uddi, T.txt_sucursal, B.txt_nombre, T.txt_codigo, puntos.num_puntos
+            SELECT U.txt_username, U.num_edad, U.txt_telefono, U.txt_email, U.fch_creacion,T.uddi, T.txt_sucursal, B.txt_nombre, T.txt_codigo, puntos.num_puntos, U.num_puntuacion
             FROM mod_usuarios_ent_usuarios U
             INNER JOIN ent_tickets T ON T.id_usuario = U.id_usuario
             INNER JOIN cat_beneficios B ON B.id_beneficio = T.id_beneficio 
@@ -273,7 +273,8 @@ class SiteController extends Controller
                 'Sucursal',
                 'Beneficio',
                 'Codigo',
-                'Puntos del registro'
+                'Puntos del registro',
+                'Puntos totales acumulados'
             ];
         }
 
@@ -388,6 +389,8 @@ class SiteController extends Controller
     public function actionElGanadorEs(){
         $usuarioGanador = EntUsuarios::getUsuarioGanadorFase();
         $premio = $usuarioGanador->colocarPremio();
+
+        //return $this->render("el-ganador-es", ["usuarioGanador"=>$usuarioGanador, "premio"=>$premio]);
         $usuarioGanador->enviarEmailGanador($premio);
     }
 

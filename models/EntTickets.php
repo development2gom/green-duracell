@@ -97,7 +97,9 @@ class EntTickets extends \yii\db\ActiveRecord
         return $tickets;
     }
 
-   
+   public static function actualizarPuntuacion(){
+       
+   }
 
     public static function generarCodigo($idBeneficio){
         $codigo = RelBeneficiosCodigos::getCodigoByBeneficio($idBeneficio);
