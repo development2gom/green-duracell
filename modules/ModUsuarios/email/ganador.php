@@ -326,7 +326,7 @@ a[x-apple-data-detectors=true] {
 	<div style="line-height:200%;color:#555555;font-family:'Verdana', Georgia, Times, 'Times New Roman', serif; padding-right: 30px; padding-left: 30px; padding-top: 10px; padding-bottom: 10px;">	
         <div style="line-height:20px;font-size:12px;color:#2B3736;font-family:'Verdana', Georgia, Times, 'Times New Roman', serif;text-align:left;">
             <p style="margin: 0;font-size: 14px;line-height: 20px;text-align: justify;">
-              <span style="font-size: 14px; line-height: 20px;">Si tienes dificultado para visualizar el botón, puedes dar click al siguiente enlace</span>
+              <span style="font-size: 14px; line-height: 20px;">Si tienes dificultad para visualizar el botón, puedes dar click al siguiente enlace</span>
             </p>
 
             <p style="margin: 0;line-height: 24px;text-align: left;" dir="ltr">
