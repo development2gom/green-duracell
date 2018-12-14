@@ -822,9 +822,9 @@ class EntUsuarios extends \yii\db\ActiveRecord implements IdentityInterface
 			if($rows){
 				return self::find()->where(["id_usuario"=>$rows["id_usuario"]])->one();
 			}
-			return false;
+			throw new HttpException(404, "No hay fase disponible");
 		}else{
-			return false;
+			throw new HttpException(404, "No hay fase disponible");
 		}
 
 	}

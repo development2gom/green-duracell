@@ -62,9 +62,11 @@ class CatPremios extends \yii\db\ActiveRecord
     }
 
     public static function getFase(){
-        $premioFase = self::find()->where([
-            "between", "NOW()", new Expression("fch_inicio"), new Expression("fch_final")
-        ])->one();
+        // $premioFase = self::find()->where([
+        //     "between", "NOW()", new Expression("fch_inicio"), new Expression("fch_final")
+        // ])->one();
+
+        $premioFase = self::find()->one();
 
         
         return $premioFase;
