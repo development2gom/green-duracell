@@ -4,6 +4,7 @@ namespace app\models;
 
 use Yii;
 use yii\web\HttpException;
+use app\modules\ModUsuarios\models\EntUsuarios;
 
 /**
  * This is the model class for table "rel_usuario_premio".
@@ -64,6 +65,16 @@ class RelUsuarioPremio extends \yii\db\ActiveRecord
     public function getUsuario()
     {
         return $this->hasOne(EntUsuarios::className(), ['id_usuario' => 'id_usuario']);
+    }
+
+    public static function getRelByToken($token){
+        $premioGanado = self::find()->where(["txt_token"=>$token])->one();
+
+        if(!$premioGanado){
+            throw new HttpException(404, "Petición no válida");
+        }
+
+        return $premioGanado;
     }
 
     public static function getPremioByToken($token){

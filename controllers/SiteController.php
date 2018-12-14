@@ -390,7 +390,16 @@ class SiteController extends Controller
         $usuarioGanador = EntUsuarios::getUsuarioGanadorFase();
         $premio = $usuarioGanador->colocarPremio();
 
+        print_r($usuarioGanador);
+        exit;
+
         //return $this->render("el-ganador-es", ["usuarioGanador"=>$usuarioGanador, "premio"=>$premio]);
+        //$usuarioGanador->enviarEmailGanador($premio);
+    }
+
+    public function actionEnviarEmailGanador($token=null){
+        $premio = RelUsuarioPremio::getRelByToken($token);
+        $usuarioGanador = $premio->usuario;
         $usuarioGanador->enviarEmailGanador($premio);
     }
 
